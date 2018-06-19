@@ -7,21 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF51C08720D88CD10024E971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C08620D88CD10024E971 /* AppDelegate.swift */; };
-		CF51C08920D88CD10024E971 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C08820D88CD10024E971 /* ViewController.swift */; };
-		CF51C08C20D88CD10024E971 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08A20D88CD10024E971 /* Main.storyboard */; };
 		CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08D20D88CD20024E971 /* Assets.xcassets */; };
 		CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */; };
+		CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */; };
+		CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */; };
+		CF51C0AB20D893A10024E971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A420D893A10024E971 /* AppDelegate.swift */; };
+		CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A620D893A10024E971 /* BBNavigationController.swift */; };
+		CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A820D893A10024E971 /* BBTabBarController.swift */; };
+		CF51C0AF20D893C50024E971 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0AE20D893C50024E971 /* BBHomeViewController.swift */; };
+		CF51C0B220D897530024E971 /* BBConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0B120D897530024E971 /* BBConst.swift */; };
+		CF51C0B520D89DB20024E971 /* BBHomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0B320D89DB20024E971 /* BBHomeCollectionCell.swift */; };
+		CF51C0B620D89DB20024E971 /* BBHomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF51C0B420D89DB20024E971 /* BBHomeCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF51C08320D88CD10024E971 /* BBAccountantTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBAccountantTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF51C08620D88CD10024E971 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF51C08820D88CD10024E971 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF51C08B20D88CD10024E971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF51C08D20D88CD20024E971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF51C09020D88CD20024E971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF51C09220D88CD20024E971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBaseController.swift; sourceTree = "<group>"; };
+		CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBackConst.swift; sourceTree = "<group>"; };
+		CF51C0A320D893A10024E971 /* BBAccountant-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBAccountant-Bridging-Header.h"; sourceTree = "<group>"; };
+		CF51C0A420D893A10024E971 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF51C0A620D893A10024E971 /* BBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNavigationController.swift; sourceTree = "<group>"; };
+		CF51C0A820D893A10024E971 /* BBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBTabBarController.swift; sourceTree = "<group>"; };
+		CF51C0AE20D893C50024E971 /* BBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
+		CF51C0B120D897530024E971 /* BBConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBConst.swift; sourceTree = "<group>"; };
+		CF51C0B320D89DB20024E971 /* BBHomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeCollectionCell.swift; sourceTree = "<group>"; };
+		CF51C0B420D89DB20024E971 /* BBHomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBHomeCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +67,117 @@
 		CF51C08520D88CD10024E971 /* BBAccountantTool */ = {
 			isa = PBXGroup;
 			children = (
-				CF51C08620D88CD10024E971 /* AppDelegate.swift */,
-				CF51C08820D88CD10024E971 /* ViewController.swift */,
-				CF51C08A20D88CD10024E971 /* Main.storyboard */,
+				CF51C09820D893A10024E971 /* Classes */,
 				CF51C08D20D88CD20024E971 /* Assets.xcassets */,
 				CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */,
 				CF51C09220D88CD20024E971 /* Info.plist */,
 			);
 			path = BBAccountantTool;
+			sourceTree = "<group>";
+		};
+		CF51C09820D893A10024E971 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C09920D893A10024E971 /* Home */,
+				CF51C09D20D893A10024E971 /* Tools */,
+				CF51C09E20D893A10024E971 /* Other */,
+				CF51C09F20D893A10024E971 /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF51C09920D893A10024E971 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C09A20D893A10024E971 /* Index */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF51C09A20D893A10024E971 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C09B20D893A10024E971 /* ViewModel */,
+				CF51C09C20D893A10024E971 /* View */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CF51C09B20D893A10024E971 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF51C09C20D893A10024E971 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0AE20D893C50024E971 /* BBHomeViewController.swift */,
+				CF51C0B320D89DB20024E971 /* BBHomeCollectionCell.swift */,
+				CF51C0B420D89DB20024E971 /* BBHomeCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF51C09D20D893A10024E971 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		CF51C09E20D893A10024E971 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0B020D897530024E971 /* Const */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CF51C09F20D893A10024E971 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0A020D893A10024E971 /* BBGestureBack */,
+				CF51C0A320D893A10024E971 /* BBAccountant-Bridging-Header.h */,
+				CF51C0A420D893A10024E971 /* AppDelegate.swift */,
+				CF51C0A520D893A10024E971 /* BBNavigation */,
+				CF51C0A720D893A10024E971 /* BBTabBar */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CF51C0A020D893A10024E971 /* BBGestureBack */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */,
+				CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */,
+			);
+			path = BBGestureBack;
+			sourceTree = "<group>";
+		};
+		CF51C0A520D893A10024E971 /* BBNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0A620D893A10024E971 /* BBNavigationController.swift */,
+			);
+			path = BBNavigation;
+			sourceTree = "<group>";
+		};
+		CF51C0A720D893A10024E971 /* BBTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0A820D893A10024E971 /* BBTabBarController.swift */,
+			);
+			path = BBTabBar;
+			sourceTree = "<group>";
+		};
+		CF51C0B020D897530024E971 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				CF51C0B120D897530024E971 /* BBConst.swift */,
+			);
+			path = Const;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +206,7 @@
 		CF51C07B20D88CD10024E971 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BB;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Bonway;
@@ -122,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF51C0B620D89DB20024E971 /* BBHomeCollectionCell.xib in Resources */,
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
-				CF51C08C20D88CD10024E971 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +252,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF51C08920D88CD10024E971 /* ViewController.swift in Sources */,
-				CF51C08720D88CD10024E971 /* AppDelegate.swift in Sources */,
+				CF51C0AB20D893A10024E971 /* AppDelegate.swift in Sources */,
+				CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */,
+				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
+				CF51C0B220D897530024E971 /* BBConst.swift in Sources */,
+				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
+				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
+				CF51C0B520D89DB20024E971 /* BBHomeCollectionCell.swift in Sources */,
+				CF51C0AF20D893C50024E971 /* BBHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF51C08A20D88CD10024E971 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF51C08B20D88CD10024E971 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +397,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBAccountantTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,6 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBAccountantTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
