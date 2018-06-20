@@ -8,37 +8,32 @@
 
 import UIKit
 
-class BBHomeViewController: UIViewController {
+class BBHomeViewController: BBGestureBaseController {
 
     
 //MARK:--懒加载
-    fileprivate lazy var collectionView : UICollectionView = {
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 80, height: 35)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 30
-        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
-        
-        let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight), collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib.init(nibName: "BBHomeCollectionCell", bundle: nil), forCellWithReuseIdentifier: "BBHomeCollectionCell")
-        // 注册一个headView
-//        collectionView.registerClass(CollectionReusableViewHeader.self, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
-        // 注册一个footView
-//        collectionView.registerClass(CollectionReusableViewFooter.self, forSupplementaryViewOfKind:UICollectionElementKindSectionFooter, withReuseIdentifier: footerIdentifier)
-        
-        collectionView.backgroundColor = UIColor.red
-        return collectionView
+
+    
+    fileprivate lazy var tableView : UITableView = {
+
+        let tableView = UITableView(frame: CGRect(x: 0, y: -20, width: bbScreenWidth, height: bbScreenHeight+20), style: .plain)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(BBHomeIndexTableViewCell.classForCoder(), forCellReuseIdentifier: "BBHomeIndexTableViewCell")
+        tableView.backgroundColor = UIColor.red
+        tableView.separatorStyle = .none
+        return tableView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBar()
+        
         setupTabBar()
         
-        setupCollectionView()
+        setupTableView()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,44 +42,70 @@ class BBHomeViewController: UIViewController {
     }
     
 
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     private func setupTabBar() {
         tabBarController?.tabBar.isHidden = true
     }
     
-    private func setupCollectionView() {
-        view.addSubview(collectionView)
+    private func setupTableView() {
+        view.addSubview(tableView)
     }
     
 }
-
-//MARK:--代理
-extension BBHomeViewController : UICollectionViewDelegate,UICollectionViewDataSource {
+//MARK:--UITableViewDataSource
+extension BBHomeViewController : UITableViewDataSource {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
-        }else {
-            return 10
+            return 1
         }
         
+        return 4
     }
     
-    //自定义cell
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBHomeCollectionCell", for: indexPath)
-        cell.backgroundColor = UIColor.yellow
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = BBHomeIndexTableViewCell.cellWithTableView(tableView: tableView, indexPath: indexPath)
+        if indexPath.section == 1 && indexPath.row == 0 {
+            cell.isHideSectionHeader = true
+        }
         return cell
-        
-        
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+}
+
+//MARK:--UITableViewDelegate
+extension BBHomeViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        if section == 0 {
+            let headerView = UIView()
+            headerView.backgroundColor = UIColor.black
+            return headerView
+        }
+        return nil
+    }
+    
+    //返回分区头部高度
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if section == 0 {
+            return 0
+        }
+        return CGFloat(bbNavBarHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+
+        return 175
     }
 }

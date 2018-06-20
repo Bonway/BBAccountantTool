@@ -10,9 +10,21 @@ import UIKit
 
 class BBHomeCollectionCell: UICollectionViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var titleName : String = "" {
+        didSet {
+            titleLabel.text = titleName
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
+    
 
+    
+    
 }
