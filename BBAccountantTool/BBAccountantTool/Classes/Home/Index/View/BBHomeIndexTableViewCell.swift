@@ -97,8 +97,29 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBHomeCollectionCell", for: indexPath) as! BBHomeCollectionCell
         cell.titleName = "哈哈"
+        
         cell.isEdit = isEdit
         cell.isAdd = isAdd
+        
+        if isEdit && !isAdd {
+            let anim = CABasicAnimation(keyPath: "transform.rotation")
+            
+            anim.fromValue = (-M_1_PI/4)
+            anim.toValue = (M_1_PI/4)
+            anim.duration = 0.13
+            anim.repeatCount = MAXFLOAT
+            anim.autoreverses = true
+            cell.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+            //            cell.layer.shouldRasterize = true
+            cell.layer.add(anim, forKey: "rotation")
+            
+        }
+        
+        
+        
+        
+        
+        
         return cell
 
     }

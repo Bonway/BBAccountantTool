@@ -53,6 +53,7 @@ class BBHomeViewController: BBGestureBaseController {
         let titleRightBtn = UIButton(frame: CGRect(x: bbScreenWidth - 70, y: 28, width: 60, height: 32))
         titleRightBtn.setTitle("完成", for: .normal)
         titleRightBtn.setImage(UIImage(named: "home_index_done"), for: .normal)
+        titleRightBtn.setImage(UIImage(named: "home_index_done"), for: .highlighted)
         titleRightBtn.titleLabel?.font = UIFont.init(name: "PingFangSC-Medium", size: 18)
         titleRightBtn.setTitleColor(UIColor.white, for: .normal)
         titleRightBtn.layoutButton(with: .right, imageTitleSpace: 4)
