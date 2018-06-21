@@ -11,7 +11,6 @@
 		CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */; };
 		CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */; };
 		CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */; };
-		CF51C0AB20D893A10024E971 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A420D893A10024E971 /* AppDelegate.swift */; };
 		CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A620D893A10024E971 /* BBNavigationController.swift */; };
 		CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A820D893A10024E971 /* BBTabBarController.swift */; };
 		CF51C0AF20D893C50024E971 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0AE20D893C50024E971 /* BBHomeViewController.swift */; };
@@ -21,6 +20,9 @@
 		CF51C0B920D8A1750024E971 /* BBHomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0B720D8A1750024E971 /* BBHomeCollectionHeaderView.swift */; };
 		CF51C0BA20D8A1750024E971 /* BBHomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF51C0B820D8A1750024E971 /* BBHomeCollectionHeaderView.xib */; };
 		CF51C0C120D8CBC60024E971 /* BBHomeIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0BF20D8CBC60024E971 /* BBHomeIndexTableViewCell.swift */; };
+		CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAD520DB9AA700B5BCC7 /* AppDelegate.swift */; };
+		CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAE020DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m */; };
+		CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +32,6 @@
 		CF51C09220D88CD20024E971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBaseController.swift; sourceTree = "<group>"; };
 		CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBackConst.swift; sourceTree = "<group>"; };
-		CF51C0A320D893A10024E971 /* BBAccountant-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BBAccountant-Bridging-Header.h"; sourceTree = "<group>"; };
-		CF51C0A420D893A10024E971 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF51C0A620D893A10024E971 /* BBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNavigationController.swift; sourceTree = "<group>"; };
 		CF51C0A820D893A10024E971 /* BBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBTabBarController.swift; sourceTree = "<group>"; };
 		CF51C0AE20D893C50024E971 /* BBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +41,11 @@
 		CF51C0B720D8A1750024E971 /* BBHomeCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeCollectionHeaderView.swift; sourceTree = "<group>"; };
 		CF51C0B820D8A1750024E971 /* BBHomeCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBHomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		CF51C0BF20D8CBC60024E971 /* BBHomeIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexTableViewCell.swift; sourceTree = "<group>"; };
+		CF69AAD520DB9AA700B5BCC7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF69AAD720DB9ABA00B5BCC7 /* BBAccountantTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBAccountantTool-Bridging-Header.h"; sourceTree = "<group>"; };
+		CF69AADF20DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
+		CF69AAE020DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
+		CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +144,7 @@
 		CF51C09E20D893A10024E971 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CF69AAD120DB497500B5BCC7 /* Extension */,
 				CF51C0B020D897530024E971 /* Const */,
 			);
 			path = Other;
@@ -147,9 +153,8 @@
 		CF51C09F20D893A10024E971 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CF69AAD420DB9AA700B5BCC7 /* BBSystem */,
 				CF51C0A020D893A10024E971 /* BBGestureBack */,
-				CF51C0A320D893A10024E971 /* BBAccountant-Bridging-Header.h */,
-				CF51C0A420D893A10024E971 /* AppDelegate.swift */,
 				CF51C0A520D893A10024E971 /* BBNavigation */,
 				CF51C0A720D893A10024E971 /* BBTabBar */,
 			);
@@ -189,6 +194,41 @@
 			path = Const;
 			sourceTree = "<group>";
 		};
+		CF69AAD120DB497500B5BCC7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF69AADE20DB9B6600B5BCC7 /* UIButton+Extension */,
+				CF69AAE120DB9B6600B5BCC7 /* UIView+Extension */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CF69AAD420DB9AA700B5BCC7 /* BBSystem */ = {
+			isa = PBXGroup;
+			children = (
+				CF69AAD520DB9AA700B5BCC7 /* AppDelegate.swift */,
+				CF69AAD720DB9ABA00B5BCC7 /* BBAccountantTool-Bridging-Header.h */,
+			);
+			path = BBSystem;
+			sourceTree = "<group>";
+		};
+		CF69AADE20DB9B6600B5BCC7 /* UIButton+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF69AADF20DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.h */,
+				CF69AAE020DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m */,
+			);
+			path = "UIButton+Extension";
+			sourceTree = "<group>";
+		};
+		CF69AAE120DB9B6600B5BCC7 /* UIView+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */,
+			);
+			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +262,7 @@
 				TargetAttributes = {
 					CF51C08220D88CD10024E971 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -262,11 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF51C0AB20D893A10024E971 /* AppDelegate.swift in Sources */,
+				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
+				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
 				CF51C0C120D8CBC60024E971 /* BBHomeIndexTableViewCell.swift in Sources */,
 				CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */,
 				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
 				CF51C0B220D897530024E971 /* BBConst.swift in Sources */,
+				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
 				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
 				CF51C0B520D89DB20024E971 /* BBHomeCollectionCell.swift in Sources */,
@@ -407,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBAccountantTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -416,6 +460,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonway.BBAccountantTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBAccountantTool/Classes/Main/BBSystem/BBAccountantTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BBAccountantTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -434,6 +481,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonway.BBAccountantTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BBAccountantTool/Classes/Main/BBSystem/BBAccountantTool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

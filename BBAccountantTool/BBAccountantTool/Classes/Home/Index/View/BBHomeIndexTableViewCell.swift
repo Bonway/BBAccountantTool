@@ -10,44 +10,52 @@ import UIKit
 
 class BBHomeIndexTableViewCell: UITableViewCell {
 
+    var editBtnBlock:((UIButton) -> ())?
+    var isHideEditBtn : Bool = false
+    var isAdd : Bool = false
     
-    var isHideSectionHeader : Bool = false {
+    var isEdit : Bool = false {
         didSet {
-            
+            collectionView.reloadData()
         }
+        
     }
+    var sectionHeaderTitle : String = ""
+    
     
     fileprivate lazy var collectionView : UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (bbScreenWidth - 15 * 5)/4, height: (375.0 - 15 * 5)/4)
-        layout.minimumInteritemSpacing = 15
-        layout.minimumLineSpacing = 30
-        layout.sectionInset = UIEdgeInsetsMake(10, 15, 10, 15)
-        
-//        if isHideSectionHeader {
-//            layout.headerReferenceSize = CGSize(width: bbScreenWidth, height: 0) // 页眉宽高
-//        }else {
-//            layout.headerReferenceSize = CGSize(width: bbScreenWidth, height: 0) // 页眉宽高
-//        }
-        
+        layout.itemSize = CGSize(width: (bbScreenWidth - 18*2 - 7*3)/4, height: (bbScreenWidth - 18*2 - 7*3)/4)
+        layout.minimumInteritemSpacing = 7
+        layout.minimumLineSpacing = 10
+        layout.sectionInset = UIEdgeInsetsMake(5, 18, 5, 18)
         
         let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenWidth / 5 + 100), collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        let cellBackView = UIView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 165))
+        
+        let cellBackImageView = UIImageView(image: UIImage(named: "home_index_section_cell"))
+        cellBackImageView.frame = CGRect(x: 12, y: 50, width: bbScreenWidth - 24, height: 115)
+        cellBackView.addSubview(cellBackImageView)
+        
+        collectionView.backgroundView = cellBackView
+        
         collectionView.register(UINib.init(nibName: "BBHomeCollectionCell", bundle: nil), forCellWithReuseIdentifier: "BBHomeCollectionCell")
         collectionView.register(UINib.init(nibName: "BBHomeCollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "BBHomeCollectionHeaderView")
 
-        collectionView.backgroundColor = UIColor.red
+        collectionView.backgroundColor = UIColor.clear
         return collectionView
     }()
-    
     
     class func cellWithTableView(tableView: UITableView , indexPath: IndexPath) -> BBHomeIndexTableViewCell {
         let cellId = "BBHomeIndexTableViewCell"
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
         return cell as! BBHomeIndexTableViewCell
     }
     
@@ -60,8 +68,13 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    
     private func setupCell() {
+        backgroundColor = UIColor.clear
+//        contentView.backgroundColor = UIColor.clear
         contentView.addSubview(collectionView)
+        
     }
 }
 
@@ -84,7 +97,8 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBHomeCollectionCell", for: indexPath) as! BBHomeCollectionCell
         cell.titleName = "哈哈"
-        cell.backgroundColor = UIColor.yellow
+        cell.isEdit = isEdit
+        cell.isAdd = isAdd
         return cell
 
     }
@@ -100,12 +114,9 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
         if kind == UICollectionElementKindSectionHeader
         {
             reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "BBHomeCollectionHeaderView", for: indexPath) as! BBHomeCollectionHeaderView
-            reusableview.backgroundColor = UIColor.green
-            reusableview.sectionHeaderTitleLabel.text = "最近常用"
-        }
-        else if kind == UICollectionElementKindSectionFooter
-        {
-            
+            reusableview.sectionHeaderTitleLabel.text = sectionHeaderTitle
+            reusableview.editBtn.isHidden = isHideEditBtn
+            reusableview.editBtn.addTarget(self, action: #selector(editBtnClick(btn:)), for: .touchUpInside)
         }
         
         return reusableview
@@ -115,7 +126,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
 
 
 //MARK:--UICollectionViewDelegate
-extension BBHomeIndexTableViewCell : UICollectionViewDelegate{
+extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
@@ -123,16 +134,23 @@ extension BBHomeIndexTableViewCell : UICollectionViewDelegate{
     
 }
 //MARK:--UICollectionViewDelegateFlowLayout
-extension BBHomeIndexTableViewCell : UICollectionViewDelegateFlowLayout{
+extension BBHomeIndexTableViewCell : UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
-        print(section)
-        if isHideSectionHeader {
-            return CGSize(width: bbScreenWidth, height: 0)
-        }
+//        print(section)
+//        if isHideSectionHeader {
+//            return CGSize(width: bbScreenWidth, height: 0)
+//        }
         return CGSize(width: 0, height: 50)
     }
 
 }
-
+//MARK:--Action
+extension BBHomeIndexTableViewCell {
+    @objc fileprivate func editBtnClick(btn:UIButton){
+        btn.isSelected = !btn.isSelected
+        editBtnBlock!(btn)
+        btn.isSelected = !btn.isSelected
+    }
+}
