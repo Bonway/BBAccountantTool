@@ -129,7 +129,7 @@ extension BBHomeViewController : UITableViewDataSource {
             return 1
         }
         
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -184,8 +184,8 @@ extension BBHomeViewController : UITableViewDelegate {
         if section == 0 {
             return 0
         }
-//        return CGFloat(bbNavBarHeight)
-        return 0
+        return CGFloat(bbNavBarHeight)
+//        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
