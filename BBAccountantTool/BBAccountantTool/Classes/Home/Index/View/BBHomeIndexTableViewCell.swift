@@ -11,6 +11,7 @@ import UIKit
 class BBHomeIndexTableViewCell: UITableViewCell {
 
     var editBtnBlock:((UIButton) -> ())?
+    var itemBlock:((String) -> ())?
     var isHideEditBtn : Bool = false
     var isAdd : Bool = false
     
@@ -20,8 +21,8 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         }
         
     }
-    var sectionHeaderTitle : String = ""
     
+    var sectionModel: BBHomeIndexDataModel?
     
     fileprivate lazy var collectionView : UICollectionView = {
 
@@ -96,14 +97,13 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BBHomeCollectionCell", for: indexPath) as! BBHomeCollectionCell
-        cell.titleName = "哈哈"
-        
+        cell.itmeModel = sectionModel?.child[indexPath.row]
         cell.isEdit = isEdit
         cell.isAdd = isAdd
         
         if isEdit && !isAdd {
-            let anim = CABasicAnimation(keyPath: "transform.rotation")
             
+            let anim = CABasicAnimation(keyPath: "transform.rotation")
             anim.fromValue = (-M_1_PI/4)
             anim.toValue = (M_1_PI/4)
             anim.duration = 0.13
@@ -114,10 +114,6 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
             cell.layer.add(anim, forKey: "rotation")
             
         }
-        
-        
-        
-        
         
         
         return cell
@@ -135,7 +131,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
         if kind == UICollectionElementKindSectionHeader
         {
             reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "BBHomeCollectionHeaderView", for: indexPath) as! BBHomeCollectionHeaderView
-            reusableview.sectionHeaderTitleLabel.text = sectionHeaderTitle
+            reusableview.sectionHeaderTitleLabel.text = sectionModel?.typename
             reusableview.editBtn.isHidden = isHideEditBtn
             reusableview.editBtn.addTarget(self, action: #selector(editBtnClick(btn:)), for: .touchUpInside)
         }
@@ -150,7 +146,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
 extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        itemBlock!((sectionModel?.child[indexPath.row].h5url)!)
     }
     
 }

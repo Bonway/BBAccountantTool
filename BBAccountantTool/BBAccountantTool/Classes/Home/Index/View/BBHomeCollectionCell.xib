@@ -38,7 +38,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-yK-RVm">
                         <rect key="frame" x="20" y="8" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_index_item_add" translatesAutoresizingMaskIntoConstraints="NO" id="n61-W7-HgG">
                         <rect key="frame" x="51" y="1" width="16" height="16"/>
@@ -46,7 +45,6 @@
                     </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.22352941179999999" green="0.49019607840000001" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Eo7-kr-tJL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CfK-Se-qiu"/>
                 <constraint firstAttribute="trailing" secondItem="Eo7-kr-tJL" secondAttribute="trailing" id="ZG8-5u-CCV"/>
@@ -56,6 +54,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="cornerImageView" destination="n61-W7-HgG" id="hvk-Pw-EDa"/>
+                <outlet property="imageView" destination="0OE-yK-RVm" id="pVr-yp-Aaf"/>
+                <outlet property="titleLabel" destination="nxJ-ki-35M" id="5Li-pF-fX8"/>
             </connections>
         </collectionViewCell>
     </objects>

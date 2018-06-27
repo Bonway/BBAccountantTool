@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class BBHomeCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var cornerImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     var isEdit : Bool = false {
         didSet {
@@ -30,14 +34,15 @@ class BBHomeCollectionCell: UICollectionViewCell {
     
     
     
-    @IBOutlet weak var titleLabel: UILabel!
     
-    var titleName : String = "" {
+    
+    
+    var itmeModel: BBHomeIndexDataChildModel?{
         didSet {
-//            titleLabel.text = titleName
+            titleLabel.text = itmeModel?.title
+            imageView.kf.setImage(with: URL(string: (itmeModel?.iconurl)!), placeholder: UIImage(named: "test"))
         }
     }
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
