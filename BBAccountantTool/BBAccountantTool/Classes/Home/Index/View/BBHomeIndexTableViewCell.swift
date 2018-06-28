@@ -11,9 +11,12 @@ import UIKit
 class BBHomeIndexTableViewCell: UITableViewCell {
 
     var editBtnBlock:((UIButton) -> ())?
-    var itemBlock:((String) -> ())?
+    var itemBlock:((String,String,String,String) -> ())?
     var isHideEditBtn : Bool = false
     var isAdd : Bool = false
+    
+    var cellBackView = UIView()
+    var cellBackImageView = UIImageView()
     
     var isEdit : Bool = false {
         didSet {
@@ -22,25 +25,36 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         
     }
     
-    var sectionModel: BBHomeIndexDataModel?
+    var sectionModel: BBHomeIndexDataModel? {
+        didSet{
+            let cellRow = (sectionModel?.child.count ?? 0) / 4
+//            print("count:\(sectionModel?.child.count) -- \(cellRow)")
+            collectionView.height = CGFloat(50 + 100 + 78 * cellRow)-5
+            cellBackView.height = CGFloat(100 + 78 * cellRow)-5
+            cellBackImageView.height = CGFloat(100 + 78 * cellRow)-5
+        }
+    }
     
     fileprivate lazy var collectionView : UICollectionView = {
 
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: (bbScreenWidth - 18*2 - 7*3)/4, height: (bbScreenWidth - 18*2 - 7*3)/4)
+        layout.itemSize = CGSize(width: (bbScreenWidth - 18*2 - 7*3)/4, height: 78)
         layout.minimumInteritemSpacing = 7
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = 15
         layout.sectionInset = UIEdgeInsetsMake(5, 18, 5, 18)
         
-        let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenWidth / 5 + 100), collectionViewLayout: layout)
+//        let cellRow = (sectionModel?.child.count ?? 0) / 4
+        
+        let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: Int(bbScreenWidth), height: 175), collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        let cellBackView = UIView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 165))
+        cellBackView = UIView(frame: CGRect(x: 0, y: 0, width: Int(bbScreenWidth), height: 175))
         
-        let cellBackImageView = UIImageView(image: UIImage(named: "home_index_section_cell"))
-        cellBackImageView.frame = CGRect(x: 12, y: 50, width: bbScreenWidth - 24, height: 115)
+        cellBackImageView = UIImageView(image: UIImage(named: "home_index_section_cell"))
+        cellBackImageView.frame = CGRect(x: 12, y: 50, width: Int(bbScreenWidth - 24), height: 175)
         cellBackView.addSubview(cellBackImageView)
         
         collectionView.backgroundView = cellBackView
@@ -54,9 +68,7 @@ class BBHomeIndexTableViewCell: UITableViewCell {
     
     class func cellWithTableView(tableView: UITableView , indexPath: IndexPath) -> BBHomeIndexTableViewCell {
         let cellId = "BBHomeIndexTableViewCell"
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        
         return cell as! BBHomeIndexTableViewCell
     }
     
@@ -73,7 +85,7 @@ class BBHomeIndexTableViewCell: UITableViewCell {
     
     private func setupCell() {
         backgroundColor = UIColor.clear
-//        contentView.backgroundColor = UIColor.clear
+        contentView.backgroundColor = UIColor.clear
         contentView.addSubview(collectionView)
         
     }
@@ -89,7 +101,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return sectionModel?.child.count ?? 0
         
     }
     
@@ -134,6 +146,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
             reusableview.sectionHeaderTitleLabel.text = sectionModel?.typename
             reusableview.editBtn.isHidden = isHideEditBtn
             reusableview.editBtn.addTarget(self, action: #selector(editBtnClick(btn:)), for: .touchUpInside)
+//            reusableview.backgroundColor = UIColor.yellow
         }
         
         return reusableview
@@ -146,7 +159,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
 extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        itemBlock!((sectionModel?.child[indexPath.row].h5url)!)
+        itemBlock!((sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
     }
     
 }

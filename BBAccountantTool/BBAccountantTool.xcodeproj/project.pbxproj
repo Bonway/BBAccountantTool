@@ -19,6 +19,7 @@
 		CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAD520DB9AA700B5BCC7 /* AppDelegate.swift */; };
 		CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAE020DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m */; };
 		CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */; };
+		CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF75EA7620E4BC2A00147F3E /* MBProgressHUD+Extension.m */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
 		CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
@@ -53,6 +54,8 @@
 		CF69AADF20DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
 		CF69AAE020DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		CF75EA7520E4BC2A00147F3E /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		CF75EA7620E4BC2A00147F3E /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
 		CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +232,7 @@
 		CF69AAD120DB497500B5BCC7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF75EA7120E4BB9000147F3E /* MBProgressHUD+Extension */,
 				CF69AADE20DB9B6600B5BCC7 /* UIButton+Extension */,
 				CF69AAE120DB9B6600B5BCC7 /* UIView+Extension */,
 			);
@@ -259,6 +263,15 @@
 				CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */,
 			);
 			path = "UIView+Extension";
+			sourceTree = "<group>";
+		};
+		CF75EA7120E4BB9000147F3E /* MBProgressHUD+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF75EA7520E4BC2A00147F3E /* MBProgressHUD+Extension.h */,
+				CF75EA7620E4BC2A00147F3E /* MBProgressHUD+Extension.m */,
+			);
+			path = "MBProgressHUD+Extension";
 			sourceTree = "<group>";
 		};
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
@@ -441,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */,
+				CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */,
 				CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */,
 				CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */,
 				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
@@ -596,6 +610,7 @@
 			baseConfigurationReference = 0EA20511D5BA2603910E0452 /* Pods-BBAccountantTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RM56A597YU;
@@ -619,6 +634,7 @@
 			baseConfigurationReference = 173B82BF1D61A857E846E2A9 /* Pods-BBAccountantTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RM56A597YU;

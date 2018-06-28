@@ -7,6 +7,7 @@
 //
 import MBProgressHUD
 import Foundation
+//import MBProgressHUD+Extension
 
 class TAlert: NSObject {
     enum AlertType {
@@ -25,7 +26,7 @@ class TAlert: NSObject {
             case .info:
                 image = #imageLiteral(resourceName: "Alert_info")
             case .error:
-                image = #imageLiteral(resourceName: "Alert_error")
+                image = #imageLiteral(resourceName: "tabbar_home_selected")
             case .warning:
                 image = #imageLiteral(resourceName: "Alert_warning")
             }
@@ -42,14 +43,14 @@ class TAlert: NSObject {
 class TProgressHUD {
     class func show() {
         if let window = UIApplication.shared.delegate?.window {
-            MBProgressHUD.showAdded(to: window!, animated: true)
+//            MBProgressHUD.showAdded(to: window!, animated: true)
+            MBProgressHUD.showProgress(window)
         }
     }
     
     class func hide() {
         if let window = UIApplication.shared.delegate?.window {
             MBProgressHUD.hide(for: window!, animated: true)
-//            MBProgressHUD.hideAllHUDs(for: window!, animated: true)
         }
     }
 }
