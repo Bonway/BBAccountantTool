@@ -22,22 +22,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo7-kr-tJL">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="68"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="个人计算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-ki-35M">
-                                <rect key="frame" x="8" y="48" width="64" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人计算" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="nxJ-ki-35M">
+                                <rect key="frame" x="0.0" y="48" width="80" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="I5v-Md-QKV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nxJ-ki-35M" firstAttribute="leading" secondItem="Eo7-kr-tJL" secondAttribute="leading" id="2j7-mr-8WT"/>
+                            <constraint firstAttribute="bottom" secondItem="nxJ-ki-35M" secondAttribute="bottom" constant="5" id="YUA-1d-I3g"/>
+                            <constraint firstAttribute="trailing" secondItem="nxJ-ki-35M" secondAttribute="trailing" id="xSW-dw-WE8"/>
                             <constraint firstAttribute="height" constant="68" id="zEv-cL-73i"/>
                         </constraints>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-yK-RVm">
-                        <rect key="frame" x="20" y="8" width="40" height="40"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0OE-yK-RVm">
+                        <rect key="frame" x="20" y="3" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="CaY-cS-NuV"/>
+                            <constraint firstAttribute="height" constant="40" id="O4m-NW-cZs"/>
+                        </constraints>
                     </imageView>
                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_index_item_add" translatesAutoresizingMaskIntoConstraints="NO" id="n61-W7-HgG">
                         <rect key="frame" x="51" y="1" width="16" height="16"/>
@@ -46,7 +54,9 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="0OE-yK-RVm" secondAttribute="bottom" constant="25" id="56s-wd-BnL"/>
                 <constraint firstItem="Eo7-kr-tJL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CfK-Se-qiu"/>
+                <constraint firstItem="0OE-yK-RVm" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="SCY-8b-033"/>
                 <constraint firstAttribute="trailing" secondItem="Eo7-kr-tJL" secondAttribute="trailing" id="ZG8-5u-CCV"/>
                 <constraint firstItem="Eo7-kr-tJL" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="e1U-vV-CME"/>
                 <constraint firstItem="Eo7-kr-tJL" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gtZ-xO-MLK"/>

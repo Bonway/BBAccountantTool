@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		76C1D1B7B4DF39DB7A1A2966 /* Pods_BBAccountantTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */; };
 		CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */; };
+		CF4E72FE20E6039B005487BB /* UIBarButtonItem+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4E72FD20E6039B005487BB /* UIBarButtonItem+BBExtension.m */; };
+		CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730020E610F2005487BB /* WBComposeTypeView.swift */; };
+		CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */; };
+		CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */; };
+		CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E730320E610F3005487BB /* WBComposeTypeView.xib */; };
+		CF4E732720E61EC7005487BB /* BBShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E732620E61EC7005487BB /* BBShareView.swift */; };
+		CF4E732920E61ED7005487BB /* BBShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E732820E61ED7005487BB /* BBShareView.xib */; };
 		CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08D20D88CD20024E971 /* Assets.xcassets */; };
 		CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */; };
 		CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */; };
@@ -40,6 +47,14 @@
 		173B82BF1D61A857E846E2A9 /* Pods-BBAccountantTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAccountantTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool.release.xcconfig"; sourceTree = "<group>"; };
 		8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAccountantTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeWebController.swift; sourceTree = "<group>"; };
+		CF4E72FC20E6039B005487BB /* UIBarButtonItem+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BBExtension.h"; sourceTree = "<group>"; };
+		CF4E72FD20E6039B005487BB /* UIBarButtonItem+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BBExtension.m"; sourceTree = "<group>"; };
+		CF4E730020E610F2005487BB /* WBComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeView.swift; sourceTree = "<group>"; };
+		CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
+		CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
+		CF4E730320E610F3005487BB /* WBComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeView.xib; sourceTree = "<group>"; };
+		CF4E732620E61EC7005487BB /* BBShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBShareView.swift; sourceTree = "<group>"; };
+		CF4E732820E61ED7005487BB /* BBShareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBShareView.xib; sourceTree = "<group>"; };
 		CF51C08320D88CD10024E971 /* BBAccountantTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBAccountantTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF51C08D20D88CD20024E971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF51C09020D88CD20024E971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				CF1B5BCA20E3773100DE77DD /* Controller */,
+				CF4E72FF20E60BC2005487BB /* View */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -114,6 +130,28 @@
 				CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF4E72FB20E6039B005487BB /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E72FC20E6039B005487BB /* UIBarButtonItem+BBExtension.h */,
+				CF4E72FD20E6039B005487BB /* UIBarButtonItem+BBExtension.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		CF4E72FF20E60BC2005487BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */,
+				CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */,
+				CF4E730020E610F2005487BB /* WBComposeTypeView.swift */,
+				CF4E730320E610F3005487BB /* WBComposeTypeView.xib */,
+				CF4E732620E61EC7005487BB /* BBShareView.swift */,
+				CF4E732820E61ED7005487BB /* BBShareView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CF51C07A20D88CD10024E971 = {
@@ -232,6 +270,7 @@
 		CF69AAD120DB497500B5BCC7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF4E72FB20E6039B005487BB /* UIBarButtonItem */,
 				CF75EA7120E4BB9000147F3E /* MBProgressHUD+Extension */,
 				CF69AADE20DB9B6600B5BCC7 /* UIButton+Extension */,
 				CF69AAE120DB9B6600B5BCC7 /* UIView+Extension */,
@@ -396,6 +435,9 @@
 				CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */,
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
+				CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */,
+				CF4E732920E61ED7005487BB /* BBShareView.xib in Resources */,
+				CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +474,7 @@
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -440,6 +483,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -454,11 +498,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */,
+				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
+				CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */,
 				CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */,
 				CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */,
+				CF4E732720E61EC7005487BB /* BBShareView.swift in Sources */,
 				CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */,
 				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
 				CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */,
+				CF4E72FE20E6039B005487BB /* UIBarButtonItem+BBExtension.m in Sources */,
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
 				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
