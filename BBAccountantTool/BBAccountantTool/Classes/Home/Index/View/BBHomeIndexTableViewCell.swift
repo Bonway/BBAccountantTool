@@ -12,6 +12,7 @@ class BBHomeIndexTableViewCell: UITableViewCell {
 
     var editBtnBlock:((UIButton) -> ())?
     var itemBlock:((String,String,String,String) -> ())?
+    var itemErrorBlock:(() -> ())?
     var isHideEditBtn : Bool = false
     var isAdd : Bool = false
     
@@ -22,13 +23,18 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         didSet {
             collectionView.reloadData()
         }
-        
     }
     
     var sectionModel: BBHomeIndexDataModel? {
         didSet{
-            let cellRow = (sectionModel?.child.count ?? 0) / 4
-//            print("count:\(sectionModel?.child.count) -- \(cellRow)")
+            
+            var cellRow = 0
+            if (sectionModel?.child.count ?? 0) % 4 == 0{
+                cellRow = (sectionModel?.child.count ?? 0) / 4 - 1
+            }else{
+                cellRow = (sectionModel?.child.count ?? 0) / 4
+            }
+            
             collectionView.height = CGFloat(50 + 100 + 78 * cellRow)-5
             cellBackView.height = CGFloat(100 + 78 * cellRow)-5
             cellBackImageView.height = CGFloat(100 + 78 * cellRow)-5
@@ -40,19 +46,17 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: (bbScreenWidth - 18*2 - 7*3)/4, height: 78)
         layout.minimumInteritemSpacing = 7
-        layout.minimumLineSpacing = 15
+        layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsetsMake(5, 18, 5, 18)
         
 //        let cellRow = (sectionModel?.child.count ?? 0) / 4
         
         let collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 0, width: Int(bbScreenWidth), height: 175), collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
-        
         collectionView.delegate = self
         collectionView.dataSource = self
         
         cellBackView = UIView(frame: CGRect(x: 0, y: 0, width: Int(bbScreenWidth), height: 175))
-        
         cellBackImageView = UIImageView(image: UIImage(named: "home_index_section_cell"))
         cellBackImageView.frame = CGRect(x: 12, y: 50, width: Int(bbScreenWidth - 24), height: 175)
         cellBackView.addSubview(cellBackImageView)
@@ -100,9 +104,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return sectionModel?.child.count ?? 0
-        
     }
     
     //自定义cell
@@ -126,27 +128,20 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
             cell.layer.add(anim, forKey: "rotation")
             
         }
-        
-        
         return cell
-
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        
-        
         var reusableview:BBHomeCollectionHeaderView!
-        
         if kind == UICollectionElementKindSectionHeader
         {
             reusableview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "BBHomeCollectionHeaderView", for: indexPath) as! BBHomeCollectionHeaderView
             reusableview.sectionHeaderTitleLabel.text = sectionModel?.typename
-            reusableview.editBtn.isHidden = isHideEditBtn
+//            reusableview.editBtn.isHidden = isHideEditBtn
             reusableview.editBtn.addTarget(self, action: #selector(editBtnClick(btn:)), for: .touchUpInside)
-//            reusableview.backgroundColor = UIColor.yellow
         }
         
         return reusableview
@@ -159,7 +154,14 @@ extension BBHomeIndexTableViewCell : UICollectionViewDataSource {
 extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        itemBlock!((sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
+        
+        
+        if (sectionModel?.child[indexPath.row].h5url.isEmpty)! {
+//            MBProgressHUD.showTitle("功能暂无开发", to: self)
+            itemErrorBlock!()
+        }else{
+            itemBlock!((sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
+        }
     }
     
 }

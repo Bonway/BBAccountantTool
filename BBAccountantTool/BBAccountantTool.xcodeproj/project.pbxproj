@@ -40,6 +40,10 @@
 		CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */; };
 		CFD46B2920E242730066FC85 /* TSaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2820E242730066FC85 /* TSaveFiles.swift */; };
 		CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2A20E242A40066FC85 /* THUD.swift */; };
+		CFF7EB0C20EA39EF00CFE484 /* UIView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7EB0820EA39EF00CFE484 /* UIView+DDGShot.swift */; };
+		CFF7EB0D20EA39EF00CFE484 /* UIScrollView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7EB0920EA39EF00CFE484 /* UIScrollView+DDGShot.swift */; };
+		CFF7EB0E20EA39EF00CFE484 /* UIImage+DDGManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7EB0A20EA39EF00CFE484 /* UIImage+DDGManage.swift */; };
+		CFF7EB0F20EA39EF00CFE484 /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7EB0B20EA39EF00CFE484 /* WKWebView+DDGShot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexPresenter.swift; sourceTree = "<group>"; };
 		CFD46B2820E242730066FC85 /* TSaveFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSaveFiles.swift; sourceTree = "<group>"; };
 		CFD46B2A20E242A40066FC85 /* THUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THUD.swift; sourceTree = "<group>"; };
+		CFF7EB0820EA39EF00CFE484 /* UIView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+DDGShot.swift"; sourceTree = "<group>"; };
+		CFF7EB0920EA39EF00CFE484 /* UIScrollView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DDGShot.swift"; sourceTree = "<group>"; };
+		CFF7EB0A20EA39EF00CFE484 /* UIImage+DDGManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DDGManage.swift"; sourceTree = "<group>"; };
+		CFF7EB0B20EA39EF00CFE484 /* WKWebView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+DDGShot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +224,7 @@
 		CF51C09E20D893A10024E971 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7EB0620EA39EF00CFE484 /* Third */,
 				CF69AAD120DB497500B5BCC7 /* Extension */,
 				CF51C0B020D897530024E971 /* Const */,
 			);
@@ -369,6 +378,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CFF7EB0620EA39EF00CFE484 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7EB0720EA39EF00CFE484 /* DDGScreenShot */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		CFF7EB0720EA39EF00CFE484 /* DDGScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7EB0820EA39EF00CFE484 /* UIView+DDGShot.swift */,
+				CFF7EB0920EA39EF00CFE484 /* UIScrollView+DDGShot.swift */,
+				CFF7EB0A20EA39EF00CFE484 /* UIImage+DDGManage.swift */,
+				CFF7EB0B20EA39EF00CFE484 /* WKWebView+DDGShot.swift */,
+			);
+			path = DDGScreenShot;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -510,6 +538,7 @@
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
 				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
+				CFF7EB0D20EA39EF00CFE484 /* UIScrollView+DDGShot.swift in Sources */,
 				CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */,
 				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
 				CFD46B1720E1D2D20066FC85 /* BBHomeIndexTableViewCell.swift in Sources */,
@@ -517,10 +546,13 @@
 				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
 				CF51C0B220D897530024E971 /* BBConst.swift in Sources */,
 				CFD46B1520E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift in Sources */,
+				CFF7EB0F20EA39EF00CFE484 /* WKWebView+DDGShot.swift in Sources */,
 				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
 				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
+				CFF7EB0C20EA39EF00CFE484 /* UIView+DDGShot.swift in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
+				CFF7EB0E20EA39EF00CFE484 /* UIImage+DDGManage.swift in Sources */,
 				CFD46B2920E242730066FC85 /* TSaveFiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,7 +700,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonway.BBAccountantTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaodun.accountanttoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BBAccountantTool/Classes/Main/BBSystem/BBAccountantTool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -692,7 +724,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bonway.BBAccountantTool;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gaodun.accountanttoo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BBAccountantTool/Classes/Main/BBSystem/BBAccountantTool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

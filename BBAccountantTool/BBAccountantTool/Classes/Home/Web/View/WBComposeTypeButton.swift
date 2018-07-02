@@ -15,7 +15,7 @@ class WBComposeTypeButton: UIControl {
     @IBOutlet weak var titleLabel: UILabel!
     
     /// 点击按钮要展现控制器的类型
-    var clsName: String?
+    var clsName: String? = "adf"
     
     /// 使用图像名称／标题创建按钮，按钮布局从 XIB 加载
     class func composeTypeButton(imageName: String, title: String) -> WBComposeTypeButton {
@@ -27,6 +27,7 @@ class WBComposeTypeButton: UIControl {
         btn.imageView.image = UIImage(named: imageName)
         btn.titleLabel.text = title
         
+        btn.clsName = "adf"
         return btn
     }
 }

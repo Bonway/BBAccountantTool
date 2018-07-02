@@ -33,25 +33,21 @@ class BBHomeCollectionCell: UICollectionViewCell {
     }
     
     
-    
-    
-    
-    
     var itmeModel: BBHomeIndexDataChildModel?{
         didSet {
             titleLabel.text = itmeModel?.title
             imageView.kf.setImage(with: URL(string: (itmeModel?.iconurl)!), placeholder: UIImage(named: "test"))
+            if (itmeModel?.h5url.isEmpty)! {
+                alpha = 0.3
+            }else{
+//                backgroundColor = UIColor.red
+            }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
     }
-    
-
-    
     
 }

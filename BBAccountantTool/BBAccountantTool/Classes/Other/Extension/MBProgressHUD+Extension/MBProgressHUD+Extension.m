@@ -32,4 +32,22 @@
     return hud;
 }
 
+
++ (MBProgressHUD *)showTitle:(NSString *)title toView:(UIView *)view {
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
+    // 快速显示一个提示信息
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = NSLocalizedString(title, @"HUD message title");
+    hud.bezelView.alpha = 0.9;
+    hud.bezelView.color = [UIColor blackColor];
+    hud.label.font = [UIFont systemFontOfSize:14];
+    hud.label.textColor = [UIColor whiteColor];
+    hud.userInteractionEnabled = NO; //userInteractionEnabled=NO时，不会遮挡containerView，view可以正常响应
+    //Move to bottm center.
+    hud.offset = CGPointMake(0.f, -50);
+    
+    [hud hideAnimated:YES afterDelay:2.f];
+    return hud;
+}
 @end

@@ -16,4 +16,5 @@
  */
 + (MBProgressHUD *)showHUDProgress:(UIView *)containerView;
 
++ (MBProgressHUD *)showTitle:(NSString *)title toView:(UIView *)view;
 @end

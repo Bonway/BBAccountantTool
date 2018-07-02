@@ -48,20 +48,29 @@
                         <constraint firstAttribute="height" constant="162" id="2N3-pz-sBa"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAN-iU-TIY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="457"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="BDs-hm-xYb" firstAttribute="top" secondItem="hAN-iU-TIY" secondAttribute="bottom" id="5rf-G6-2Q6"/>
                 <constraint firstItem="UTP-ux-W4z" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="8xS-Ro-PWK"/>
+                <constraint firstItem="hAN-iU-TIY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="C5o-QC-1V0"/>
+                <constraint firstItem="hAN-iU-TIY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="CIZ-yF-tT0"/>
                 <constraint firstItem="UTP-ux-W4z" firstAttribute="top" secondItem="BDs-hm-xYb" secondAttribute="bottom" id="GQ8-r6-hce"/>
                 <constraint firstItem="UTP-ux-W4z" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="X3d-mp-0km"/>
                 <constraint firstItem="BDs-hm-xYb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jYw-hp-Irx"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BDs-hm-xYb" secondAttribute="trailing" id="kMc-Hh-8Xm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UTP-ux-W4z" secondAttribute="trailing" id="m1K-Ti-pnP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hAN-iU-TIY" secondAttribute="trailing" id="xhH-kf-MEu"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="ItemView" destination="BDs-hm-xYb" id="i9f-yO-GXf"/>
                 <outlet property="bottomBtnHeight" destination="y5c-gz-dJY" id="6hB-e8-cUL"/>
+                <outlet property="maskShareView" destination="hAN-iU-TIY" id="I1F-tS-1my"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>

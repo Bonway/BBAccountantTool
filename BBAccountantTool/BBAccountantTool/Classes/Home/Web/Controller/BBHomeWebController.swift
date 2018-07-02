@@ -58,12 +58,38 @@ class BBHomeWebController: UIViewController {
     }
     
     @objc private func menuClick(){
-//        navigationController?.popViewController(animated: true)
         // 1> 实例化视图
         let v = BBShareView.shareView()
-        v.show()
-//        v.backgroundColor = UIColor.red
-//        view.addSubview(v)
+        v.show {(clsName) in
+            
+            if clsName! == "微信" {
+                MBProgressHUD.showTitle("微信分享，账号还没有", to: self.view)
+            }
+            
+            if clsName! == "朋友圈" {
+                MBProgressHUD.showTitle("朋友圈分享，账号还没有", to: self.view)
+            }
+            
+            if clsName! == "复制链接" {
+                self.pasteBoard(str: self.urlString)
+            }
+            
+            if clsName! == "保存图片" {
+               TProgressHUD.show()
+                self.wkWebView.DDGContentScreenShot { (image) in
+                    TProgressHUD.hide()
+                    UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
+                }
+            }
+            
+            if clsName! == "复制链接" {
+                self.pasteBoard(str: self.urlString)
+            }
+            
+            
+            
+            v.removeFromSuperview()
+        }
         
         // 2> 显示视图 - 注意闭包的循环引用！
 //        v.show { [weak v] (clsName) in
@@ -88,7 +114,37 @@ class BBHomeWebController: UIViewController {
 //                v?.removeFromSuperview()
 //            }
 //        }
+        
     }
+    
+    /// 保存长截图
+    ///
+    /// - Parameters:
+    ///   - image: 返回的图片
+    ///   - error: 错误信息
+    ///   - contextInfo: 描述
+    @objc private func saveImage(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+        var showMessage = ""
+        if error != nil{
+            showMessage = "保存失败"
+        }else{
+            showMessage = "保存成功"
+        }
+        MBProgressHUD.showTitle(showMessage, to: view)
+    }
+    
+    /// 复制到剪切板
+    ///
+    /// - Parameter str: 需要复制的链接
+    private func pasteBoard(str:String) {
+        //就这两句话就实现了
+        let paste = UIPasteboard.general
+        paste.string = str
+        MBProgressHUD.showTitle("链接已复制", to: view)
+    }
+    
+    
+    
     
     private func setupWebView(){
         view.addSubview(wkWebView)
