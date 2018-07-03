@@ -90,12 +90,12 @@ class BBShareView: UIView {
             // x,y 在系统中使用 CGPoint 表示，如果要转换成 id，需要使用 `NSValue` 包装
             let scale = (selectedButton == btn) ? 2 : 0.2
             scaleAnim.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
-            scaleAnim.duration = 0.5
+            scaleAnim.duration = 0.3
             btn.pop_add(scaleAnim, forKey: nil)
             // 2> 渐变动画 - 动画组
             let alphaAnim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
             alphaAnim.toValue = 0.2
-            alphaAnim.duration = 0.5
+            alphaAnim.duration = 0.3
             btn.pop_add(alphaAnim, forKey: nil)
             // 3> 添加动画监听
             if i == 0 {
@@ -120,7 +120,6 @@ private extension BBShareView {
         
         // 1. 根据 contentOffset 判断当前显示的子视图
         let v = itemView.subviews[0]
-        
         // 2. 遍历 v 中的所有按钮
         for (i, btn) in v.subviews.enumerated().reversed() {
             // 1> 创建动画
@@ -133,13 +132,7 @@ private extension BBShareView {
             // 3> 添加动画
             btn.layer.pop_add(anim, forKey: nil)
             // 4> 监听第 0 个按钮的动画，是最后一个执行的
-            if i == 0 {
-                print(CACurrentMediaTime())
-                anim.completionBlock = { _, _ in
-                    print(CACurrentMediaTime())
-                    self.hideCurrentView()
-                }
-            }
+            self.hideCurrentView()
         }
     }
     
@@ -149,7 +142,7 @@ private extension BBShareView {
         let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
         anim.fromValue = 1
         anim.toValue = 0
-        anim.duration = 0.25
+        anim.duration = 0.5
         // 2> 添加到视图
         pop_add(anim, forKey: nil)
         // 3> 添加完成监听方法
