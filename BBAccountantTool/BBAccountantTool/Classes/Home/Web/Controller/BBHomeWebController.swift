@@ -15,6 +15,14 @@ class BBHomeWebController: UIViewController {
     var titleString: String = ""
     var shareTitle: String = ""
     var shareDscription: String = ""
+    var iconurl: String = ""
+    
+//    fileprivate lazy var headerView: UIImageView = {
+//        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0))
+////        headerView.backgroundColor = UIColor.red
+//        headerView.image = UIImage(named: "home_index_header_backview")
+//        return headerView
+//    }()
     
     fileprivate lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0))
@@ -27,6 +35,15 @@ class BBHomeWebController: UIViewController {
         let webConfiguration = WKWebViewConfiguration()
         let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight - bbNavBarHeight), configuration: webConfiguration)
         wkWebView.navigationDelegate = self
+//        wkWebView.scrollView.delegate = self
+//        wkWebView.scrollView.mj_header = MJRefreshHeader.init(refreshingBlock: {
+//
+//        })
+//            [MJRefreshHeader headerWithRefreshingBlock:^{
+            //刷新请求
+//            }];
+//        wkWebView.scrollView.hea
+        
         wkWebView.load(URLRequest(url: URL(string: urlString)!))
         return wkWebView
         
@@ -40,21 +57,40 @@ class BBHomeWebController: UIViewController {
         setupNavigation()
         
         setupWebView()
-        view.backgroundColor = UIColor.white
         
     }
     
     private func setupNavigation(){
         navigationItem.title = titleString
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "navigation_back"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backClick))
+        let backItem = UIBarButtonItem.init(image: UIImage(named: "navigation_back"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backClick))
+        
+        let closeBtn = UIButton(type: .custom)
+        closeBtn.setTitle("关闭", for: .normal)
+        closeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        closeBtn.setTitleColor(UIColor.white, for: .normal)
+        closeBtn.addTarget(self, action: #selector(closeClick), for: .touchUpInside)
+        
+        let closeItem = UIBarButtonItem.init(customView: closeBtn)
+        
+        self.navigationItem.leftBarButtonItems = [backItem,closeItem]
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "navigation_menu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(menuClick))
         
     }
     
-    @objc private func backClick(){
+    @objc private func closeClick(){
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @objc private func backClick(){
+        
+        if wkWebView.canGoBack {
+            wkWebView.goBack()
+        }else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     
     @objc private func menuClick(){
@@ -63,15 +99,11 @@ class BBHomeWebController: UIViewController {
         v.show {(clsName) in
             
             if clsName! == "微信" {
-                MBProgressHUD.showTitle("微信分享，账号还没有", to: self.view)
+                self.share(type: .typeWechat)
             }
             
             if clsName! == "朋友圈" {
-                MBProgressHUD.showTitle("朋友圈分享，账号还没有", to: self.view)
-            }
-            
-            if clsName! == "复制链接" {
-                self.pasteBoard(str: self.urlString)
+                self.share(type: .subTypeWechatTimeline)
             }
             
             if clsName! == "保存图片" {
@@ -148,6 +180,7 @@ class BBHomeWebController: UIViewController {
     
     private func setupWebView(){
         view.addSubview(wkWebView)
+//        view.addSubview(headerView)       
         view.addSubview(progressView)
         wkWebView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
     }
@@ -156,11 +189,37 @@ class BBHomeWebController: UIViewController {
         wkWebView.removeObserver(self, forKeyPath: "estimatedProgress")
     }
     
+    
+    
+    private func share(type:SSDKPlatformType){
+        // 1.创建分享参数
+        let shareParames = NSMutableDictionary()
+        shareParames.ssdkSetupShareParams(byText: shareDscription,
+                                          images : iconurl,
+                                          url : NSURL(string:urlString) as URL?,
+                                          title : shareTitle,
+                                          type : .auto)
+        
+        //2.进行分享
+        ShareSDK.share(type, parameters: shareParames) { (state : SSDKResponseState, nil, entity : SSDKContentEntity?, error :Error?) in
+            
+            switch state{
+                
+            case SSDKResponseState.success:  MBProgressHUD.showTitle("分享成功", to: self.view)
+            case SSDKResponseState.fail:    MBProgressHUD.showTitle("授权失败,错误描述:\(String(describing: error))",to: self.view)
+            case SSDKResponseState.cancel:  MBProgressHUD.showTitle("操作取消",to: self.view)
+                
+            default:
+                break
+            }
+            
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
     
 }
 
@@ -170,7 +229,7 @@ extension BBHomeWebController : WKNavigationDelegate,WKUIDelegate {
         if keyPath == "estimatedProgress" {
             progressView.isHidden = wkWebView.estimatedProgress == 1
             progressView.setProgress(Float(wkWebView.estimatedProgress), animated: true)
-            print(wkWebView.estimatedProgress)
+//            print(wkWebView.estimatedProgress)
         }
     }
     
@@ -179,4 +238,24 @@ extension BBHomeWebController : WKNavigationDelegate,WKUIDelegate {
     }
     
 }
+
+//extension BBHomeWebController : UIScrollViewDelegate {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+////        var diff =  -wkWebView.scrollView.contentOffset.y;
+//        print(wkWebView.scrollView.contentOffset.y)
+//        if (wkWebView.scrollView.contentOffset.y < 0) {
+//            headerView.height = -wkWebView.scrollView.contentOffset.y
+//        }
+////            CGFloat oldH = self.headerDefaultSize.height;
+////            CGFloat oldW = self.headerDefaultSize.width;
+////
+////            CGFloat newH = oldH + diff;
+////            CGFloat newW = oldW *newH/oldH;
+////
+////            self.headerView.frame  = CGRectMake(0, 0, newW, newH);
+////            self.headerView.center = CGPointMake(oldW/2.0f, (oldH-diff)/2.0f);
+////
+////
+//    }
+//}
 

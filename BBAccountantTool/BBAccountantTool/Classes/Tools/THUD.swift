@@ -22,20 +22,25 @@ class TAlert: NSObject {
             var image: UIImage
             switch type {
             case .success:
-                image = #imageLiteral(resourceName: "Alert_success")
+                image = UIImage(named: "home_index_done")!
             case .info:
-                image = #imageLiteral(resourceName: "Alert_info")
+                image = UIImage(named: "network")!
             case .error:
-                image = #imageLiteral(resourceName: "tabbar_home_selected")
+                image = UIImage(named: "network")!
             case .warning:
-                image = #imageLiteral(resourceName: "Alert_warning")
+                image = UIImage(named: "network")!
             }
             let hud = MBProgressHUD.showAdded(to: window!, animated: true)
             hud.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
             hud.mode = .customView
             hud.customView = UIImageView(image:image)
             hud.label.text = text
-            hud.hide(animated: true, afterDelay: 1.2)
+            hud.hide(animated: true, afterDelay: 2.0)
+            hud.bezelView.alpha = 0.9
+            hud.bezelView.color = UIColor.black
+            hud.label.font = UIFont.systemFont(ofSize: 14)
+            hud.label.textColor = UIColor.white
+
         }
     }
 }
@@ -43,7 +48,6 @@ class TAlert: NSObject {
 class TProgressHUD {
     class func show() {
         if let window = UIApplication.shared.delegate?.window {
-//            MBProgressHUD.showAdded(to: window!, animated: true)
             MBProgressHUD.showProgress(window)
         }
     }

@@ -46,6 +46,9 @@ class WBComposeTypeView: UIView {
         
         v.setupUI()
         
+        
+        
+        
         return v
     }
     

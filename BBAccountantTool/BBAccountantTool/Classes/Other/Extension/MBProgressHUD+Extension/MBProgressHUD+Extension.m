@@ -43,7 +43,7 @@
     hud.bezelView.color = [UIColor blackColor];
     hud.label.font = [UIFont systemFontOfSize:14];
     hud.label.textColor = [UIColor whiteColor];
-    hud.userInteractionEnabled = NO; //userInteractionEnabled=NO时，不会遮挡containerView，view可以正常响应
+//    hud.userInteractionEnabled = NO; //userInteractionEnabled=NO时，不会遮挡containerView，view可以正常响应
     //Move to bottm center.
     hud.offset = CGPointMake(0.f, -50);
     

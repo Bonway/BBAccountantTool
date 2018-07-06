@@ -11,7 +11,7 @@ import UIKit
 class BBHomeIndexTableViewCell: UITableViewCell {
 
     var editBtnBlock:((UIButton) -> ())?
-    var itemBlock:((String,String,String,String) -> ())?
+    var itemBlock:((String,String,String,String,String) -> ())?
     var itemErrorBlock:(() -> ())?
     var isHideEditBtn : Bool = false
     var isAdd : Bool = false
@@ -91,7 +91,10 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
         contentView.addSubview(collectionView)
-        
+        contentView.layer.shadowColor = BBColor(rgbValue: 0xdddddd).cgColor
+        contentView.layer.shadowOpacity = 0.5
+        contentView.layer.shadowRadius = 8.0
+        contentView.layer.shadowOffset = CGSize(width: 4, height: 4)
     }
 }
 
@@ -160,7 +163,7 @@ extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
 //            MBProgressHUD.showTitle("功能暂无开发", to: self)
             itemErrorBlock!()
         }else{
-            itemBlock!((sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
+            itemBlock!((sectionModel?.child[indexPath.row].iconurl)!,(sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
         }
     }
     
