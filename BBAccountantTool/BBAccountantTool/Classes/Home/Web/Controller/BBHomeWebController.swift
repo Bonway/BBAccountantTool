@@ -17,13 +17,6 @@ class BBHomeWebController: UIViewController {
     var shareDscription: String = ""
     var iconurl: String = ""
     
-//    fileprivate lazy var headerView: UIImageView = {
-//        let headerView = UIImageView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0))
-////        headerView.backgroundColor = UIColor.red
-//        headerView.image = UIImage(named: "home_index_header_backview")
-//        return headerView
-//    }()
-    
     fileprivate lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0))
         progressView.trackTintColor = UIColor.white
@@ -33,16 +26,8 @@ class BBHomeWebController: UIViewController {
    
     fileprivate lazy var wkWebView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()
-        let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight - bbNavBarHeight), configuration: webConfiguration)
+        let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight), configuration: webConfiguration)
         wkWebView.navigationDelegate = self
-//        wkWebView.scrollView.delegate = self
-//        wkWebView.scrollView.mj_header = MJRefreshHeader.init(refreshingBlock: {
-//
-//        })
-//            [MJRefreshHeader headerWithRefreshingBlock:^{
-            //刷新请求
-//            }];
-//        wkWebView.scrollView.hea
         
         wkWebView.load(URLRequest(url: URL(string: urlString)!))
         return wkWebView

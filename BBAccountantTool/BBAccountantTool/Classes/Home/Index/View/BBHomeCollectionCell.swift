@@ -36,11 +36,11 @@ class BBHomeCollectionCell: UICollectionViewCell {
     var itmeModel: BBHomeIndexDataChildModel?{
         didSet {
             titleLabel.text = itmeModel?.title
-            imageView.kf.setImage(with: URL(string: (itmeModel?.iconurl)!), placeholder: UIImage(named: "test"))
+            imageView.kf.setImage(with: URL(string: (itmeModel?.iconurl)!), placeholder: UIImage(named: "blank_zwt"))
             if (itmeModel?.h5url.isEmpty)! {
                 alpha = 0.3
             }else{
-//                backgroundColor = UIColor.red
+                alpha = 1.0
             }
         }
     }
