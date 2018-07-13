@@ -2,8 +2,8 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-#ifndef Bridging_h
-#define Bridging_h
+//#ifndef Bridging_h
+//#define Bridging_h
 
 #import "UIButton+ImageTitleSpacing.h"
 #import "MBProgressHUD+Extension.h"
@@ -11,6 +11,7 @@
 //#import "UIBarButtonItem+BBExtension.h"
 
 #import "MJRefresh.h"
+#import "SGPagingView.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 
@@ -28,4 +29,4 @@
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
 
-#endif
+//#endif

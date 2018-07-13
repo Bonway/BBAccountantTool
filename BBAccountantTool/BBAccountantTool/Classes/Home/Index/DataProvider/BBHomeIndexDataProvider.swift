@@ -12,7 +12,7 @@ import Moya
 let homeIndexProvider = MoyaProvider<HomeIndexType>()
 
 public enum HomeIndexType {
-    case tools
+    case tools  //小工具首页
 }
 
 //请求配置

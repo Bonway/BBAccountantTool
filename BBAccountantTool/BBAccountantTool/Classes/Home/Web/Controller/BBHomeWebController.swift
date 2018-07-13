@@ -97,6 +97,7 @@ class BBHomeWebController: UIViewController {
                     TProgressHUD.hide()
                     UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
                 }
+                
             }
             
             if clsName! == "复制链接" {

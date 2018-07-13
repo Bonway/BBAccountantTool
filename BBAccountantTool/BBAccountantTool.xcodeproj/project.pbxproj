@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		76C1D1B7B4DF39DB7A1A2966 /* Pods_BBAccountantTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */; };
+		CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */; };
+		CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */; };
+		CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */; };
+		CF1A84D020F899B900E9CE0B /* NSString+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84C220F899B900E9CE0B /* NSString+SGPagingView.m */; };
+		CF1A84D120F899B900E9CE0B /* UIButton+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84C320F899B900E9CE0B /* UIButton+SGPagingView.m */; };
+		CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84C420F899B900E9CE0B /* UIView+SGPagingView.m */; };
+		CF1A84D320F899B900E9CE0B /* SGPageContentScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84C620F899B900E9CE0B /* SGPageContentScrollView.m */; };
+		CF1A84D420F899B900E9CE0B /* SGPageContentCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84C920F899B900E9CE0B /* SGPageContentCollectionView.m */; };
+		CF1A84D520F899B900E9CE0B /* SGPageTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84CB20F899B900E9CE0B /* SGPageTitleView.m */; };
+		CF1A84D620F899B900E9CE0B /* SGPageTitleViewConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1A84CC20F899B900E9CE0B /* SGPageTitleViewConfigure.m */; };
 		CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */; };
-		CF30CFF320EF1C8A0029C86D /* DNSPageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFEB20EF1C8A0029C86D /* DNSPageContentView.swift */; };
-		CF30CFF420EF1C8A0029C86D /* DNSPageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFEC20EF1C8A0029C86D /* DNSPageHelper.swift */; };
-		CF30CFF620EF1C8A0029C86D /* DNSPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFEF20EF1C8A0029C86D /* DNSPageTitleView.swift */; };
-		CF30CFF720EF1C8A0029C86D /* DNSPageViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFF020EF1C8A0029C86D /* DNSPageViewManager.swift */; };
-		CF30CFF820EF1C8A0029C86D /* DNSPageCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFF120EF1C8A0029C86D /* DNSPageCollectionViewFlowLayout.swift */; };
-		CF30CFF920EF1C8A0029C86D /* DNSPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFF220EF1C8A0029C86D /* DNSPageStyle.swift */; };
-		CF30CFFA20EF1F0B0029C86D /* DNSPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF30CFEE20EF1C8A0029C86D /* DNSPageView.swift */; };
 		CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730020E610F2005487BB /* WBComposeTypeView.swift */; };
 		CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */; };
 		CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */; };
@@ -85,42 +88,7 @@
 		CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82EC4220EF1AC300CCE8DC /* WKWebView+DDGShot.swift */; };
 		CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */; };
 		CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */; };
-		CFD3669920EF39BC00C31155 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669820EF39BC00C31155 /* ContentViewController.swift */; };
-		CFD366BF20EF3C1C00C31155 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669B20EF3C1C00C31155 /* ConstraintMultiplierTarget.swift */; };
-		CFD366C020EF3C1C00C31155 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669C20EF3C1C00C31155 /* LayoutConstraintItem.swift */; };
-		CFD366C120EF3C1C00C31155 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669D20EF3C1C00C31155 /* ConstraintDescription.swift */; };
-		CFD366C220EF3C1C00C31155 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669E20EF3C1C00C31155 /* ConstraintMakerPriortizable.swift */; };
-		CFD366C320EF3C1C00C31155 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD3669F20EF3C1C00C31155 /* ConstraintAttributes.swift */; };
-		CFD366C420EF3C1C00C31155 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A020EF3C1C00C31155 /* ConstraintViewDSL.swift */; };
-		CFD366C520EF3C1C00C31155 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A120EF3C1C00C31155 /* ConstraintPriorityTarget.swift */; };
-		CFD366C620EF3C1C00C31155 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A220EF3C1C00C31155 /* ConstraintInsets.swift */; };
-		CFD366C720EF3C1C00C31155 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A320EF3C1C00C31155 /* ConstraintMakerFinalizable.swift */; };
-		CFD366C820EF3C1C00C31155 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A420EF3C1C00C31155 /* ConstraintDSL.swift */; };
-		CFD366C920EF3C1C00C31155 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A520EF3C1C00C31155 /* ConstraintMakerExtendable.swift */; };
-		CFD366CA20EF3C1C00C31155 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A620EF3C1C00C31155 /* ConstraintPriority.swift */; };
-		CFD366CB20EF3C1C00C31155 /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A720EF3C1C00C31155 /* ConstraintInsetTarget.swift */; };
-		CFD366CC20EF3C1C00C31155 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366A920EF3C1C00C31155 /* ConstraintConfig.swift */; };
-		CFD366CD20EF3C1C00C31155 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AA20EF3C1C00C31155 /* UILayoutSupport+Extensions.swift */; };
-		CFD366CE20EF3C1C00C31155 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AB20EF3C1C00C31155 /* ConstraintView.swift */; };
-		CFD366CF20EF3C1C00C31155 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AC20EF3C1C00C31155 /* ConstraintLayoutGuide.swift */; };
-		CFD366D020EF3C1C00C31155 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AD20EF3C1C00C31155 /* ConstraintLayoutSupport.swift */; };
-		CFD366D120EF3C1C00C31155 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AE20EF3C1C00C31155 /* Typealiases.swift */; };
-		CFD366D220EF3C1C00C31155 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366AF20EF3C1C00C31155 /* ConstraintConstantTarget.swift */; };
-		CFD366D320EF3C1C00C31155 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B020EF3C1C00C31155 /* ConstraintOffsetTarget.swift */; };
-		CFD366D420EF3C1C00C31155 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B120EF3C1C00C31155 /* ConstraintMakerEditable.swift */; };
-		CFD366D520EF3C1C00C31155 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B220EF3C1C00C31155 /* ConstraintMaker.swift */; };
-		CFD366D620EF3C1C00C31155 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B320EF3C1C00C31155 /* ConstraintRelation.swift */; };
-		CFD366D720EF3C1C00C31155 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B420EF3C1C00C31155 /* ConstraintLayoutGuideDSL.swift */; };
-		CFD366D820EF3C1C00C31155 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B520EF3C1C00C31155 /* ConstraintView+Extensions.swift */; };
-		CFD366D920EF3C1C00C31155 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B620EF3C1C00C31155 /* ConstraintItem.swift */; };
-		CFD366DA20EF3C1C00C31155 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B720EF3C1C00C31155 /* Constraint.swift */; };
-		CFD366DB20EF3C1C00C31155 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B820EF3C1C00C31155 /* Debugging.swift */; };
-		CFD366DC20EF3C1C00C31155 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366B920EF3C1C00C31155 /* ConstraintRelatableTarget.swift */; };
-		CFD366DD20EF3C1C00C31155 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFD366BA20EF3C1C00C31155 /* Info.plist */; };
-		CFD366DE20EF3C1C00C31155 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366BB20EF3C1C00C31155 /* LayoutConstraint.swift */; };
-		CFD366DF20EF3C1C00C31155 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366BC20EF3C1C00C31155 /* ConstraintLayoutGuide+Extensions.swift */; };
-		CFD366E020EF3C1C00C31155 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366BD20EF3C1C00C31155 /* ConstraintLayoutSupportDSL.swift */; };
-		CFD366E120EF3C1C00C31155 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD366BE20EF3C1C00C31155 /* ConstraintMakerRelatable.swift */; };
+		CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
 		CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
@@ -142,14 +110,25 @@
 		0EA20511D5BA2603910E0452 /* Pods-BBAccountantTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAccountantTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool.debug.xcconfig"; sourceTree = "<group>"; };
 		173B82BF1D61A857E846E2A9 /* Pods-BBAccountantTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAccountantTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool.release.xcconfig"; sourceTree = "<group>"; };
 		8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAccountantTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNewsIndexDataProvider.swift; sourceTree = "<group>"; };
+		CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsIndexTitleModel.swift; sourceTree = "<group>"; };
+		CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CF1A84BF20F899B900E9CE0B /* UIButton+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGPagingView.h"; sourceTree = "<group>"; };
+		CF1A84C020F899B900E9CE0B /* NSString+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SGPagingView.h"; sourceTree = "<group>"; };
+		CF1A84C120F899B900E9CE0B /* UIView+SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SGPagingView.h"; sourceTree = "<group>"; };
+		CF1A84C220F899B900E9CE0B /* NSString+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SGPagingView.m"; sourceTree = "<group>"; };
+		CF1A84C320F899B900E9CE0B /* UIButton+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGPagingView.m"; sourceTree = "<group>"; };
+		CF1A84C420F899B900E9CE0B /* UIView+SGPagingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SGPagingView.m"; sourceTree = "<group>"; };
+		CF1A84C620F899B900E9CE0B /* SGPageContentScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentScrollView.m; sourceTree = "<group>"; };
+		CF1A84C720F899B900E9CE0B /* SGPageContentCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentCollectionView.h; sourceTree = "<group>"; };
+		CF1A84C820F899B900E9CE0B /* SGPageContentScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageContentScrollView.h; sourceTree = "<group>"; };
+		CF1A84C920F899B900E9CE0B /* SGPageContentCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageContentCollectionView.m; sourceTree = "<group>"; };
+		CF1A84CB20F899B900E9CE0B /* SGPageTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleView.m; sourceTree = "<group>"; };
+		CF1A84CC20F899B900E9CE0B /* SGPageTitleViewConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPageTitleViewConfigure.m; sourceTree = "<group>"; };
+		CF1A84CD20F899B900E9CE0B /* SGPageTitleViewConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleViewConfigure.h; sourceTree = "<group>"; };
+		CF1A84CE20F899B900E9CE0B /* SGPageTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPageTitleView.h; sourceTree = "<group>"; };
+		CF1A84CF20F899B900E9CE0B /* SGPagingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPagingView.h; sourceTree = "<group>"; };
 		CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeWebController.swift; sourceTree = "<group>"; };
-		CF30CFEB20EF1C8A0029C86D /* DNSPageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageContentView.swift; sourceTree = "<group>"; };
-		CF30CFEC20EF1C8A0029C86D /* DNSPageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageHelper.swift; sourceTree = "<group>"; };
-		CF30CFEE20EF1C8A0029C86D /* DNSPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageView.swift; sourceTree = "<group>"; };
-		CF30CFEF20EF1C8A0029C86D /* DNSPageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageTitleView.swift; sourceTree = "<group>"; };
-		CF30CFF020EF1C8A0029C86D /* DNSPageViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageViewManager.swift; sourceTree = "<group>"; };
-		CF30CFF120EF1C8A0029C86D /* DNSPageCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
-		CF30CFF220EF1C8A0029C86D /* DNSPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DNSPageStyle.swift; sourceTree = "<group>"; };
 		CF4E730020E610F2005487BB /* WBComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeView.swift; sourceTree = "<group>"; };
 		CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
@@ -251,43 +230,7 @@
 		CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1720EB53AD00EA6FAD /* UIImage+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBExtension.h"; sourceTree = "<group>"; };
-		CFD3669820EF39BC00C31155 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		CFD3669B20EF3C1C00C31155 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		CFD3669C20EF3C1C00C31155 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		CFD3669D20EF3C1C00C31155 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
-		CFD3669E20EF3C1C00C31155 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		CFD3669F20EF3C1C00C31155 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
-		CFD366A020EF3C1C00C31155 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		CFD366A120EF3C1C00C31155 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		CFD366A220EF3C1C00C31155 /* ConstraintInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsets.swift; sourceTree = "<group>"; };
-		CFD366A320EF3C1C00C31155 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		CFD366A420EF3C1C00C31155 /* ConstraintDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDSL.swift; sourceTree = "<group>"; };
-		CFD366A520EF3C1C00C31155 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		CFD366A620EF3C1C00C31155 /* ConstraintPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintPriority.swift; sourceTree = "<group>"; };
-		CFD366A720EF3C1C00C31155 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		CFD366A820EF3C1C00C31155 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
-		CFD366A920EF3C1C00C31155 /* ConstraintConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConfig.swift; sourceTree = "<group>"; };
-		CFD366AA20EF3C1C00C31155 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		CFD366AB20EF3C1C00C31155 /* ConstraintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintView.swift; sourceTree = "<group>"; };
-		CFD366AC20EF3C1C00C31155 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		CFD366AD20EF3C1C00C31155 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		CFD366AE20EF3C1C00C31155 /* Typealiases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		CFD366AF20EF3C1C00C31155 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		CFD366B020EF3C1C00C31155 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		CFD366B120EF3C1C00C31155 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		CFD366B220EF3C1C00C31155 /* ConstraintMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMaker.swift; sourceTree = "<group>"; };
-		CFD366B320EF3C1C00C31155 /* ConstraintRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelation.swift; sourceTree = "<group>"; };
-		CFD366B420EF3C1C00C31155 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		CFD366B520EF3C1C00C31155 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		CFD366B620EF3C1C00C31155 /* ConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintItem.swift; sourceTree = "<group>"; };
-		CFD366B720EF3C1C00C31155 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
-		CFD366B820EF3C1C00C31155 /* Debugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debugging.swift; sourceTree = "<group>"; };
-		CFD366B920EF3C1C00C31155 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		CFD366BA20EF3C1C00C31155 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFD366BB20EF3C1C00C31155 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
-		CFD366BC20EF3C1C00C31155 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		CFD366BD20EF3C1C00C31155 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		CFD366BE20EF3C1C00C31155 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildController.swift; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
 		CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +304,83 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF0B9BE820F724E100D42009 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF0B9BE920F724E100D42009 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF0B9BEA20F724E100D42009 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		CF0B9BEF20F73D1F00D42009 /* UIColor+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */,
+			);
+			path = "UIColor+Extension";
+			sourceTree = "<group>";
+		};
+		CF1A84BD20F899B900E9CE0B /* SGPagingView */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A84BE20F899B900E9CE0B /* Category */,
+				CF1A84C520F899B900E9CE0B /* SGPageContent */,
+				CF1A84CA20F899B900E9CE0B /* SGPageTitle */,
+				CF1A84CF20F899B900E9CE0B /* SGPagingView.h */,
+			);
+			path = SGPagingView;
+			sourceTree = "<group>";
+		};
+		CF1A84BE20F899B900E9CE0B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A84BF20F899B900E9CE0B /* UIButton+SGPagingView.h */,
+				CF1A84C020F899B900E9CE0B /* NSString+SGPagingView.h */,
+				CF1A84C120F899B900E9CE0B /* UIView+SGPagingView.h */,
+				CF1A84C220F899B900E9CE0B /* NSString+SGPagingView.m */,
+				CF1A84C320F899B900E9CE0B /* UIButton+SGPagingView.m */,
+				CF1A84C420F899B900E9CE0B /* UIView+SGPagingView.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CF1A84C520F899B900E9CE0B /* SGPageContent */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A84C820F899B900E9CE0B /* SGPageContentScrollView.h */,
+				CF1A84C620F899B900E9CE0B /* SGPageContentScrollView.m */,
+				CF1A84C720F899B900E9CE0B /* SGPageContentCollectionView.h */,
+				CF1A84C920F899B900E9CE0B /* SGPageContentCollectionView.m */,
+			);
+			path = SGPageContent;
+			sourceTree = "<group>";
+		};
+		CF1A84CA20F899B900E9CE0B /* SGPageTitle */ = {
+			isa = PBXGroup;
+			children = (
+				CF1A84CD20F899B900E9CE0B /* SGPageTitleViewConfigure.h */,
+				CF1A84CC20F899B900E9CE0B /* SGPageTitleViewConfigure.m */,
+				CF1A84CE20F899B900E9CE0B /* SGPageTitleView.h */,
+				CF1A84CB20F899B900E9CE0B /* SGPageTitleView.m */,
+			);
+			path = SGPageTitle;
+			sourceTree = "<group>";
+		};
 		CF1B5BC920E3773100DE77DD /* Web */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,20 +396,6 @@
 				CF1B5BCB20E3775400DE77DD /* BBHomeWebController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		CF30CFEA20EF1C8A0029C86D /* DNSPageView */ = {
-			isa = PBXGroup;
-			children = (
-				CF30CFEB20EF1C8A0029C86D /* DNSPageContentView.swift */,
-				CF30CFEC20EF1C8A0029C86D /* DNSPageHelper.swift */,
-				CF30CFEE20EF1C8A0029C86D /* DNSPageView.swift */,
-				CF30CFEF20EF1C8A0029C86D /* DNSPageTitleView.swift */,
-				CF30CFF020EF1C8A0029C86D /* DNSPageViewManager.swift */,
-				CF30CFF120EF1C8A0029C86D /* DNSPageCollectionViewFlowLayout.swift */,
-				CF30CFF220EF1C8A0029C86D /* DNSPageStyle.swift */,
-			);
-			path = DNSPageView;
 			sourceTree = "<group>";
 		};
 		CF4E72FF20E60BC2005487BB /* View */ = {
@@ -524,6 +530,7 @@
 		CF69AAD120DB497500B5BCC7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CF0B9BEF20F73D1F00D42009 /* UIColor+Extension */,
 				CF6E85F220EF61BA009FE443 /* String+Extension */,
 				CF863B1520EB53AD00EA6FAD /* UIImage+Extension */,
 				CF863B1120EB539900EA6FAD /* UIBarButtonItem+Extension */,
@@ -580,8 +587,7 @@
 		CF82EBBD20EF1AC200CCE8DC /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				CFD3669A20EF3C1C00C31155 /* SnapKit */,
-				CF30CFEA20EF1C8A0029C86D /* DNSPageView */,
+				CF1A84BD20F899B900E9CE0B /* SGPagingView */,
 				CF82EBEC20EF1AC300CCE8DC /* MJRefresh */,
 				CF82EC1B20EF1AC300CCE8DC /* SDK */,
 				CF82EC3E20EF1AC300CCE8DC /* DDGScreenShot */,
@@ -831,49 +837,6 @@
 			path = "UIImage+Extension";
 			sourceTree = "<group>";
 		};
-		CFD3669A20EF3C1C00C31155 /* SnapKit */ = {
-			isa = PBXGroup;
-			children = (
-				CFD3669B20EF3C1C00C31155 /* ConstraintMultiplierTarget.swift */,
-				CFD3669C20EF3C1C00C31155 /* LayoutConstraintItem.swift */,
-				CFD3669D20EF3C1C00C31155 /* ConstraintDescription.swift */,
-				CFD3669E20EF3C1C00C31155 /* ConstraintMakerPriortizable.swift */,
-				CFD3669F20EF3C1C00C31155 /* ConstraintAttributes.swift */,
-				CFD366A020EF3C1C00C31155 /* ConstraintViewDSL.swift */,
-				CFD366A120EF3C1C00C31155 /* ConstraintPriorityTarget.swift */,
-				CFD366A220EF3C1C00C31155 /* ConstraintInsets.swift */,
-				CFD366A320EF3C1C00C31155 /* ConstraintMakerFinalizable.swift */,
-				CFD366A420EF3C1C00C31155 /* ConstraintDSL.swift */,
-				CFD366A520EF3C1C00C31155 /* ConstraintMakerExtendable.swift */,
-				CFD366A620EF3C1C00C31155 /* ConstraintPriority.swift */,
-				CFD366A720EF3C1C00C31155 /* ConstraintInsetTarget.swift */,
-				CFD366A820EF3C1C00C31155 /* SnapKit.h */,
-				CFD366A920EF3C1C00C31155 /* ConstraintConfig.swift */,
-				CFD366AA20EF3C1C00C31155 /* UILayoutSupport+Extensions.swift */,
-				CFD366AB20EF3C1C00C31155 /* ConstraintView.swift */,
-				CFD366AC20EF3C1C00C31155 /* ConstraintLayoutGuide.swift */,
-				CFD366AD20EF3C1C00C31155 /* ConstraintLayoutSupport.swift */,
-				CFD366AE20EF3C1C00C31155 /* Typealiases.swift */,
-				CFD366AF20EF3C1C00C31155 /* ConstraintConstantTarget.swift */,
-				CFD366B020EF3C1C00C31155 /* ConstraintOffsetTarget.swift */,
-				CFD366B120EF3C1C00C31155 /* ConstraintMakerEditable.swift */,
-				CFD366B220EF3C1C00C31155 /* ConstraintMaker.swift */,
-				CFD366B320EF3C1C00C31155 /* ConstraintRelation.swift */,
-				CFD366B420EF3C1C00C31155 /* ConstraintLayoutGuideDSL.swift */,
-				CFD366B520EF3C1C00C31155 /* ConstraintView+Extensions.swift */,
-				CFD366B620EF3C1C00C31155 /* ConstraintItem.swift */,
-				CFD366B720EF3C1C00C31155 /* Constraint.swift */,
-				CFD366B820EF3C1C00C31155 /* Debugging.swift */,
-				CFD366B920EF3C1C00C31155 /* ConstraintRelatableTarget.swift */,
-				CFD366BA20EF3C1C00C31155 /* Info.plist */,
-				CFD366BB20EF3C1C00C31155 /* LayoutConstraint.swift */,
-				CFD366BC20EF3C1C00C31155 /* ConstraintLayoutGuide+Extensions.swift */,
-				CFD366BD20EF3C1C00C31155 /* ConstraintLayoutSupportDSL.swift */,
-				CFD366BE20EF3C1C00C31155 /* ConstraintMakerRelatable.swift */,
-			);
-			path = SnapKit;
-			sourceTree = "<group>";
-		};
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -941,6 +904,9 @@
 		CFD7E65520EF0B8E002178AA /* Index */ = {
 			isa = PBXGroup;
 			children = (
+				CF0B9BEA20F724E100D42009 /* DataProvider */,
+				CF0B9BE820F724E100D42009 /* Model */,
+				CF0B9BE920F724E100D42009 /* View */,
 				CFD7E65820EF0BC7002178AA /* Controller */,
 			);
 			path = Index;
@@ -965,8 +931,8 @@
 		CFD7E65820EF0BC7002178AA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CFD3669820EF39BC00C31155 /* ContentViewController.swift */,
 				CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */,
+				CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1047,7 +1013,6 @@
 				CF82EC8B20EF1AC300CCE8DC /* ShareSDKConfigFile.bundle in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
 				CF82EC8720EF1AC300CCE8DC /* ShareSDKUI.bundle in Resources */,
-				CFD366DD20EF3C1C00C31155 /* Info.plist in Resources */,
 				CF82EC8620EF1AC300CCE8DC /* ShareSDK.bundle in Resources */,
 				CF82EC8220EF1AC300CCE8DC /* README.txt in Resources */,
 				CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */,
@@ -1114,100 +1079,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD366D420EF3C1C00C31155 /* ConstraintMakerEditable.swift in Sources */,
-				CF30CFFA20EF1F0B0029C86D /* DNSPageView.swift in Sources */,
-				CFD366C320EF3C1C00C31155 /* ConstraintAttributes.swift in Sources */,
 				CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */,
-				CFD366CF20EF3C1C00C31155 /* ConstraintLayoutGuide.swift in Sources */,
-				CFD366C920EF3C1C00C31155 /* ConstraintMakerExtendable.swift in Sources */,
 				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
-				CFD366D520EF3C1C00C31155 /* ConstraintMaker.swift in Sources */,
 				CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */,
-				CFD3669920EF39BC00C31155 /* ContentViewController.swift in Sources */,
-				CFD366D120EF3C1C00C31155 /* Typealiases.swift in Sources */,
-				CFD366C720EF3C1C00C31155 /* ConstraintMakerFinalizable.swift in Sources */,
-				CFD366D320EF3C1C00C31155 /* ConstraintOffsetTarget.swift in Sources */,
+				CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */,
 				CF82EC7520EF1AC300CCE8DC /* MJRefreshAutoStateFooter.m in Sources */,
-				CFD366C620EF3C1C00C31155 /* ConstraintInsets.swift in Sources */,
-				CFD366D220EF3C1C00C31155 /* ConstraintConstantTarget.swift in Sources */,
 				CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */,
 				CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */,
 				CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */,
-				CFD366CB20EF3C1C00C31155 /* ConstraintInsetTarget.swift in Sources */,
 				CF82EC9420EF1AC300CCE8DC /* UIImage+DDGManage.swift in Sources */,
-				CFD366DA20EF3C1C00C31155 /* Constraint.swift in Sources */,
 				CF82EC6C20EF1AC300CCE8DC /* UIScrollView+MJRefresh.m in Sources */,
 				CF4E732720E61EC7005487BB /* BBShareView.swift in Sources */,
+				CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */,
+				CF1A84D520F899B900E9CE0B /* SGPageTitleView.m in Sources */,
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
-				CFD366D820EF3C1C00C31155 /* ConstraintView+Extensions.swift in Sources */,
-				CFD366D020EF3C1C00C31155 /* ConstraintLayoutSupport.swift in Sources */,
-				CFD366CC20EF3C1C00C31155 /* ConstraintConfig.swift in Sources */,
-				CFD366C220EF3C1C00C31155 /* ConstraintMakerPriortizable.swift in Sources */,
-				CFD366C420EF3C1C00C31155 /* ConstraintViewDSL.swift in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */,
+				CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */,
 				CF82EC7220EF1AC300CCE8DC /* MJRefreshBackGifFooter.m in Sources */,
 				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
-				CFD366D920EF3C1C00C31155 /* ConstraintItem.swift in Sources */,
 				CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */,
-				CF30CFF920EF1C8A0029C86D /* DNSPageStyle.swift in Sources */,
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
 				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
-				CFD366BF20EF3C1C00C31155 /* ConstraintMultiplierTarget.swift in Sources */,
+				CF1A84D620F899B900E9CE0B /* SGPageTitleViewConfigure.m in Sources */,
 				CF82EC7420EF1AC300CCE8DC /* MJRefreshBackNormalFooter.m in Sources */,
 				CF82EC7B20EF1AC300CCE8DC /* MJRefreshFooter.m in Sources */,
 				CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */,
-				CFD366D620EF3C1C00C31155 /* ConstraintRelation.swift in Sources */,
+				CF1A84D120F899B900E9CE0B /* UIButton+SGPagingView.m in Sources */,
 				CF82EC6F20EF1AC300CCE8DC /* UIScrollView+MJExtension.m in Sources */,
 				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
-				CFD366C020EF3C1C00C31155 /* LayoutConstraintItem.swift in Sources */,
-				CFD366DE20EF3C1C00C31155 /* LayoutConstraint.swift in Sources */,
 				CF82EC7C20EF1AC300CCE8DC /* MJRefreshHeader.m in Sources */,
-				CFD366E020EF3C1C00C31155 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				CF82EC7020EF1AC300CCE8DC /* NSBundle+MJRefresh.m in Sources */,
+				CF1A84D320F899B900E9CE0B /* SGPageContentScrollView.m in Sources */,
 				CF82EC9320EF1AC300CCE8DC /* UIScrollView+DDGShot.swift in Sources */,
 				CF82EC6D20EF1AC300CCE8DC /* MJRefreshConst.m in Sources */,
 				CFD46B1720E1D2D20066FC85 /* BBHomeIndexTableViewCell.swift in Sources */,
 				CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */,
-				CFD366D720EF3C1C00C31155 /* ConstraintLayoutGuideDSL.swift in Sources */,
-				CFD366DC20EF3C1C00C31155 /* ConstraintRelatableTarget.swift in Sources */,
-				CFD366CE20EF3C1C00C31155 /* ConstraintView.swift in Sources */,
 				CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */,
 				CF82EC7920EF1AC300CCE8DC /* MJRefreshStateHeader.m in Sources */,
 				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
-				CF30CFF420EF1C8A0029C86D /* DNSPageHelper.swift in Sources */,
-				CF30CFF620EF1C8A0029C86D /* DNSPageTitleView.swift in Sources */,
-				CF30CFF320EF1C8A0029C86D /* DNSPageContentView.swift in Sources */,
 				CF82EC9220EF1AC300CCE8DC /* UIView+DDGShot.swift in Sources */,
-				CFD366DF20EF3C1C00C31155 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				CF82EC7E20EF1AC300CCE8DC /* MJRefreshAutoFooter.m in Sources */,
 				CF82EC7120EF1AC300CCE8DC /* UIView+MJExtension.m in Sources */,
-				CFD366C520EF3C1C00C31155 /* ConstraintPriorityTarget.swift in Sources */,
 				CF82EC7D20EF1AC300CCE8DC /* MJRefreshBackFooter.m in Sources */,
-				CF30CFF720EF1C8A0029C86D /* DNSPageViewManager.swift in Sources */,
-				CFD366E120EF3C1C00C31155 /* ConstraintMakerRelatable.swift in Sources */,
-				CFD366DB20EF3C1C00C31155 /* Debugging.swift in Sources */,
 				CFD7E65D20EF0E48002178AA /* BBUserViewController.swift in Sources */,
 				CF82EC7720EF1AC300CCE8DC /* MJRefreshAutoNormalFooter.m in Sources */,
+				CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */,
+				CF1A84D420F899B900E9CE0B /* SGPageContentCollectionView.m in Sources */,
 				CF51C0B220D897530024E971 /* BBConst.swift in Sources */,
 				CF82EC7F20EF1AC300CCE8DC /* MJRefreshComponent.m in Sources */,
-				CFD366CA20EF3C1C00C31155 /* ConstraintPriority.swift in Sources */,
 				CFD46B1520E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift in Sources */,
+				CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */,
 				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
 				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
 				CF82EC7320EF1AC300CCE8DC /* MJRefreshBackStateFooter.m in Sources */,
 				CF6E85F420EF61DB009FE443 /* String+Extension.swift in Sources */,
-				CFD366C120EF3C1C00C31155 /* ConstraintDescription.swift in Sources */,
-				CF30CFF820EF1C8A0029C86D /* DNSPageCollectionViewFlowLayout.swift in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
-				CFD366CD20EF3C1C00C31155 /* UILayoutSupport+Extensions.swift in Sources */,
 				CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */,
 				CFD46B2920E242730066FC85 /* TSaveFiles.swift in Sources */,
-				CFD366C820EF3C1C00C31155 /* ConstraintDSL.swift in Sources */,
+				CF1A84D020F899B900E9CE0B /* NSString+SGPagingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1282,6 +1216,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1335,6 +1270,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
