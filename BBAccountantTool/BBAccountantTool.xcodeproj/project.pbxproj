@@ -89,6 +89,12 @@
 		CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */; };
 		CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */; };
 		CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */; };
+		CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA87D620FC2F27009EF95D /* BBNewsChildOnePicCell.swift */; };
+		CFAA87D920FC2F27009EF95D /* BBNewsChildOnePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAA87D720FC2F27009EF95D /* BBNewsChildOnePicCell.xib */; };
+		CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE80F20FC419700849B4C /* BBNewsChildListModel.swift */; };
+		CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE81120FC695C00849B4C /* BBNewsChildMorePicCell.swift */; };
+		CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */; };
+		CFACE81E20FCA1C400849B4C /* BBRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE81D20FCA1C400849B4C /* BBRefresh.swift */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
 		CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
@@ -231,6 +237,12 @@
 		CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1720EB53AD00EA6FAD /* UIImage+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBExtension.h"; sourceTree = "<group>"; };
 		CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildController.swift; sourceTree = "<group>"; };
+		CFAA87D620FC2F27009EF95D /* BBNewsChildOnePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildOnePicCell.swift; sourceTree = "<group>"; };
+		CFAA87D720FC2F27009EF95D /* BBNewsChildOnePicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBNewsChildOnePicCell.xib; sourceTree = "<group>"; };
+		CFACE80F20FC419700849B4C /* BBNewsChildListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildListModel.swift; sourceTree = "<group>"; };
+		CFACE81120FC695C00849B4C /* BBNewsChildMorePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildMorePicCell.swift; sourceTree = "<group>"; };
+		CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBNewsChildMorePicCell.xib; sourceTree = "<group>"; };
+		CFACE81D20FCA1C400849B4C /* BBRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBRefresh.swift; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
 		CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */,
+				CFACE80F20FC419700849B4C /* BBNewsChildListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +328,10 @@
 		CF0B9BE920F724E100D42009 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFAA87D620FC2F27009EF95D /* BBNewsChildOnePicCell.swift */,
+				CFAA87D720FC2F27009EF95D /* BBNewsChildOnePicCell.xib */,
+				CFACE81120FC695C00849B4C /* BBNewsChildMorePicCell.swift */,
+				CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -475,6 +492,7 @@
 		CF51C09E20D893A10024E971 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CFACE81920FCA18500849B4C /* Custom */,
 				CF82EBBD20EF1AC200CCE8DC /* Third */,
 				CF69AAD120DB497500B5BCC7 /* Extension */,
 				CF51C0B020D897530024E971 /* Const */,
@@ -837,6 +855,22 @@
 			path = "UIImage+Extension";
 			sourceTree = "<group>";
 		};
+		CFACE81920FCA18500849B4C /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				CFACE81A20FCA1AB00849B4C /* BBRefresh */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		CFACE81A20FCA1AB00849B4C /* BBRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				CFACE81D20FCA1C400849B4C /* BBRefresh.swift */,
+			);
+			path = BBRefresh;
+			sourceTree = "<group>";
+		};
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -1008,10 +1042,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD46B1920E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib in Resources */,
+				CFAA87D920FC2F27009EF95D /* BBNewsChildOnePicCell.xib in Resources */,
 				CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */,
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF82EC8B20EF1AC300CCE8DC /* ShareSDKConfigFile.bundle in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
+				CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */,
 				CF82EC8720EF1AC300CCE8DC /* ShareSDKUI.bundle in Resources */,
 				CF82EC8620EF1AC300CCE8DC /* ShareSDK.bundle in Resources */,
 				CF82EC8220EF1AC300CCE8DC /* README.txt in Resources */,
@@ -1087,9 +1123,11 @@
 				CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */,
 				CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */,
 				CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */,
+				CFACE81E20FCA1C400849B4C /* BBRefresh.swift in Sources */,
 				CF82EC9420EF1AC300CCE8DC /* UIImage+DDGManage.swift in Sources */,
 				CF82EC6C20EF1AC300CCE8DC /* UIScrollView+MJRefresh.m in Sources */,
 				CF4E732720E61EC7005487BB /* BBShareView.swift in Sources */,
+				CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */,
 				CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */,
 				CF1A84D520F899B900E9CE0B /* SGPageTitleView.m in Sources */,
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
@@ -1135,7 +1173,9 @@
 				CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */,
 				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
 				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
+				CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
+				CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */,
 				CF82EC7320EF1AC300CCE8DC /* MJRefreshBackStateFooter.m in Sources */,
 				CF6E85F420EF61DB009FE443 /* String+Extension.swift in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,

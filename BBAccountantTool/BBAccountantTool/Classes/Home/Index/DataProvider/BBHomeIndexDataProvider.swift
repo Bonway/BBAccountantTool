@@ -42,10 +42,16 @@ extension HomeIndexType: TargetType {
     }
     
     public var task: Task {
+        
+//        let params: [String: Any] = [:]
+        
         switch self {
         case .tools:
             return .requestPlain
         }
+        
+        
+//        return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
     
     public var headers: [String : String]? {

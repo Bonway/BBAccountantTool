@@ -81,6 +81,14 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         setupCell()
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        
+    }
+    
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+        
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -95,6 +103,8 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         contentView.layer.shadowOpacity = 0.5
         contentView.layer.shadowRadius = 8.0
         contentView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        
+        
     }
 }
 

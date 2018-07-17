@@ -55,10 +55,14 @@ class BBNewsViewController: BBGestureBaseController {
     }
 
     private func loadDatas() {
+        
         BBNetworkTool.loadData(API: NewsIndexType.self, target: .title, cache: true , success: { (json)in
             let decoder = JSONDecoder()
             let model = try? decoder.decode(BBNewsIndexTitleModel.self, from: json)
             self.model = model
+            
+            print(model)
+            
             self.setupView()
         }) { (error_code, message) in
             self.addBlankView(blankType: .requestFailed)
@@ -76,8 +80,6 @@ class BBNewsViewController: BBGestureBaseController {
 
 extension BBNewsViewController {
     private func setupView() {
-//        automaticallyAdjustsScrollViewInsets = false
-        
         view.addSubview(imageView)
         
         var nameArray : [String] = []
@@ -86,8 +88,8 @@ extension BBNewsViewController {
         for i in 0..<count {
             nameArray.append((model?.data[i].name)!)
             let childController = BBNewsChildController()
-            childController.model = model?.data[i]
-            childArray.append(BBNewsChildController())
+            childController.titleModel = model?.data[i]
+            childArray.append(childController)
         }
         
         //配置信息
@@ -125,4 +127,6 @@ extension BBNewsViewController: SGPageTitleViewDelegate, SGPageContentCollection
     func pageContentCollectionView(_ pageContentView: SGPageContentCollectionView!, progress: CGFloat, originalIndex: Int, targetIndex: Int) {
         self.pageTitleView!.setPageTitleViewWithProgress(progress, originalIndex: originalIndex, targetIndex: targetIndex)
     }
+    
+    
 }

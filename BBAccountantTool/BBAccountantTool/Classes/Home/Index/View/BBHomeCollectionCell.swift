@@ -45,6 +45,8 @@ class BBHomeCollectionCell: UICollectionViewCell {
         }
     }
     
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
