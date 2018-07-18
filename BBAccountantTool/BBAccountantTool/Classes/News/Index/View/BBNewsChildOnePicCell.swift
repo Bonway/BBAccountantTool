@@ -16,6 +16,7 @@ class BBNewsChildOnePicCell: UITableViewCell {
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var browseLabel: UILabel!
+    @IBOutlet weak var clickLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,10 +39,16 @@ class BBNewsChildOnePicCell: UITableViewCell {
             attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0,titleString.count))
 
             titleLabel.attributedText = attributedString
-            titleImgView.kf.setImage(with: URL(string: (cellModel?.litpic)!), placeholder: UIImage(named: "blank_zwt"))
+            if cellModel?.imgList.list.count ?? 0 > 0 {
+                titleImgView.kf.setImage(with: URL(string: (cellModel?.imgList.list[0])!), placeholder: UIImage(named: "blank_placeholder"))
+//                if cellModel?.imgList.list.count ?? 0 == 0 
+            } else {
+                titleImgView.image = UIImage(named: "pic_\(arc4random_uniform(10))")
+            }
+            
             sourceLabel.text = cellModel?.source
             timeLabel.text = cellModel?.pubdate
-            
+            clickLabel.text = String(cellModel?.click ?? 0) + "浏览"
         }
     }
     

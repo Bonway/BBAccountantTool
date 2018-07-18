@@ -61,7 +61,6 @@ class BBNewsViewController: BBGestureBaseController {
             let model = try? decoder.decode(BBNewsIndexTitleModel.self, from: json)
             self.model = model
             
-            print(model)
             
             self.setupView()
         }) { (error_code, message) in
@@ -104,7 +103,7 @@ extension BBNewsViewController {
         configuration.indicatorHeight = 6;
         
         // 标题名称的数组
-        self.pageTitleView = SGPageTitleView(frame: CGRect(x: 0, y: bbStatusHeight+3, width: bbScreenWidth - (bbNavBarHeight - bbStatusHeight), height: (bbNavBarHeight - bbStatusHeight-3)), delegate: self, titleNames: nameArray, configure: configuration)
+        self.pageTitleView = SGPageTitleView(frame: CGRect(x: 0, y: bbStatusHeight+3, width: bbScreenWidth, height: (bbNavBarHeight - bbStatusHeight-3)), delegate: self, titleNames: nameArray, configure: configuration)
         self.pageTitleView!.backgroundColor = .clear
         self.view.addSubview(self.pageTitleView!)
 

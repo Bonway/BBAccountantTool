@@ -24,6 +24,7 @@
     [imgView.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:containerView animated:YES];
+//    hud.userInteractionEnabled = NO;
     hud.customView = imgView;
     hud.bezelView.color = [UIColor clearColor];
     hud.mode = MBProgressHUDModeCustomView;

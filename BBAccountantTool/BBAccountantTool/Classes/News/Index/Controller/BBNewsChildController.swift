@@ -10,6 +10,16 @@ import UIKit
 
 class BBNewsChildController: BBGestureBaseController {
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
     let cellOneID = "newsChildOnePicCell"
     let cellMoreID = "newsChildMorePicCell"
     
@@ -23,8 +33,10 @@ class BBNewsChildController: BBGestureBaseController {
         tableView.backgroundColor = BBColor(rgbValue: 0xF6F6F6)
         tableView.estimatedRowHeight = 140
         tableView.mj_header = BBRefreshHeader(refreshingTarget: self, refreshingAction: #selector(loadNewData))
-        tableView.mj_footer = BBRefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadNewData))
-//        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        tableView.mj_footer = BBRefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
+        tableView.mj_footer.isHidden = true
+        tableView.rowHeight = UITableViewAutomaticDimension
         return tableView
     }()
     
@@ -35,29 +47,24 @@ class BBNewsChildController: BBGestureBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         isEnablePanGesture = false
-        
-        
-//        .newsList(typeid: titleModel?.tid, token: titleModel?.tid.tokenString
         setupView()
         loadDatas()
     }
 
     private func setupView() {
         view.addSubview(tableView)
+        
     }
     
     private func loadDatas() {
-        
-//        print("tid\(titleModel?.tid) and:\(titleModel?.tid.tokenString)")
-        
         BBNetworkTool.loadData(API: NewsIndexType.self, target: .newsList(typeid: titleModel?.tid ?? "", token: titleModel?.tid.tokenString ?? ""), cache: true , success: { (json)in
             let decoder = JSONDecoder()
             
             let model = try? decoder.decode(BBNewsChildListModel.self, from: json)
             self.model = model
             
-//            print(model)
             self.tableView.reloadData()
+            self.tableView.mj_footer.isHidden = false
 
         }) { (error_code, message) in
             self.addBlankView(blankType: .requestFailed)
@@ -74,7 +81,10 @@ class BBNewsChildController: BBGestureBaseController {
 // MARK: - #ACTION
 extension BBNewsChildController{
     @objc private func loadNewData() {
-        
+        tableView.mj_header.endRefreshing()
+    }
+    @objc private func loadMoreData() {
+        tableView.mj_footer.endRefreshing()
     }
 }
 
@@ -93,20 +103,26 @@ extension BBNewsChildController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-//        if model?.data[indexPath.row].litpic {
-//            <#code#>
-//        }
+        let count = model?.arcList[indexPath.row].imgList.list.count ?? 0
+        
+        if count > 1 {
+            let moreCell = tableView.dequeueReusableCell(withIdentifier: cellMoreID) as! BBNewsChildMorePicCell
+            moreCell.cellModel = model?.arcList[indexPath.row]
+            return moreCell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: cellOneID) as! BBNewsChildOnePicCell
-        
-
         cell.cellModel = model?.arcList[indexPath.row]
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        let count = model?.arcList[indexPath.row].imgList.list.count ?? 0
+        if count > 1 {
+            return UITableViewAutomaticDimension
+        }
         return 140
-        //return UITableViewAutomaticDimension
     }
 }
 
@@ -114,7 +130,9 @@ extension BBNewsChildController: UITableViewDataSource {
 extension BBNewsChildController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let newsDetailController = BBNewsDetailController()
+        newsDetailController.aid = model?.arcList[indexPath.row].id
+        navigationController?.pushViewController(newsDetailController, animated: true)
     }
     
 }

@@ -112,6 +112,7 @@
             <connections>
                 <outlet property="browseLabel" destination="cMZ-Bt-AyS" id="DnT-Fs-nnO"/>
                 <outlet property="cellCenterView" destination="hJZ-ri-YMP" id="DhO-3P-UFe"/>
+                <outlet property="clickLabel" destination="cMZ-Bt-AyS" id="jOD-Cb-6cU"/>
                 <outlet property="sourceLabel" destination="LJU-6d-BI0" id="3f2-bg-w7Z"/>
                 <outlet property="timeLabel" destination="6Bo-Za-nhc" id="Jo7-wp-Vle"/>
                 <outlet property="titleImgView" destination="4wO-TB-tL5" id="MnU-LC-uat"/>

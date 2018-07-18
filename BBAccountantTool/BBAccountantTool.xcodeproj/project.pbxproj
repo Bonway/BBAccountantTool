@@ -95,6 +95,9 @@
 		CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE81120FC695C00849B4C /* BBNewsChildMorePicCell.swift */; };
 		CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */; };
 		CFACE81E20FCA1C400849B4C /* BBRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE81D20FCA1C400849B4C /* BBRefresh.swift */; };
+		CFBC5C3820FD768F001C5BE8 /* BBNewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */; };
+		CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */; };
+		CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
 		CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
@@ -243,6 +246,9 @@
 		CFACE81120FC695C00849B4C /* BBNewsChildMorePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildMorePicCell.swift; sourceTree = "<group>"; };
 		CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBNewsChildMorePicCell.xib; sourceTree = "<group>"; };
 		CFACE81D20FCA1C400849B4C /* BBRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBRefresh.swift; sourceTree = "<group>"; };
+		CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailController.swift; sourceTree = "<group>"; };
+		CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailModel.swift; sourceTree = "<group>"; };
+		CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailHeaderView.swift; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
 		CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
@@ -871,6 +877,40 @@
 			path = BBRefresh;
 			sourceTree = "<group>";
 		};
+		CFBC5C3520FD765A001C5BE8 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC5C3C20FDBD7C001C5BE8 /* view */,
+				CFBC5C3920FDB824001C5BE8 /* Model */,
+				CFBC5C3620FD766B001C5BE8 /* Controller */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		CFBC5C3620FD766B001C5BE8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFBC5C3920FDB824001C5BE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFBC5C3C20FDBD7C001C5BE8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,6 +970,7 @@
 		CFD7E65420EF0B8E002178AA /* News */ = {
 			isa = PBXGroup;
 			children = (
+				CFBC5C3520FD765A001C5BE8 /* Details */,
 				CFD7E65520EF0B8E002178AA /* Index */,
 			);
 			path = News;
@@ -1116,6 +1157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */,
+				CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */,
 				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
 				CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */,
 				CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */,
@@ -1133,6 +1175,7 @@
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
+				CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */,
 				CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */,
@@ -1146,6 +1189,7 @@
 				CF82EC7420EF1AC300CCE8DC /* MJRefreshBackNormalFooter.m in Sources */,
 				CF82EC7B20EF1AC300CCE8DC /* MJRefreshFooter.m in Sources */,
 				CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */,
+				CFBC5C3820FD768F001C5BE8 /* BBNewsDetailController.swift in Sources */,
 				CF1A84D120F899B900E9CE0B /* UIButton+SGPagingView.m in Sources */,
 				CF82EC6F20EF1AC300CCE8DC /* UIScrollView+MJExtension.m in Sources */,
 				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
