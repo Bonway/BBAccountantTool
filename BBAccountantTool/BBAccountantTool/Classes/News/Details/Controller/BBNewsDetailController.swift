@@ -20,10 +20,16 @@ class BBNewsDetailController: BBGestureBaseController {
         let navitionView = UIView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbNavBarHeight))
         navitionView.backgroundColor = UIColor.white
         
-        let leftBtn = UIButton(frame: CGRect(x: 20, y: 10, width: 40, height: 40))
+        let leftBtn = UIButton(frame: CGRect(x: 2, y: bbNavBarHeight - 2 - 40, width: 40, height: 40))
         leftBtn.setImage(UIImage(named: "navigation_news_back"), for: .normal)
         leftBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
         navitionView.addSubview(leftBtn)
+        
+        let menuBtn = UIButton(frame: CGRect(x: bbScreenWidth - 40 - 5, y: bbNavBarHeight - 2 - 40, width: 40, height: 40))
+        menuBtn.setImage(UIImage(named: "navigation_news_menu"), for: .normal)
+        menuBtn.addTarget(self, action: #selector(menuClick), for: .touchUpInside)
+        navitionView.addSubview(menuBtn)
+        
         return navitionView
     }()
     
@@ -57,7 +63,7 @@ class BBNewsDetailController: BBGestureBaseController {
 
         setupNavigation()
         setupView()
-        loadDatas()
+//        loadDatas()
     }
 
     private func setupNavigation() {
@@ -79,8 +85,6 @@ class BBNewsDetailController: BBGestureBaseController {
             self.headerView.model = self.model
             self.headerView.frame = CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0)
             self.headerView.delegate = self
-//            self.headerView.height = self.headerView.headerHeight
-            
             self.tableView.reloadData()
             
         }) { (error_code, message) in
@@ -97,6 +101,60 @@ class BBNewsDetailController: BBGestureBaseController {
 extension BBNewsDetailController {
     @objc private func backClick() {
         navigationController?.popViewController(animated: true)
+    }
+    @objc private func menuClick() {
+        let v = BBShareView.shareView(shareType: .three)
+        v.show {(clsName) in
+            
+            if clsName! == "微信" {
+                self.share(type: .typeWechat)
+            }
+            
+            if clsName! == "朋友圈" {
+                self.share(type: .subTypeWechatTimeline)
+            }
+            
+            
+            if clsName! == "复制链接" {
+                self.pasteBoard(str: "self.urlString")
+            }
+            
+            
+            
+            v.removeFromSuperview()
+        }
+    }
+    
+    private func share(type:SSDKPlatformType){
+        // 1.创建分享参数
+        let shareParames = NSMutableDictionary()
+        shareParames.ssdkSetupShareParams(byText: "shareDscription",
+                                          images : "iconurl",
+                                          url : NSURL(string:"urlString") as URL?,
+                                          title : "shareTitle",
+                                          type : .auto)
+        
+        //2.进行分享
+        ShareSDK.share(type, parameters: shareParames) { (state : SSDKResponseState, nil, entity : SSDKContentEntity?, error :Error?) in
+            
+            switch state{
+                
+            case SSDKResponseState.success:  MBProgressHUD.showTitle("分享成功", to: self.view)
+            case SSDKResponseState.fail:    MBProgressHUD.showTitle("授权失败,错误描述:\(String(describing: error))",to: self.view)
+            case SSDKResponseState.cancel:  MBProgressHUD.showTitle("操作取消",to: self.view)
+                
+            default:
+                break
+            }
+            
+        }
+    }
+    
+    private func pasteBoard(str:String) {
+        //就这两句话就实现了
+        let paste = UIPasteboard.general
+        paste.string = str
+        MBProgressHUD.showTitle("链接已复制", to: view)
     }
 }
 

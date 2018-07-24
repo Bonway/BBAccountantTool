@@ -25,7 +25,7 @@ class BBNewsDetailHeaderView: UIView {
         }
     }
     private lazy var webView: WKWebView = {
-        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 100))
+        let webView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight))
         webView.navigationDelegate = self;
         webView.scrollView.isScrollEnabled = false
         return webView
@@ -54,13 +54,9 @@ extension BBNewsDetailHeaderView: WKNavigationDelegate {
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!){
         webView.evaluateJavaScript("document.body.scrollHeight;") { (result, error) in
-//            self.headerHeight = result as! CGFloat
-            
             webView.sizeToFit()
             print(webView.scrollView.contentSize.height)
-            
             webView.height = webView.scrollView.contentSize.height
-//            print(self.headerHeight)
             self.delegate?.headerHeight(height: webView.scrollView.contentSize.height)
         }
     }

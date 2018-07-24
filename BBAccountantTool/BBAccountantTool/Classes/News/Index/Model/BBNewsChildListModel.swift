@@ -15,7 +15,7 @@ struct BBNewsChildListModel: Codable{
     let id: String
     let typename: String
     let total: String
-    var arcList: [BBNewsChildArcListModel]
+    var arcList: [BBNewsChildArcListModel]?
 //    enum CodingKeys : String, CodingKey {
 //        case msg
 //        case info

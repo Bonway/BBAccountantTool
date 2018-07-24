@@ -57,9 +57,7 @@ class BBHomeWebController: UIViewController {
         closeBtn.addTarget(self, action: #selector(closeClick), for: .touchUpInside)
         
         let closeItem = UIBarButtonItem.init(customView: closeBtn)
-        
         self.navigationItem.leftBarButtonItems = [backItem,closeItem]
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "navigation_menu"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(menuClick))
         
     }
@@ -80,7 +78,7 @@ class BBHomeWebController: UIViewController {
     
     @objc private func menuClick(){
         // 1> 实例化视图
-        let v = BBShareView.shareView()
+        let v = BBShareView.shareView(shareType: .four)
         v.show {(clsName) in
             
             if clsName! == "微信" {

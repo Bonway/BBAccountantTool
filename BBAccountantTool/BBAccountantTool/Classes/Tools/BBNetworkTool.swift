@@ -9,7 +9,11 @@
 import Foundation
 import Moya
 
+let NET_STATE_CODE_SUCCESS_NOLOGIN = -1
+let NET_STATE_CODE_SUCCESS_ERROE = 0
 let NET_STATE_CODE_SUCCESS = 1
+
+let NET_STATE_CODE_SUCCESS_NODATE = 3
 let NET_STATE_CODE_LOGIN = 4000
 class TBaseModel: Decodable {
     var msg: Int
@@ -35,11 +39,11 @@ class BBNetworkTool {
         if cache, let data = TSaveFiles.read(path: target.path) {
             success(data)
         }else {
-            TProgressHUD.show()
+//            TProgressHUD.show()
         }
         
         provider.request(target) { result in
-            TProgressHUD.hide()
+//            TProgressHUD.hide()
             switch result {
             case let .success(response):
                 do {
@@ -55,7 +59,7 @@ class BBNetworkTool {
                         return
                     }
                     switch (model.msg) {
-                    case NET_STATE_CODE_SUCCESS :
+                    case  NET_STATE_CODE_SUCCESS_ERROE,NET_STATE_CODE_SUCCESS_NOLOGIN,NET_STATE_CODE_SUCCESS, NET_STATE_CODE_SUCCESS_NODATE:
                         //数据返回正确
                         if cache {
                             //缓存

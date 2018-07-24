@@ -60,8 +60,6 @@ class BBNewsViewController: BBGestureBaseController {
             let decoder = JSONDecoder()
             let model = try? decoder.decode(BBNewsIndexTitleModel.self, from: json)
             self.model = model
-            
-            
             self.setupView()
         }) { (error_code, message) in
             self.addBlankView(blankType: .requestFailed)
