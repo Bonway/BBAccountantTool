@@ -13,7 +13,4 @@ struct BBUserLoginModel: Codable{
     let info: String
 }
 
-struct BBUserCheckLoginModel: Codable{
-    let msg: Int
-    let info: String
-}
+

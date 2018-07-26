@@ -164,7 +164,6 @@ class BBHomeWebController: UIViewController {
     
     private func setupWebView(){
         view.addSubview(wkWebView)
-//        view.addSubview(headerView)       
         view.addSubview(progressView)
         wkWebView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
     }

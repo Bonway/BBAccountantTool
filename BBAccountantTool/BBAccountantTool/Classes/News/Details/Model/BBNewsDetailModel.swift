@@ -14,6 +14,7 @@ struct BBNewsDetailModel: Codable{
     let typeid: String
     let typename: String
     let aid: String
+    
     let title: String
     let source: String
     let senddate: String

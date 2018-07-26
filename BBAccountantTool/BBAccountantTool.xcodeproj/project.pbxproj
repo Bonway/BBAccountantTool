@@ -31,6 +31,10 @@
 		CF216F642106BE9F00243B2F /* BBUserSetPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF216F5C2106BE9F00243B2F /* BBUserSetPasswordController.xib */; };
 		CF216F652106BE9F00243B2F /* BBUserBindPhoneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216F5D2106BE9F00243B2F /* BBUserBindPhoneController.swift */; };
 		CF216F662106BE9F00243B2F /* BBUserAccountLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF216F5E2106BE9F00243B2F /* BBUserAccountLoginController.xib */; };
+		CF216F6B2106FFA500243B2F /* THUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216F682106FFA500243B2F /* THUD.swift */; };
+		CF216F6C2106FFA500243B2F /* TSaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216F692106FFA500243B2F /* TSaveFiles.swift */; };
+		CF216F6D2106FFA500243B2F /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216F6A2106FFA500243B2F /* BBNetworkTool.swift */; };
+		CF216F70210726F900243B2F /* BBUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF216F6F210726F900243B2F /* BBUserModel.swift */; };
 		CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730020E610F2005487BB /* WBComposeTypeView.swift */; };
 		CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */; };
 		CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */; };
@@ -100,17 +104,9 @@
 		CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */; };
 		CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F7D2105705100E23FFA /* BBUserVipController.xib */; };
 		CF939F802105705100E23FFA /* BBUserVipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F7E2105705100E23FFA /* BBUserVipController.swift */; };
-		CF939F832105A63600E23FFA /* BBUserNickNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F812105A63600E23FFA /* BBUserNickNameController.swift */; };
-		CF939F842105A63600E23FFA /* BBUserNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F822105A63600E23FFA /* BBUserNickNameController.xib */; };
-		CF939F872105AC0B00E23FFA /* BBUserUpdatePhoneNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F852105AC0B00E23FFA /* BBUserUpdatePhoneNumController.swift */; };
-		CF939F882105AC0B00E23FFA /* BBUserUpdatePhoneNumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F862105AC0B00E23FFA /* BBUserUpdatePhoneNumController.xib */; };
-		CF939F8B2105B44900E23FFA /* BBUserUpdatePasswordNumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F892105B44900E23FFA /* BBUserUpdatePasswordNumController.xib */; };
-		CF939F8C2105B44900E23FFA /* BBUserUpdatePasswordNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F8A2105B44900E23FFA /* BBUserUpdatePasswordNumController.swift */; };
 		CF939F922105DAF800E23FFA /* BBUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F912105DAF800E23FFA /* BBUserProvider.swift */; };
 		CF939F942105DD4F00E23FFA /* BBUserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F932105DD4F00E23FFA /* BBUserLoginModel.swift */; };
 		CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */; };
-		CF9B40E42101E3840040477A /* BBUserPersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9B40E22101E3840040477A /* BBUserPersonController.swift */; };
-		CF9B40E52101E3840040477A /* BBUserPersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9B40E32101E3840040477A /* BBUserPersonController.xib */; };
 		CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAA87D620FC2F27009EF95D /* BBNewsChildOnePicCell.swift */; };
 		CFAA87D920FC2F27009EF95D /* BBNewsChildOnePicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFAA87D720FC2F27009EF95D /* BBNewsChildOnePicCell.xib */; };
 		CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFACE80F20FC419700849B4C /* BBNewsChildListModel.swift */; };
@@ -133,7 +129,6 @@
 		CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */; };
 		CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
-		CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
 		CFD46B1520E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0F20E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift */; };
 		CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD46B1020E1D2D20066FC85 /* BBHomeCollectionCell.xib */; };
@@ -143,9 +138,20 @@
 		CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B1A20E1D5A40066FC85 /* BBHomeIndexModel.swift */; };
 		CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */; };
 		CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */; };
-		CFD46B2920E242730066FC85 /* TSaveFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2820E242730066FC85 /* TSaveFiles.swift */; };
-		CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2A20E242A40066FC85 /* THUD.swift */; };
 		CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */; };
+		CFFE800A21081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */; };
+		CFFE800B21081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */; };
+		CFFE800C21081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800321081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift */; };
+		CFFE800D21081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE800421081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib */; };
+		CFFE800E21081ADA00E280C8 /* BBUserNickNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800521081ADA00E280C8 /* BBUserNickNameController.swift */; };
+		CFFE800F21081ADA00E280C8 /* BBUserPersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800621081ADA00E280C8 /* BBUserPersonController.swift */; };
+		CFFE801021081ADA00E280C8 /* BBUserNickNameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE800721081ADA00E280C8 /* BBUserNickNameController.xib */; };
+		CFFE801121081ADA00E280C8 /* BBUserPersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE800821081ADA00E280C8 /* BBUserPersonController.xib */; };
+		CFFE801421081B5900E280C8 /* BBUserPersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE801321081B5900E280C8 /* BBUserPersonModel.swift */; };
+		CFFE8017210856A000E280C8 /* BBUserSexPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE8016210856A000E280C8 /* BBUserSexPickerView.swift */; };
+		CFFE8019210856B100E280C8 /* BBUserSexPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE8018210856B100E280C8 /* BBUserSexPickerView.xib */; };
+		CFFE801D21087A6B00E280C8 /* BBUserBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE801C21087A6B00E280C8 /* BBUserBirthdayView.swift */; };
+		CFFE801F21087A7900E280C8 /* BBUserBirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE801E21087A7900E280C8 /* BBUserBirthdayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +189,10 @@
 		CF216F5C2106BE9F00243B2F /* BBUserSetPasswordController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserSetPasswordController.xib; sourceTree = "<group>"; };
 		CF216F5D2106BE9F00243B2F /* BBUserBindPhoneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserBindPhoneController.swift; sourceTree = "<group>"; };
 		CF216F5E2106BE9F00243B2F /* BBUserAccountLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserAccountLoginController.xib; sourceTree = "<group>"; };
+		CF216F682106FFA500243B2F /* THUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THUD.swift; sourceTree = "<group>"; };
+		CF216F692106FFA500243B2F /* TSaveFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSaveFiles.swift; sourceTree = "<group>"; };
+		CF216F6A2106FFA500243B2F /* BBNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
+		CF216F6F210726F900243B2F /* BBUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserModel.swift; sourceTree = "<group>"; };
 		CF4E730020E610F2005487BB /* WBComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeView.swift; sourceTree = "<group>"; };
 		CF4E730120E610F3005487BB /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		CF4E730220E610F3005487BB /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
@@ -284,17 +294,9 @@
 		CF863B1720EB53AD00EA6FAD /* UIImage+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBExtension.h"; sourceTree = "<group>"; };
 		CF939F7D2105705100E23FFA /* BBUserVipController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserVipController.xib; sourceTree = "<group>"; };
 		CF939F7E2105705100E23FFA /* BBUserVipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserVipController.swift; sourceTree = "<group>"; };
-		CF939F812105A63600E23FFA /* BBUserNickNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserNickNameController.swift; sourceTree = "<group>"; };
-		CF939F822105A63600E23FFA /* BBUserNickNameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserNickNameController.xib; sourceTree = "<group>"; };
-		CF939F852105AC0B00E23FFA /* BBUserUpdatePhoneNumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePhoneNumController.swift; sourceTree = "<group>"; };
-		CF939F862105AC0B00E23FFA /* BBUserUpdatePhoneNumController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserUpdatePhoneNumController.xib; sourceTree = "<group>"; };
-		CF939F892105B44900E23FFA /* BBUserUpdatePasswordNumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserUpdatePasswordNumController.xib; sourceTree = "<group>"; };
-		CF939F8A2105B44900E23FFA /* BBUserUpdatePasswordNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePasswordNumController.swift; sourceTree = "<group>"; };
 		CF939F912105DAF800E23FFA /* BBUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserProvider.swift; sourceTree = "<group>"; };
 		CF939F932105DD4F00E23FFA /* BBUserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserLoginModel.swift; sourceTree = "<group>"; };
 		CF94726A20F88AB600C665C3 /* BBNewsChildController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildController.swift; sourceTree = "<group>"; };
-		CF9B40E22101E3840040477A /* BBUserPersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserPersonController.swift; sourceTree = "<group>"; };
-		CF9B40E32101E3840040477A /* BBUserPersonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserPersonController.xib; sourceTree = "<group>"; };
 		CFAA87D620FC2F27009EF95D /* BBNewsChildOnePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildOnePicCell.swift; sourceTree = "<group>"; };
 		CFAA87D720FC2F27009EF95D /* BBNewsChildOnePicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBNewsChildOnePicCell.xib; sourceTree = "<group>"; };
 		CFACE80F20FC419700849B4C /* BBNewsChildListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsChildListModel.swift; sourceTree = "<group>"; };
@@ -317,7 +319,6 @@
 		CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailModel.swift; sourceTree = "<group>"; };
 		CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailHeaderView.swift; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
-		CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNetworkTool.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
 		CFD46B0F20E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeCollectionHeaderView.swift; sourceTree = "<group>"; };
 		CFD46B1020E1D2D20066FC85 /* BBHomeCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeCollectionCell.xib; sourceTree = "<group>"; };
@@ -327,9 +328,20 @@
 		CFD46B1A20E1D5A40066FC85 /* BBHomeIndexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexModel.swift; sourceTree = "<group>"; };
 		CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexDataProvider.swift; sourceTree = "<group>"; };
 		CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexPresenter.swift; sourceTree = "<group>"; };
-		CFD46B2820E242730066FC85 /* TSaveFiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSaveFiles.swift; sourceTree = "<group>"; };
-		CFD46B2A20E242A40066FC85 /* THUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THUD.swift; sourceTree = "<group>"; };
 		CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsViewController.swift; sourceTree = "<group>"; };
+		CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserUpdatePasswordNumController.xib; sourceTree = "<group>"; };
+		CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePhoneNumController.swift; sourceTree = "<group>"; };
+		CFFE800321081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePasswordNumController.swift; sourceTree = "<group>"; };
+		CFFE800421081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserUpdatePhoneNumController.xib; sourceTree = "<group>"; };
+		CFFE800521081ADA00E280C8 /* BBUserNickNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserNickNameController.swift; sourceTree = "<group>"; };
+		CFFE800621081ADA00E280C8 /* BBUserPersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserPersonController.swift; sourceTree = "<group>"; };
+		CFFE800721081ADA00E280C8 /* BBUserNickNameController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserNickNameController.xib; sourceTree = "<group>"; };
+		CFFE800821081ADA00E280C8 /* BBUserPersonController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserPersonController.xib; sourceTree = "<group>"; };
+		CFFE801321081B5900E280C8 /* BBUserPersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserPersonModel.swift; sourceTree = "<group>"; };
+		CFFE8016210856A000E280C8 /* BBUserSexPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserSexPickerView.swift; sourceTree = "<group>"; };
+		CFFE8018210856B100E280C8 /* BBUserSexPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserSexPickerView.xib; sourceTree = "<group>"; };
+		CFFE801C21087A6B00E280C8 /* BBUserBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserBirthdayView.swift; sourceTree = "<group>"; };
+		CFFE801E21087A7900E280C8 /* BBUserBirthdayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserBirthdayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +439,7 @@
 		CF0DBDB92100289300243E2B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CF216F6F210726F900243B2F /* BBUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,6 +537,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		CF216F672106FFA500243B2F /* BBNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				CF216F682106FFA500243B2F /* THUD.swift */,
+				CF216F692106FFA500243B2F /* TSaveFiles.swift */,
+				CF216F6A2106FFA500243B2F /* BBNetworkTool.swift */,
+			);
+			path = BBNetwork;
+			sourceTree = "<group>";
+		};
+		CF216F6E2106FFB700243B2F /* BBLogin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BBLogin;
+			sourceTree = "<group>";
+		};
 		CF4E72FF20E60BC2005487BB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,9 +620,8 @@
 		CF51C09D20D893A10024E971 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CFD46B2820E242730066FC85 /* TSaveFiles.swift */,
-				CFD46B0620E1D1560066FC85 /* BBNetworkTool.swift */,
-				CFD46B2A20E242A40066FC85 /* THUD.swift */,
+				CF216F6E2106FFB700243B2F /* BBLogin */,
+				CF216F672106FFA500243B2F /* BBNetwork */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1005,21 +1034,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CF9B40E12101E32A0040477A /* Person */ = {
-			isa = PBXGroup;
-			children = (
-				CF939F8A2105B44900E23FFA /* BBUserUpdatePasswordNumController.swift */,
-				CF939F892105B44900E23FFA /* BBUserUpdatePasswordNumController.xib */,
-				CF9B40E22101E3840040477A /* BBUserPersonController.swift */,
-				CF9B40E32101E3840040477A /* BBUserPersonController.xib */,
-				CF939F812105A63600E23FFA /* BBUserNickNameController.swift */,
-				CF939F822105A63600E23FFA /* BBUserNickNameController.xib */,
-				CF939F852105AC0B00E23FFA /* BBUserUpdatePhoneNumController.swift */,
-				CF939F862105AC0B00E23FFA /* BBUserUpdatePhoneNumController.xib */,
-			);
-			path = Person;
-			sourceTree = "<group>";
-		};
 		CFACE81920FCA18500849B4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1209,8 +1223,8 @@
 		CFD7E65620EF0BA9002178AA /* User */ = {
 			isa = PBXGroup;
 			children = (
+				CFFE7FFF21081ADA00E280C8 /* Person */,
 				CF939F7C2105705100E23FFA /* Vip */,
-				CF9B40E12101E32A0040477A /* Person */,
 				CF9B40CD2101A8030040477A /* Login */,
 				CFBBB5252100891E00D31F89 /* About */,
 				CFBBB5122100835000D31F89 /* Set */,
@@ -1245,6 +1259,50 @@
 				CF0DBDB3210020E100243E2B /* BBUserViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFFE7FFF21081ADA00E280C8 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE80152108567500E280C8 /* View */,
+				CFFE801221081B1500E280C8 /* Model */,
+				CFFE800021081ADA00E280C8 /* Controller */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		CFFE800021081ADA00E280C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */,
+				CFFE800321081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift */,
+				CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */,
+				CFFE800421081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib */,
+				CFFE800521081ADA00E280C8 /* BBUserNickNameController.swift */,
+				CFFE800721081ADA00E280C8 /* BBUserNickNameController.xib */,
+				CFFE800621081ADA00E280C8 /* BBUserPersonController.swift */,
+				CFFE800821081ADA00E280C8 /* BBUserPersonController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFFE801221081B1500E280C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE801321081B5900E280C8 /* BBUserPersonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFFE80152108567500E280C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFFE8016210856A000E280C8 /* BBUserSexPickerView.swift */,
+				CFFE8018210856B100E280C8 /* BBUserSexPickerView.xib */,
+				CFFE801C21087A6B00E280C8 /* BBUserBirthdayView.swift */,
+				CFFE801E21087A7900E280C8 /* BBUserBirthdayView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1312,21 +1370,25 @@
 				CFBBB50821005F9200D31F89 /* BBShareView.xib in Resources */,
 				CFD46B1920E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib in Resources */,
 				CFAA87D920FC2F27009EF95D /* BBNewsChildOnePicCell.xib in Resources */,
-				CF9B40E52101E3840040477A /* BBUserPersonController.xib in Resources */,
+				CFFE800A21081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib in Resources */,
 				CF216F642106BE9F00243B2F /* BBUserSetPasswordController.xib in Resources */,
 				CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */,
+				CFFE800D21081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib in Resources */,
 				CF216F662106BE9F00243B2F /* BBUserAccountLoginController.xib in Resources */,
 				CFBBB52B21008A8D00D31F89 /* BBUserAboutController.xib in Resources */,
 				CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */,
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF82EC8B20EF1AC300CCE8DC /* ShareSDKConfigFile.bundle in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
-				CF939F842105A63600E23FFA /* BBUserNickNameController.xib in Resources */,
 				CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */,
 				CF82EC8720EF1AC300CCE8DC /* ShareSDKUI.bundle in Resources */,
 				CF82EC8620EF1AC300CCE8DC /* ShareSDK.bundle in Resources */,
 				CF0DBDC02100292800243E2B /* BBUserIndexCell.xib in Resources */,
 				CFBBB50D210078AD00D31F89 /* BBUserIndexTopCell.xib in Resources */,
+				CFFE801121081ADA00E280C8 /* BBUserPersonController.xib in Resources */,
+				CFFE801021081ADA00E280C8 /* BBUserNickNameController.xib in Resources */,
+				CFFE801F21087A7900E280C8 /* BBUserBirthdayView.xib in Resources */,
+				CFFE8019210856B100E280C8 /* BBUserSexPickerView.xib in Resources */,
 				CF82EC8220EF1AC300CCE8DC /* README.txt in Resources */,
 				CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */,
 				CF216F632106BE9F00243B2F /* BBUserLoginController.xib in Resources */,
@@ -1335,8 +1397,6 @@
 				CF216F622106BE9F00243B2F /* BBUserBindPhoneController.xib in Resources */,
 				CF0DBDB5210020E100243E2B /* BBUserViewController.xib in Resources */,
 				CF82EC8020EF1AC300CCE8DC /* WeiboSDK.bundle in Resources */,
-				CF939F882105AC0B00E23FFA /* BBUserUpdatePhoneNumController.xib in Resources */,
-				CF939F8B2105B44900E23FFA /* BBUserUpdatePasswordNumController.xib in Resources */,
 				CF82EC6E20EF1AC300CCE8DC /* MJRefresh.bundle in Resources */,
 				CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */,
 				CFBBB5172100836F00D31F89 /* BBUserSetController.xib in Resources */,
@@ -1399,7 +1459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD46B0720E1D1560066FC85 /* BBNetworkTool.swift in Sources */,
 				CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */,
 				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
 				CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */,
@@ -1416,7 +1475,7 @@
 				CF82EC9420EF1AC300CCE8DC /* UIImage+DDGManage.swift in Sources */,
 				CFBBB52A21008A8D00D31F89 /* BBUserAboutController.swift in Sources */,
 				CF939F922105DAF800E23FFA /* BBUserProvider.swift in Sources */,
-				CF939F8C2105B44900E23FFA /* BBUserUpdatePasswordNumController.swift in Sources */,
+				CF216F6D2106FFA500243B2F /* BBNetworkTool.swift in Sources */,
 				CF82EC6C20EF1AC300CCE8DC /* UIScrollView+MJRefresh.m in Sources */,
 				CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */,
 				CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */,
@@ -1424,16 +1483,16 @@
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
+				CFFE8017210856A000E280C8 /* BBUserSexPickerView.swift in Sources */,
 				CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CF939F942105DD4F00E23FFA /* BBUserLoginModel.swift in Sources */,
-				CFD46B2B20E242A40066FC85 /* THUD.swift in Sources */,
 				CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */,
+				CFFE800B21081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift in Sources */,
 				CF82EC7220EF1AC300CCE8DC /* MJRefreshBackGifFooter.m in Sources */,
 				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
 				CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */,
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
-				CF939F872105AC0B00E23FFA /* BBUserUpdatePhoneNumController.swift in Sources */,
 				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
 				CF1A84D620F899B900E9CE0B /* SGPageTitleViewConfigure.m in Sources */,
@@ -1445,16 +1504,19 @@
 				CF1A84D120F899B900E9CE0B /* UIButton+SGPagingView.m in Sources */,
 				CF82EC6F20EF1AC300CCE8DC /* UIScrollView+MJExtension.m in Sources */,
 				CF216F602106BE9F00243B2F /* BBUserLoginController.swift in Sources */,
+				CFFE800E21081ADA00E280C8 /* BBUserNickNameController.swift in Sources */,
 				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
 				CF82EC7C20EF1AC300CCE8DC /* MJRefreshHeader.m in Sources */,
 				CF82EC7020EF1AC300CCE8DC /* NSBundle+MJRefresh.m in Sources */,
 				CF1A84D320F899B900E9CE0B /* SGPageContentScrollView.m in Sources */,
 				CF82EC9320EF1AC300CCE8DC /* UIScrollView+DDGShot.swift in Sources */,
+				CF216F6C2106FFA500243B2F /* TSaveFiles.swift in Sources */,
 				CF82EC6D20EF1AC300CCE8DC /* MJRefreshConst.m in Sources */,
 				CFD46B1720E1D2D20066FC85 /* BBHomeIndexTableViewCell.swift in Sources */,
 				CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */,
 				CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */,
 				CF82EC7920EF1AC300CCE8DC /* MJRefreshStateHeader.m in Sources */,
+				CF216F70210726F900243B2F /* BBUserModel.swift in Sources */,
 				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
 				CF82EC9220EF1AC300CCE8DC /* UIView+DDGShot.swift in Sources */,
 				CF82EC7E20EF1AC300CCE8DC /* MJRefreshAutoFooter.m in Sources */,
@@ -1462,6 +1524,8 @@
 				CF82EC7120EF1AC300CCE8DC /* UIView+MJExtension.m in Sources */,
 				CF939F802105705100E23FFA /* BBUserVipController.swift in Sources */,
 				CF82EC7D20EF1AC300CCE8DC /* MJRefreshBackFooter.m in Sources */,
+				CFFE801421081B5900E280C8 /* BBUserPersonModel.swift in Sources */,
+				CFFE800C21081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift in Sources */,
 				CF0DBDB4210020E100243E2B /* BBUserViewController.swift in Sources */,
 				CF82EC7720EF1AC300CCE8DC /* MJRefreshAutoNormalFooter.m in Sources */,
 				CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */,
@@ -1472,19 +1536,19 @@
 				CFBBB503210037C500D31F89 /* BBUserIndexHeaderCell.swift in Sources */,
 				CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */,
 				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
-				CF939F832105A63600E23FFA /* BBUserNickNameController.swift in Sources */,
 				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
+				CF216F6B2106FFA500243B2F /* THUD.swift in Sources */,
+				CFFE800F21081ADA00E280C8 /* BBUserPersonController.swift in Sources */,
 				CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
-				CF9B40E42101E3840040477A /* BBUserPersonController.swift in Sources */,
 				CF216F652106BE9F00243B2F /* BBUserBindPhoneController.swift in Sources */,
 				CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */,
 				CF82EC7320EF1AC300CCE8DC /* MJRefreshBackStateFooter.m in Sources */,
 				CF6E85F420EF61DB009FE443 /* String+Extension.swift in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
 				CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */,
-				CFD46B2920E242730066FC85 /* TSaveFiles.swift in Sources */,
 				CF0DBDBF2100292800243E2B /* BBUserIndexCell.swift in Sources */,
+				CFFE801D21087A6B00E280C8 /* BBUserBirthdayView.swift in Sources */,
 				CF1A84D020F899B900E9CE0B /* NSString+SGPagingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

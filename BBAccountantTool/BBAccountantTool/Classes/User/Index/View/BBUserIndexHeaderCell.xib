@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,10 +121,19 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_index_vip_no" translatesAutoresizingMaskIntoConstraints="NO" id="4El-78-Myp">
+                        <rect key="frame" x="86" y="88" width="24" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="iZZ-by-M0H"/>
+                            <constraint firstAttribute="height" constant="28" id="wNk-xn-AlE"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="wXf-6Q-buv" secondAttribute="bottom" constant="5" id="3ER-gg-fE4"/>
                     <constraint firstAttribute="trailing" secondItem="wXf-6Q-buv" secondAttribute="trailing" constant="12" id="ErE-dg-UjM"/>
+                    <constraint firstItem="4El-78-Myp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="77" id="ZcZ-1y-H4G"/>
+                    <constraint firstItem="4El-78-Myp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="fpy-7e-ovq"/>
                     <constraint firstItem="wXf-6Q-buv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lDL-PK-b1S"/>
                     <constraint firstItem="wXf-6Q-buv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="ohL-Vc-baP"/>
                 </constraints>
@@ -136,6 +146,7 @@
                 <outlet property="loginName" destination="OuT-Js-ltR" id="gnK-08-sYQ"/>
                 <outlet property="loginView" destination="DMG-hq-nAg" id="3IY-sC-7Y5"/>
                 <outlet property="noLoginView" destination="nmD-fd-G6T" id="HkT-v5-wuY"/>
+                <outlet property="vipImageView" destination="4El-78-Myp" id="Az0-RD-eYx"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52"/>
         </tableViewCell>
@@ -143,5 +154,6 @@
     <resources>
         <image name="home_index_head" width="78" height="78"/>
         <image name="user_index_arrow" width="7" height="12"/>
+        <image name="user_index_vip_no" width="76" height="86"/>
     </resources>
 </document>

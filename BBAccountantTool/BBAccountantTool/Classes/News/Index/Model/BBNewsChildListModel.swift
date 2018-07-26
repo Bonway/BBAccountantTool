@@ -12,7 +12,7 @@ struct BBNewsChildListModel: Codable{
     
     let msg: Int
     let info: String
-    let id: String
+    let id: Int
     let typename: String
     let total: String
     var arcList: [BBNewsChildArcListModel]?

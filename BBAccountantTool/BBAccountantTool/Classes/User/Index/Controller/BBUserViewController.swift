@@ -10,6 +10,7 @@ import UIKit
 
 class BBUserViewController: BBGestureBaseController {
 
+    var model: BBUserModel?
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -50,6 +51,8 @@ class BBUserViewController: BBGestureBaseController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
+        
+        loadDatas()
     }
     
 //    override func viewWillDisappear(_ animated: Bool) {
@@ -71,8 +74,25 @@ class BBUserViewController: BBGestureBaseController {
         tableView.register(UINib.init(nibName: "BBUserIndexCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib.init(nibName: "BBUserIndexTopCell", bundle: nil), forCellReuseIdentifier: cellTopID)
         tableView.register(UINib.init(nibName: "BBUserIndexBottomCell", bundle: nil), forCellReuseIdentifier: cellBottomID)
-        
         tableView.register(UINib.init(nibName: "BBUserIndexHeaderCell", bundle: nil), forCellReuseIdentifier: cellHeaderID)
+    }
+    
+    private func loadDatas() {
+        
+        
+        let hud = MBProgressHUD.showProgress(view)
+        BBNetworkTool.loadData(API: UserProviderType.self, target: .islogin, cache: true , success: { (json)in
+            hud?.hide(animated: true)
+            let decoder = JSONDecoder()
+            let model = try? decoder.decode(BBUserModel.self, from: json)
+            self.model = model
+            
+            self.tableView.reloadData()
+        }) { (error_code, message) in
+            hud?.hide(animated: true)
+            self.addBlankView(blankType: .requestFailed)
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,6 +130,7 @@ extension BBUserViewController : UITableViewDataSource {
         
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellHeaderID) as! BBUserIndexHeaderCell
+            cell.model = model
             return cell
         }
         
@@ -163,23 +184,28 @@ extension BBUserViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section == 0 {
-            let loginViewController = BBNavigationController(rootViewController: BBUserLoginController())
-            loginViewController.modalTransitionStyle = .flipHorizontal
-            navigationController?.present(loginViewController, animated: true, completion: nil)
+            
+            if model?.msg == 1 {
+                navigationController?.pushViewController(BBUserPersonController(), animated: true)
+            }else {
+                let loginViewController = BBNavigationController(rootViewController: BBUserLoginController())
+                loginViewController.modalTransitionStyle = .flipHorizontal
+                navigationController?.present(loginViewController, animated: true, completion: nil)
+            }
         }
         
         
         if indexPath.section == 1 {
+            
             if indexPath.row == 0 {
                 navigationController?.pushViewController(BBUserPersonController(), animated: true)
             }
+            
             if indexPath.row == 2 {
                 navigationController?.pushViewController(BBUserAboutController(), animated: true)
             }
         }
     }
-    
-
 }
 //MARK:--UIScrollViewDelegate
 extension BBUserViewController : UIScrollViewDelegate {
