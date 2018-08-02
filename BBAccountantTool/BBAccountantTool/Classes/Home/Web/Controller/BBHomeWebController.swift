@@ -18,7 +18,7 @@ class BBHomeWebController: UIViewController {
     var iconurl: String = ""
     
     fileprivate lazy var progressView: UIProgressView = {
-        let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0))
+        let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: 1))
         progressView.trackTintColor = UIColor.white
         progressView.progressTintColor = BBColor(rgbValue: 0x115ACE)
         return progressView
@@ -26,7 +26,7 @@ class BBHomeWebController: UIViewController {
    
     fileprivate lazy var wkWebView: WKWebView = {
         let webConfiguration = WKWebViewConfiguration()
-        let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight), configuration: webConfiguration)
+        let wkWebView = WKWebView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbScreenHeight - bbNavBarHeight), configuration: webConfiguration)
         wkWebView.navigationDelegate = self
         
         wkWebView.load(URLRequest(url: URL(string: urlString)!))
@@ -93,7 +93,10 @@ class BBHomeWebController: UIViewController {
                TProgressHUD.show()
                 self.wkWebView.DDGContentScreenShot { (image) in
                     TProgressHUD.hide()
-                    UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
+                    
+                    let slaveImage = UIImage(named: "index_share_from")
+                    
+                    UIImageWriteToSavedPhotosAlbum(UIImage.addSlaveImage(image, toMasterImage: slaveImage)!, self, #selector(self.saveImage(image:didFinishSavingWithError:contextInfo:)), nil)
                 }
                 
             }
@@ -140,6 +143,8 @@ class BBHomeWebController: UIViewController {
     ///   - error: 错误信息
     ///   - contextInfo: 描述
     @objc private func saveImage(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+        
+        
         var showMessage = ""
         if error != nil{
             showMessage = "保存失败"
@@ -212,7 +217,7 @@ extension BBHomeWebController : WKNavigationDelegate,WKUIDelegate {
         if keyPath == "estimatedProgress" {
             progressView.isHidden = wkWebView.estimatedProgress == 1
             progressView.setProgress(Float(wkWebView.estimatedProgress), animated: true)
-//            print(wkWebView.estimatedProgress)
+            print(wkWebView.estimatedProgress)
         }
     }
     
@@ -222,23 +227,4 @@ extension BBHomeWebController : WKNavigationDelegate,WKUIDelegate {
     
 }
 
-//extension BBHomeWebController : UIScrollViewDelegate {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-////        var diff =  -wkWebView.scrollView.contentOffset.y;
-//        print(wkWebView.scrollView.contentOffset.y)
-//        if (wkWebView.scrollView.contentOffset.y < 0) {
-//            headerView.height = -wkWebView.scrollView.contentOffset.y
-//        }
-////            CGFloat oldH = self.headerDefaultSize.height;
-////            CGFloat oldW = self.headerDefaultSize.width;
-////
-////            CGFloat newH = oldH + diff;
-////            CGFloat newW = oldW *newH/oldH;
-////
-////            self.headerView.frame  = CGRectMake(0, 0, newW, newH);
-////            self.headerView.center = CGPointMake(oldW/2.0f, (oldH-diff)/2.0f);
-////
-////
-//    }
-//}
 

@@ -12,7 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBUserSetController" customModule="BBAccountantTool" customModuleProvider="target">
             <connections>
+                <outlet property="logoutBtn" destination="Ty1-nc-YEy" id="SEY-Uz-791"/>
                 <outlet property="swiftchView" destination="i0n-DH-ckb" id="fQn-EP-ilu"/>
+                <outlet property="versionView" destination="SAX-CV-9EW" id="8uA-V5-FkT"/>
                 <outlet property="versionsLabel" destination="TL1-zk-r6K" id="zc1-4r-1Q0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -105,14 +107,27 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jw5-0X-jF9" customClass="user_set_signout">
-                    <rect key="frame" x="147" y="589" width="80" height="26"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button" image="user_set_signout"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-nc-YEy">
+                    <rect key="frame" x="137" y="563" width="100" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="AzQ-hA-9Yu"/>
+                        <constraint firstAttribute="height" constant="80" id="l3u-Sp-3fp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-10" minY="25" maxX="18" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="32" minY="0.0" maxX="20" maxY="25"/>
+                    <state key="normal" title="退出登录" image="user_set_signout">
+                        <color key="titleColor" red="1" green="0.40392156862745099" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sigoutClick:" destination="-1" eventType="touchUpInside" id="hkC-it-fEt"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ty1-nc-YEy" secondAttribute="bottom" constant="24" id="5eD-8i-cqB"/>
+                <constraint firstItem="Ty1-nc-YEy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QXq-bO-chj"/>
                 <constraint firstItem="2r7-Wm-Mpg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Y59-Mw-Or8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2r7-Wm-Mpg" secondAttribute="trailing" constant="12" id="cpm-Ex-UwH"/>
                 <constraint firstItem="2r7-Wm-Mpg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="nt4-Cu-0D9"/>

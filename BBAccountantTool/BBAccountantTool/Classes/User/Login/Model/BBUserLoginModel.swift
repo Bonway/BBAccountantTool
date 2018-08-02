@@ -11,6 +11,16 @@ import Foundation
 struct BBUserLoginModel: Codable{
     let msg: Int
     let info: String
+    var data: BBUserLoginModelDataModel
+}
+
+struct BBUserLoginModelDataModel: Codable{
+    let vip: Int?
 }
 
 
+
+struct BBUserGeneralModel: Codable{
+    let msg: Int
+    let info: String
+}

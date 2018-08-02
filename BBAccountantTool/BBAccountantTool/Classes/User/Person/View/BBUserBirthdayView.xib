@@ -72,7 +72,7 @@
                     </constraints>
                 </view>
                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="w69-8r-owl">
-                    <rect key="frame" x="41" y="44" width="335" height="244"/>
+                    <rect key="frame" x="41" y="64" width="335" height="204"/>
                     <date key="date" timeIntervalSinceReferenceDate="554206232.58596206">
                         <!--2018-07-25 10:10:32 +0000-->
                     </date>
@@ -84,13 +84,13 @@
                 <constraint firstItem="KE6-cO-SoY" firstAttribute="top" secondItem="dgI-vy-Al4" secondAttribute="top" id="0FX-r1-dbW"/>
                 <constraint firstItem="dgI-vy-Al4" firstAttribute="trailing" secondItem="GM0-na-7WP" secondAttribute="trailing" id="5nR-hj-lpX"/>
                 <constraint firstItem="GM0-na-7WP" firstAttribute="top" secondItem="KE6-cO-SoY" secondAttribute="bottom" id="9TT-8s-r8L"/>
-                <constraint firstItem="w69-8r-owl" firstAttribute="top" secondItem="EhV-OU-DBF" secondAttribute="bottom" id="EYR-cz-Fu6"/>
+                <constraint firstItem="w69-8r-owl" firstAttribute="top" secondItem="EhV-OU-DBF" secondAttribute="bottom" constant="20" id="EYR-cz-Fu6"/>
                 <constraint firstItem="EhV-OU-DBF" firstAttribute="top" secondItem="dgI-vy-Al4" secondAttribute="top" id="Edp-j3-4lu"/>
                 <constraint firstItem="EhV-OU-DBF" firstAttribute="leading" secondItem="dgI-vy-Al4" secondAttribute="leading" id="Ie0-S7-sfZ"/>
                 <constraint firstItem="w69-8r-owl" firstAttribute="leading" secondItem="dgI-vy-Al4" secondAttribute="leading" constant="41" id="KDh-SI-zFp"/>
                 <constraint firstItem="dgI-vy-Al4" firstAttribute="trailing" secondItem="w69-8r-owl" secondAttribute="trailing" constant="41" id="LTR-hv-PwI"/>
                 <constraint firstItem="GM0-na-7WP" firstAttribute="leading" secondItem="dgI-vy-Al4" secondAttribute="leading" id="ai6-mb-cag"/>
-                <constraint firstItem="dgI-vy-Al4" firstAttribute="bottom" secondItem="w69-8r-owl" secondAttribute="bottom" id="gGT-Tq-Lox"/>
+                <constraint firstItem="dgI-vy-Al4" firstAttribute="bottom" secondItem="w69-8r-owl" secondAttribute="bottom" constant="20" id="gGT-Tq-Lox"/>
                 <constraint firstItem="dgI-vy-Al4" firstAttribute="trailing" secondItem="Brm-dg-n1u" secondAttribute="trailing" id="jSG-bl-XV6"/>
                 <constraint firstItem="Brm-dg-n1u" firstAttribute="top" secondItem="dgI-vy-Al4" secondAttribute="top" id="kfs-1N-2A9"/>
                 <constraint firstItem="KE6-cO-SoY" firstAttribute="centerX" secondItem="zkI-j7-aPd" secondAttribute="centerX" id="me1-p4-Qf8"/>

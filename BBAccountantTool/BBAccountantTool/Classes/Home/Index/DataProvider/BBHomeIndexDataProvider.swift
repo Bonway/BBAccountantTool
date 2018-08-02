@@ -29,7 +29,7 @@ extension HomeIndexType: TargetType {
     public var path: String {
         switch self {
         case .tools:
-            return "/api/index/tools"
+            return "/api/tools/tools"
         }
     }
     

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		76C1D1B7B4DF39DB7A1A2966 /* Pods_BBAccountantTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */; };
+		CF0A32F221097B8D0055B5C8 /* BBUserPhonePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A32F021097B8D0055B5C8 /* BBUserPhonePasswordController.swift */; };
+		CF0A32F321097B8D0055B5C8 /* BBUserPhonePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A32F121097B8D0055B5C8 /* BBUserPhonePasswordController.xib */; };
+		CF0A32F621099D690055B5C8 /* BBUserUpdatePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A32F421099D690055B5C8 /* BBUserUpdatePasswordController.swift */; };
+		CF0A32F721099D690055B5C8 /* BBUserUpdatePasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A32F521099D690055B5C8 /* BBUserUpdatePasswordController.xib */; };
+		CF0A32F92109A8580055B5C8 /* BBUserAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A32F82109A8580055B5C8 /* BBUserAddressView.swift */; };
+		CF0A32FB2109A8650055B5C8 /* BBUserAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A32FA2109A8650055B5C8 /* BBUserAddressView.xib */; };
+		CF0A32FE2109B03D0055B5C8 /* BBUserSetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A32FD2109B03D0055B5C8 /* BBUserSetModel.swift */; };
+		CF0A33002109B6F50055B5C8 /* BBUserSetVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A32FF2109B6F50055B5C8 /* BBUserSetVersionView.swift */; };
+		CF0A33022109B7070055B5C8 /* BBUserSetVersionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A33012109B7070055B5C8 /* BBUserSetVersionView.xib */; };
+		CF0A33072109C8B00055B5C8 /* BBUserAdviseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A33052109C8B00055B5C8 /* BBUserAdviseController.swift */; };
+		CF0A33082109C8B00055B5C8 /* BBUserAdviseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A33062109C8B00055B5C8 /* BBUserAdviseController.xib */; };
 		CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */; };
 		CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */; };
 		CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */; };
@@ -126,8 +137,6 @@
 		CFBBB52A21008A8D00D31F89 /* BBUserAboutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBBB52821008A8D00D31F89 /* BBUserAboutController.swift */; };
 		CFBBB52B21008A8D00D31F89 /* BBUserAboutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBBB52921008A8D00D31F89 /* BBUserAboutController.xib */; };
 		CFBC5C3820FD768F001C5BE8 /* BBNewsDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */; };
-		CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */; };
-		CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */; };
 		CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */; };
 		CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */; };
 		CFD46B1520E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B0F20E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift */; };
@@ -158,6 +167,17 @@
 		0EA20511D5BA2603910E0452 /* Pods-BBAccountantTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAccountantTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool.debug.xcconfig"; sourceTree = "<group>"; };
 		173B82BF1D61A857E846E2A9 /* Pods-BBAccountantTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBAccountantTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool.release.xcconfig"; sourceTree = "<group>"; };
 		8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBAccountantTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF0A32F021097B8D0055B5C8 /* BBUserPhonePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserPhonePasswordController.swift; sourceTree = "<group>"; };
+		CF0A32F121097B8D0055B5C8 /* BBUserPhonePasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserPhonePasswordController.xib; sourceTree = "<group>"; };
+		CF0A32F421099D690055B5C8 /* BBUserUpdatePasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePasswordController.swift; sourceTree = "<group>"; };
+		CF0A32F521099D690055B5C8 /* BBUserUpdatePasswordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserUpdatePasswordController.xib; sourceTree = "<group>"; };
+		CF0A32F82109A8580055B5C8 /* BBUserAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserAddressView.swift; sourceTree = "<group>"; };
+		CF0A32FA2109A8650055B5C8 /* BBUserAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserAddressView.xib; sourceTree = "<group>"; };
+		CF0A32FD2109B03D0055B5C8 /* BBUserSetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserSetModel.swift; sourceTree = "<group>"; };
+		CF0A32FF2109B6F50055B5C8 /* BBUserSetVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserSetVersionView.swift; sourceTree = "<group>"; };
+		CF0A33012109B7070055B5C8 /* BBUserSetVersionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserSetVersionView.xib; sourceTree = "<group>"; };
+		CF0A33052109C8B00055B5C8 /* BBUserAdviseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserAdviseController.swift; sourceTree = "<group>"; };
+		CF0A33062109C8B00055B5C8 /* BBUserAdviseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserAdviseController.xib; sourceTree = "<group>"; };
 		CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNewsIndexDataProvider.swift; sourceTree = "<group>"; };
 		CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsIndexTitleModel.swift; sourceTree = "<group>"; };
 		CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -316,8 +336,6 @@
 		CFBBB52821008A8D00D31F89 /* BBUserAboutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserAboutController.swift; sourceTree = "<group>"; };
 		CFBBB52921008A8D00D31F89 /* BBUserAboutController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserAboutController.xib; sourceTree = "<group>"; };
 		CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailController.swift; sourceTree = "<group>"; };
-		CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailModel.swift; sourceTree = "<group>"; };
-		CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsDetailHeaderView.swift; sourceTree = "<group>"; };
 		CFD46B0420E1CF240066FC85 /* BBThirdPropert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBThirdPropert.swift; sourceTree = "<group>"; };
 		CFD46B0C20E1D2D20066FC85 /* BBHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeViewController.swift; sourceTree = "<group>"; };
 		CFD46B0F20E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeCollectionHeaderView.swift; sourceTree = "<group>"; };
@@ -398,6 +416,31 @@
 				8226914B9A2253FFC9840E82 /* Pods_BBAccountantTool.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF0A32FC2109B0270055B5C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A32FD2109B03D0055B5C8 /* BBUserSetModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF0A33032109C8890055B5C8 /* Advise */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A33042109C8890055B5C8 /* Controller */,
+			);
+			path = Advise;
+			sourceTree = "<group>";
+		};
+		CF0A33042109C8890055B5C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF0A33052109C8B00055B5C8 /* BBUserAdviseController.swift */,
+				CF0A33062109C8B00055B5C8 /* BBUserAdviseController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CF0B9BE820F724E100D42009 /* Model */ = {
@@ -1063,6 +1106,7 @@
 		CFBBB5122100835000D31F89 /* Set */ = {
 			isa = PBXGroup;
 			children = (
+				CF0A32FC2109B0270055B5C8 /* Model */,
 				CFBBB518210086A300D31F89 /* View */,
 				CFBBB5132100835000D31F89 /* Controller */,
 			);
@@ -1081,6 +1125,8 @@
 		CFBBB518210086A300D31F89 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF0A32FF2109B6F50055B5C8 /* BBUserSetVersionView.swift */,
+				CF0A33012109B7070055B5C8 /* BBUserSetVersionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1113,8 +1159,6 @@
 		CFBC5C3520FD765A001C5BE8 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				CFBC5C3C20FDBD7C001C5BE8 /* view */,
-				CFBC5C3920FDB824001C5BE8 /* Model */,
 				CFBC5C3620FD766B001C5BE8 /* Controller */,
 			);
 			path = Details;
@@ -1126,22 +1170,6 @@
 				CFBC5C3720FD768F001C5BE8 /* BBNewsDetailController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		CFBC5C3920FDB824001C5BE8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CFBC5C3A20FDB84F001C5BE8 /* BBNewsDetailModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CFBC5C3C20FDBD7C001C5BE8 /* view */ = {
-			isa = PBXGroup;
-			children = (
-				CFBC5C3F20FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
@@ -1223,6 +1251,7 @@
 		CFD7E65620EF0BA9002178AA /* User */ = {
 			isa = PBXGroup;
 			children = (
+				CF0A33032109C8890055B5C8 /* Advise */,
 				CFFE7FFF21081ADA00E280C8 /* Person */,
 				CF939F7C2105705100E23FFA /* Vip */,
 				CF9B40CD2101A8030040477A /* Login */,
@@ -1282,6 +1311,10 @@
 				CFFE800721081ADA00E280C8 /* BBUserNickNameController.xib */,
 				CFFE800621081ADA00E280C8 /* BBUserPersonController.swift */,
 				CFFE800821081ADA00E280C8 /* BBUserPersonController.xib */,
+				CF0A32F021097B8D0055B5C8 /* BBUserPhonePasswordController.swift */,
+				CF0A32F121097B8D0055B5C8 /* BBUserPhonePasswordController.xib */,
+				CF0A32F421099D690055B5C8 /* BBUserUpdatePasswordController.swift */,
+				CF0A32F521099D690055B5C8 /* BBUserUpdatePasswordController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1301,6 +1334,8 @@
 				CFFE8018210856B100E280C8 /* BBUserSexPickerView.xib */,
 				CFFE801C21087A6B00E280C8 /* BBUserBirthdayView.swift */,
 				CFFE801E21087A7900E280C8 /* BBUserBirthdayView.xib */,
+				CF0A32F82109A8580055B5C8 /* BBUserAddressView.swift */,
+				CF0A32FA2109A8650055B5C8 /* BBUserAddressView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1371,19 +1406,23 @@
 				CFD46B1920E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib in Resources */,
 				CFAA87D920FC2F27009EF95D /* BBNewsChildOnePicCell.xib in Resources */,
 				CFFE800A21081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib in Resources */,
+				CF0A32F321097B8D0055B5C8 /* BBUserPhonePasswordController.xib in Resources */,
 				CF216F642106BE9F00243B2F /* BBUserSetPasswordController.xib in Resources */,
 				CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */,
 				CFFE800D21081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib in Resources */,
 				CF216F662106BE9F00243B2F /* BBUserAccountLoginController.xib in Resources */,
 				CFBBB52B21008A8D00D31F89 /* BBUserAboutController.xib in Resources */,
 				CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */,
+				CF0A33022109B7070055B5C8 /* BBUserSetVersionView.xib in Resources */,
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF82EC8B20EF1AC300CCE8DC /* ShareSDKConfigFile.bundle in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
+				CF0A32FB2109A8650055B5C8 /* BBUserAddressView.xib in Resources */,
 				CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */,
 				CF82EC8720EF1AC300CCE8DC /* ShareSDKUI.bundle in Resources */,
 				CF82EC8620EF1AC300CCE8DC /* ShareSDK.bundle in Resources */,
 				CF0DBDC02100292800243E2B /* BBUserIndexCell.xib in Resources */,
+				CF0A33082109C8B00055B5C8 /* BBUserAdviseController.xib in Resources */,
 				CFBBB50D210078AD00D31F89 /* BBUserIndexTopCell.xib in Resources */,
 				CFFE801121081ADA00E280C8 /* BBUserPersonController.xib in Resources */,
 				CFFE801021081ADA00E280C8 /* BBUserNickNameController.xib in Resources */,
@@ -1400,6 +1439,7 @@
 				CF82EC6E20EF1AC300CCE8DC /* MJRefresh.bundle in Resources */,
 				CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */,
 				CFBBB5172100836F00D31F89 /* BBUserSetController.xib in Resources */,
+				CF0A32F721099D690055B5C8 /* BBUserUpdatePasswordController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1459,7 +1499,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFBC5C3B20FDB84F001C5BE8 /* BBNewsDetailModel.swift in Sources */,
 				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
 				CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */,
 				CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */,
@@ -1477,6 +1516,8 @@
 				CF939F922105DAF800E23FFA /* BBUserProvider.swift in Sources */,
 				CF216F6D2106FFA500243B2F /* BBNetworkTool.swift in Sources */,
 				CF82EC6C20EF1AC300CCE8DC /* UIScrollView+MJRefresh.m in Sources */,
+				CF0A32F621099D690055B5C8 /* BBUserUpdatePasswordController.swift in Sources */,
+				CF0A32F221097B8D0055B5C8 /* BBUserPhonePasswordController.swift in Sources */,
 				CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */,
 				CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */,
 				CF1A84D520F899B900E9CE0B /* SGPageTitleView.m in Sources */,
@@ -1484,16 +1525,17 @@
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
 				CFFE8017210856A000E280C8 /* BBUserSexPickerView.swift in Sources */,
-				CFBC5C4020FDCA9B001C5BE8 /* BBNewsDetailHeaderView.swift in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CF939F942105DD4F00E23FFA /* BBUserLoginModel.swift in Sources */,
 				CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */,
 				CFFE800B21081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift in Sources */,
 				CF82EC7220EF1AC300CCE8DC /* MJRefreshBackGifFooter.m in Sources */,
 				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
+				CF0A33072109C8B00055B5C8 /* BBUserAdviseController.swift in Sources */,
 				CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */,
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
 				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
+				CF0A33002109B6F50055B5C8 /* BBUserSetVersionView.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
 				CF1A84D620F899B900E9CE0B /* SGPageTitleViewConfigure.m in Sources */,
 				CF82EC7420EF1AC300CCE8DC /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1523,6 +1565,7 @@
 				CFBBB510210078C200D31F89 /* BBUserIndexBottomCell.swift in Sources */,
 				CF82EC7120EF1AC300CCE8DC /* UIView+MJExtension.m in Sources */,
 				CF939F802105705100E23FFA /* BBUserVipController.swift in Sources */,
+				CF0A32FE2109B03D0055B5C8 /* BBUserSetModel.swift in Sources */,
 				CF82EC7D20EF1AC300CCE8DC /* MJRefreshBackFooter.m in Sources */,
 				CFFE801421081B5900E280C8 /* BBUserPersonModel.swift in Sources */,
 				CFFE800C21081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift in Sources */,
@@ -1541,6 +1584,7 @@
 				CFFE800F21081ADA00E280C8 /* BBUserPersonController.swift in Sources */,
 				CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
+				CF0A32F92109A8580055B5C8 /* BBUserAddressView.swift in Sources */,
 				CF216F652106BE9F00243B2F /* BBUserBindPhoneController.swift in Sources */,
 				CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */,
 				CF82EC7320EF1AC300CCE8DC /* MJRefreshBackStateFooter.m in Sources */,

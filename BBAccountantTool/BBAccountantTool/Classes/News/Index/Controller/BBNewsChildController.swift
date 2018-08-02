@@ -11,12 +11,17 @@ import AudioToolbox
 
 class BBNewsChildController: BBGestureBaseController {
     
+    var isWillDisappear = true
+    
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
+        isWillDisappear = true
     }
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+        if isWillDisappear {
+            navigationController?.setNavigationBarHidden(false, animated: animated)
+        }
         super.viewWillDisappear(animated)
     }
     
@@ -211,8 +216,10 @@ extension BBNewsChildController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension BBNewsChildController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        isWillDisappear = false
         let newsDetailController = BBNewsDetailController()
-        newsDetailController.aid = model?.arcList![indexPath.row].id
+        newsDetailController.urlString = "https://m.gaodun.com\(model?.arcList![indexPath.row].arcurl ?? "")"
         navigationController?.pushViewController(newsDetailController, animated: true)
     }
 }

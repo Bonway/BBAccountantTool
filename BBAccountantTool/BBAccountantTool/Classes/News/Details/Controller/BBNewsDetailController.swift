@@ -7,14 +7,40 @@
 //
 
 import UIKit
-
+import WebKit
 class BBNewsDetailController: BBGestureBaseController {
 
-    let cellOneID = "newsChildOnePicCell"
-    let cellMoreID = "newsChildMorePicCell"
-    var aid : String!
-    var model: BBNewsDetailModel?
-    var headerView = BBNewsDetailHeaderView()
+    var urlString: String = ""
+//    var titleString: String = ""
+//    var shareTitle: String = ""
+//    var shareDscription: String = ""
+//    var iconurl: String = ""
+    
+    fileprivate lazy var progressView: UIProgressView = {
+        let progressView = UIProgressView(frame: CGRect(x: 0, y: bbNavBarHeight, width: bbScreenWidth, height: 1))
+        progressView.trackTintColor = UIColor.white
+        progressView.progressTintColor = BBColor(rgbValue: 0x115ACE)
+        return progressView
+    }()
+    
+    fileprivate lazy var wkWebView: WKWebView = {
+        let webConfiguration = WKWebViewConfiguration()
+        let wkWebView = WKWebView(frame: CGRect(x: 0, y: bbNavBarHeight, width: bbScreenWidth, height: bbScreenHeight - bbNavBarHeight), configuration: webConfiguration)
+        wkWebView.navigationDelegate = self
+        
+        wkWebView.load(URLRequest(url: URL(string: urlString)!))
+        return wkWebView
+        
+    }()
+    
+//    private lazy var navitionTitleLabel: UILabel = {
+//        let navitionTitleLabel = UILabel(frame: CGRect(x: bbScreenWidth / 2 - 100, y: bbNavBarHeight - 44, width: 200, height: 44))
+//        navitionTitleLabel.font = UIFont.init(name: "PingFangSC-Medium", size: 18)
+//        navitionTitleLabel.textColor = BBColor(rgbValue: 0x333333)
+//        navitionTitleLabel.textAlignment = .center
+//        navitionTitleLabel.text = "哈哈哈"
+//        return navitionTitleLabel
+//    }()
     
     private lazy var navitionView : UIView = {
         let navitionView = UIView(frame: CGRect(x: 0, y: 0, width: bbScreenWidth, height: bbNavBarHeight))
@@ -25,6 +51,13 @@ class BBNewsDetailController: BBGestureBaseController {
         leftBtn.addTarget(self, action: #selector(backClick), for: .touchUpInside)
         navitionView.addSubview(leftBtn)
         
+        let closeBtn = UIButton(frame: CGRect(x: 42, y: bbNavBarHeight - 2 - 40, width: 40, height: 40))
+        closeBtn.setTitle("关闭", for: .normal)
+        closeBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        closeBtn.setTitleColor(BBColor(rgbValue: 0x333333), for: .normal)
+        closeBtn.addTarget(self, action: #selector(closeClick), for: .touchUpInside)
+        navitionView.addSubview(closeBtn)
+        
         let menuBtn = UIButton(frame: CGRect(x: bbScreenWidth - 40 - 5, y: bbNavBarHeight - 2 - 40, width: 40, height: 40))
         menuBtn.setImage(UIImage(named: "navigation_news_menu"), for: .normal)
         menuBtn.addTarget(self, action: #selector(menuClick), for: .touchUpInside)
@@ -33,27 +66,14 @@ class BBNewsDetailController: BBGestureBaseController {
         return navitionView
     }()
     
-    private lazy var tableView : UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0, y: bbNavBarHeight, width: bbScreenWidth, height: bbScreenHeight))
-        tableView.register(UINib.init(nibName: "BBNewsChildOnePicCell", bundle: nil), forCellReuseIdentifier: cellOneID)
-        tableView.register(UINib.init(nibName: "BBNewsChildMorePicCell", bundle: nil), forCellReuseIdentifier: cellMoreID)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.separatorStyle = .none
-        tableView.backgroundColor = BBColor(rgbValue: 0xF6F6F6)
-        tableView.estimatedRowHeight = 140
-        tableView.rowHeight = 140
-        return tableView
-    }()
-    
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
         UIApplication.shared.statusBarStyle = .default
         super.viewWillAppear(animated)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
         UIApplication.shared.statusBarStyle = .lightContent
         super.viewWillDisappear(animated)
     }
@@ -62,34 +82,22 @@ class BBNewsDetailController: BBGestureBaseController {
         super.viewDidLoad()
 
         setupNavigation()
-        setupView()
-//        loadDatas()
+        
+        setupWebView()
     }
 
     private func setupNavigation() {
         view.addSubview(navitionView)
-        
-        
     }
     
-    private func setupView() {
-        view.addSubview(tableView)
+    private func setupWebView(){
+        view.addSubview(wkWebView)
+        view.addSubview(progressView)
+        wkWebView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
     }
     
-    private func loadDatas() {
-
-        BBNetworkTool.loadData(API: NewsIndexType.self, target: .article(aid: aid, token: aid.tokenString), cache: true , success: { (json)in
-            let decoder = JSONDecoder()
-            let model = try? decoder.decode(BBNewsDetailModel.self, from: json)
-            self.model = model
-            self.headerView.model = self.model
-            self.headerView.frame = CGRect(x: 0, y: 0, width: bbScreenWidth, height: 0)
-            self.headerView.delegate = self
-            self.tableView.reloadData()
-            
-        }) { (error_code, message) in
-            self.addBlankView(blankType: .requestFailed)
-        }
+    deinit {
+        wkWebView.removeObserver(self, forKeyPath: "estimatedProgress")
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,8 +107,18 @@ class BBNewsDetailController: BBGestureBaseController {
 }
 // MARK: - Action
 extension BBNewsDetailController {
-    @objc private func backClick() {
+    @objc private func closeClick(){
         navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @objc private func backClick(){
+        
+        if wkWebView.canGoBack {
+            wkWebView.goBack()
+        }else {
+            navigationController?.popViewController(animated: true)
+        }
     }
     @objc private func menuClick() {
         let v = BBShareView.shareView(shareType: .three)
@@ -159,58 +177,24 @@ extension BBNewsDetailController {
 }
 
 
-// MARK: - UITableViewDataSource
-extension BBNewsDetailController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = model?.likearticle.count ?? 0
-        return count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let count = model?.likearticle[indexPath.row].imgList.list.count ?? 0
-        if count > 1 {
-            let moreCell = tableView.dequeueReusableCell(withIdentifier: cellMoreID) as! BBNewsChildMorePicCell
-            moreCell.cellModel = model?.likearticle[indexPath.row]
-            return moreCell
+//MARK:--WKNavigationDelegate
+extension BBNewsDetailController : WKNavigationDelegate,WKUIDelegate {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.isHidden = wkWebView.estimatedProgress == 1
+            progressView.setProgress(Float(wkWebView.estimatedProgress), animated: true)
+            print(wkWebView.estimatedProgress)
         }
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellOneID) as! BBNewsChildOnePicCell
-        cell.cellModel = model?.likearticle[indexPath.row]
-        return cell
     }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let count = model?.likearticle[indexPath.row].imgList.list.count ?? 0
-        if count > 1 {
-            return UITableViewAutomaticDimension
-        }
-        return 140
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension BBNewsDetailController: UITableViewDelegate {
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.headerView.height = self.headerView.headerHeight
-    }
-
-}
-
-// MARK: - UITableViewDelegate
-extension BBNewsDetailController: BBNewsDetailHeaderViewDelegate {
-    func headerHeight(height: CGFloat) {
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        progressView.setProgress(0.0, animated: false)
         
-        self.headerView.height = height
-        self.tableView.tableHeaderView = self.headerView
+//        [js appendString:@"var buyNow = document.getElementsByTagName('header');"];
+//        [js appendString:@"buyNow.parentNode.removeChild(buyNow);"];
+        webView.evaluateJavaScript("document.getElementsByTagName('header')[0].style.display='none';document.getElementsByClassName('bottomCpa')[0].style.display='none';document.getElementsByClassName('place')[0].style.display='none';document.getElementsByClassName('cont')[0].style.display='none';document.getElementsByClassName('list_load')[0].style.display='none';document.getElementsByClassName('block-title')[0].style.display='none';", completionHandler: nil)
+        
     }
+    
 }
-    
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.headerView.height = self.headerView.headerHeight
-//    }
-    
 

@@ -11,10 +11,15 @@ import Foundation
 struct BBHomeIndexModel: Codable{
     let msg: Int
     let info: String
-    var data: [BBHomeIndexDataModel]
+    var data: BBHomeIndexDataModel
 }
 
 struct BBHomeIndexDataModel: Codable{
+    var vip:Int
+    var list: [BBHomeIndexListModel]
+}
+
+struct BBHomeIndexListModel: Codable{
     let typename: String
     var child: [BBHomeIndexDataChildModel]
 }
@@ -25,4 +30,5 @@ struct BBHomeIndexDataChildModel: Codable{
     let h5url: String
     let sharetitle: String
     let description: String
+    let vipgrade: String
 }

@@ -17,8 +17,8 @@ struct BBUserPersonDataModel: Codable{
     let head: String
     let sex: String
     let phone: String
-    let city: String
-    let province: String
+    var city: String
+    var province: String
     let birthday: String
     let viptype: String
     let viptime: String
@@ -27,3 +27,17 @@ struct BBUserPersonDataModel: Codable{
     let shareday: String
 }
 
+struct BBUserPersonAddressModel: Codable{
+    let msg: Int
+    let info: String
+    var data: [BBUserPersonAddressDataModel]
+}
+struct BBUserPersonAddressDataModel: Codable{
+    let id: String
+    let name: String
+    var second: [BBUserPersonAddressSecondDataModel]
+}
+struct BBUserPersonAddressSecondDataModel: Codable{
+    let id: String
+    let name: String
+}

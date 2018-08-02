@@ -18,16 +18,16 @@ class BBUserBirthdayView: UIView {
         didSet {
             
             if birthdayString != "" {
-                
+            
                 let formatter = DateFormatter()
                 formatter.dateFormat = "YYYY-MM-dd"
                 datePickerView.setDate(formatter.date(from: birthdayString)!, animated: true)
             }else{
-                
                 let formatter = DateFormatter()
                 formatter.dateFormat = "YYYY-MM-dd"
-                birthdayString = formatter.string(from: Date())
-                
+                birthdayString = "2000-01-01"
+
+                datePickerView.setDate(formatter.date(from: birthdayString)!, animated: true)
             }
             
         }

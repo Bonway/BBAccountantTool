@@ -11,6 +11,7 @@ import UIKit
 class BBUserViewController: BBGestureBaseController {
 
     var model: BBUserModel?
+    var isWillDisappear = true
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
@@ -51,14 +52,16 @@ class BBUserViewController: BBGestureBaseController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
-        
+        isWillDisappear = true
         loadDatas()
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        navigationController?.setNavigationBarHidden(false, animated: animated)
-//        super.viewWillDisappear(animated)
-//    }
+    override func viewWillDisappear(_ animated: Bool) {
+        if isWillDisappear {
+            navigationController?.setNavigationBarHidden(false, animated: animated)
+        }
+        super.viewWillDisappear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,17 +82,12 @@ class BBUserViewController: BBGestureBaseController {
     
     private func loadDatas() {
         
-        
-        let hud = MBProgressHUD.showProgress(view)
         BBNetworkTool.loadData(API: UserProviderType.self, target: .islogin, cache: true , success: { (json)in
-            hud?.hide(animated: true)
             let decoder = JSONDecoder()
             let model = try? decoder.decode(BBUserModel.self, from: json)
             self.model = model
-            
             self.tableView.reloadData()
         }) { (error_code, message) in
-            hud?.hide(animated: true)
             self.addBlankView(blankType: .requestFailed)
         }
         
@@ -108,7 +106,10 @@ extension BBUserViewController {
     }
     
     @objc private func titleRightBtnClick() {
-        navigationController?.pushViewController(BBUserSetController(), animated: true)
+        
+        let userSetController = BBUserSetController()
+        userSetController.msg = model?.msg ?? 0
+        navigationController?.pushViewController(userSetController, animated: true)
     }
 }
 
@@ -185,6 +186,7 @@ extension BBUserViewController : UITableViewDelegate {
         
         if indexPath.section == 0 {
             
+            isWillDisappear = false
             if model?.msg == 1 {
                 navigationController?.pushViewController(BBUserPersonController(), animated: true)
             }else {
@@ -198,11 +200,21 @@ extension BBUserViewController : UITableViewDelegate {
         if indexPath.section == 1 {
             
             if indexPath.row == 0 {
-                navigationController?.pushViewController(BBUserPersonController(), animated: true)
+//                navigationController?.pushViewController(BBUserPersonController(), animated: true)
+            }
+            
+            if indexPath.row == 1 {
+                navigationController?.pushViewController(BBUserAdviseController(), animated: true)
             }
             
             if indexPath.row == 2 {
                 navigationController?.pushViewController(BBUserAboutController(), animated: true)
+            }
+            
+            if indexPath.row == 3 {
+                let urlString = "itms-apps://itunes.apple.com/app/id1407125955"
+                let url = NSURL(string: urlString)
+                UIApplication.shared.openURL(url! as URL)
             }
         }
     }

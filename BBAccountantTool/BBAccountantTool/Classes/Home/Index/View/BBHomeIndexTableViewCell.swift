@@ -12,7 +12,7 @@ class BBHomeIndexTableViewCell: UITableViewCell {
 
     var editBtnBlock:((UIButton) -> ())?
     var itemBlock:((String,String,String,String,String) -> ())?
-    var itemErrorBlock:(() -> ())?
+    var itemErrorBlock:((Bool,Bool) -> ())?
     var isHideEditBtn : Bool = false
     var isAdd : Bool = false
     
@@ -25,7 +25,7 @@ class BBHomeIndexTableViewCell: UITableViewCell {
         }
     }
     
-    var sectionModel: BBHomeIndexDataModel? {
+    var sectionModel: BBHomeIndexListModel? {
         didSet{
             
             var cellRow = 0
@@ -169,9 +169,13 @@ extension BBHomeIndexTableViewCell : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        if (sectionModel?.child[indexPath.row].h5url.isEmpty)! {
-//            MBProgressHUD.showTitle("功能暂无开发", to: self)
-            itemErrorBlock!()
+        let userDefault = UserDefaults.standard
+        if sectionModel?.child[indexPath.row].vipgrade == "2" {
+            if userDefault.bool(forKey: IS_LOGIN_STATUS) && userDefault.bool(forKey: IS_VIP_STATUS){
+                itemBlock!((sectionModel?.child[indexPath.row].iconurl)!,(sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
+            }else{
+                itemErrorBlock!(userDefault.bool(forKey: IS_LOGIN_STATUS),userDefault.bool(forKey: IS_VIP_STATUS))
+            }
         }else{
             itemBlock!((sectionModel?.child[indexPath.row].iconurl)!,(sectionModel?.child[indexPath.row].h5url)!,(sectionModel?.child[indexPath.row].title)!,(sectionModel?.child[indexPath.row].sharetitle)!,(sectionModel?.child[indexPath.row].description)!)
         }
