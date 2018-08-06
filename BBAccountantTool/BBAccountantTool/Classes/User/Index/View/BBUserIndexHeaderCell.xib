@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXf-6Q-buv">
-                        <rect key="frame" x="12" y="5" width="351" height="145.5"/>
+                        <rect key="frame" x="12" y="4" width="351" height="141.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_index_head" translatesAutoresizingMaskIntoConstraints="NO" id="aoE-7V-KMc">
                                 <rect key="frame" x="22" y="34" width="76" height="76"/>
@@ -40,14 +40,14 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_index_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="jml-3l-xPh">
-                                <rect key="frame" x="320" y="67" width="7" height="12"/>
+                                <rect key="frame" x="320" y="65" width="7" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="fg9-2F-Uep"/>
                                     <constraint firstAttribute="width" constant="7" id="k4D-m9-IFo"/>
                                 </constraints>
                             </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMG-hq-nAg">
-                                <rect key="frame" x="110" y="34" width="198" height="76"/>
+                                <rect key="frame" x="110" y="32" width="198" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuT-Js-ltR">
                                         <rect key="frame" x="0.0" y="14" width="198" height="22"/>
@@ -80,7 +80,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmD-fd-G6T">
-                                <rect key="frame" x="110" y="34" width="198" height="76"/>
+                                <rect key="frame" x="110" y="32" width="198" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="立即登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3b-U8-CKh">
                                         <rect key="frame" x="0.0" y="27" width="198" height="22"/>
@@ -130,11 +130,11 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="wXf-6Q-buv" secondAttribute="bottom" constant="5" id="3ER-gg-fE4"/>
+                    <constraint firstAttribute="bottom" secondItem="wXf-6Q-buv" secondAttribute="bottom" constant="10" id="3ER-gg-fE4"/>
                     <constraint firstAttribute="trailing" secondItem="wXf-6Q-buv" secondAttribute="trailing" constant="12" id="ErE-dg-UjM"/>
                     <constraint firstItem="4El-78-Myp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="77" id="ZcZ-1y-H4G"/>
                     <constraint firstItem="4El-78-Myp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="fpy-7e-ovq"/>
-                    <constraint firstItem="wXf-6Q-buv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lDL-PK-b1S"/>
+                    <constraint firstItem="wXf-6Q-buv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="lDL-PK-b1S"/>
                     <constraint firstItem="wXf-6Q-buv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="ohL-Vc-baP"/>
                 </constraints>
             </tableViewCellContentView>

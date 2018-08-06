@@ -47,7 +47,7 @@ class BBNewsChildMorePicCell: UITableViewCell {
                 titleImgView3.kf.setImage(with: URL(string: (cellModel?.imgList.list[2])!), placeholder: UIImage(named: "blank_placeholder"))
             }
             sourceLabel.text = cellModel?.source
-            timeLabel.text = cellModel?.pubdate
+            timeLabel.text = cellModel?.senddate
             clickLabel.text = String(cellModel?.click ?? 0) + "浏览"
         }
     }

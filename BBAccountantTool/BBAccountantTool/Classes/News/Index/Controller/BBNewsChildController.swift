@@ -11,19 +11,19 @@ import AudioToolbox
 
 class BBNewsChildController: BBGestureBaseController {
     
-    var isWillDisappear = true
+//    var isWillDisappear = true
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
-        isWillDisappear = true
+//        isWillDisappear = true
     }
-    override func viewWillDisappear(_ animated: Bool) {
-        if isWillDisappear {
-            navigationController?.setNavigationBarHidden(false, animated: animated)
-        }
-        super.viewWillDisappear(animated)
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+////        if isWillDisappear {
+//            navigationController?.setNavigationBarHidden(false, animated: animated)
+////        }
+//        super.viewWillDisappear(animated)
+//    }
     
     private lazy var refreshLabel: UILabel = {
         let refreshLabel = UILabel(frame: CGRect(x: bbScreenWidth / 2 - 75, y: 14, width: 150, height: 36))
@@ -71,8 +71,18 @@ class BBNewsChildController: BBGestureBaseController {
         tableView.mj_header = header
         
         
+        let footer = RefreshAutoGifFooter { [weak self] in
+            
+            self?.loadMoreData()
+            
+        }
+        footer?.stateLabel.isHidden = true
+        tableView.mj_footer = footer
+//        tableView.mj_footer = BBRefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
         
-        tableView.mj_footer = BBRefreshFooter(refreshingTarget: self, refreshingAction: #selector(loadMoreData))
+        
+        
+        
         tableView.mj_footer.isHidden = true
         tableView.rowHeight = UITableViewAutomaticDimension
         return tableView
@@ -217,9 +227,12 @@ extension BBNewsChildController: UITableViewDataSource {
 extension BBNewsChildController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-        isWillDisappear = false
+//        isWillDisappear = false
         let newsDetailController = BBNewsDetailController()
         newsDetailController.urlString = "https://m.gaodun.com\(model?.arcList![indexPath.row].arcurl ?? "")"
+        newsDetailController.shareTitle = model?.arcList![indexPath.row].title ?? ""
+        newsDetailController.shareDscription = model?.arcList![indexPath.row].description ?? ""
+        newsDetailController.iconurl = model?.arcList![indexPath.row].litpic ?? ""
         navigationController?.pushViewController(newsDetailController, animated: true)
     }
 }

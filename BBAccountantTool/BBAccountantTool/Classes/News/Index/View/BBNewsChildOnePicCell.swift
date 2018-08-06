@@ -47,7 +47,7 @@ class BBNewsChildOnePicCell: UITableViewCell {
             }
             
             sourceLabel.text = cellModel?.source
-            timeLabel.text = cellModel?.pubdate
+            timeLabel.text = cellModel?.senddate
             clickLabel.text = String(cellModel?.click ?? 0) + "浏览"
         }
     }

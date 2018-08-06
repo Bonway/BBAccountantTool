@@ -12,9 +12,9 @@ class BBNewsDetailController: BBGestureBaseController {
 
     var urlString: String = ""
 //    var titleString: String = ""
-//    var shareTitle: String = ""
-//    var shareDscription: String = ""
-//    var iconurl: String = ""
+    var shareTitle: String = ""
+    var shareDscription: String = ""
+    var iconurl: String = ""
     
     fileprivate lazy var progressView: UIProgressView = {
         let progressView = UIProgressView(frame: CGRect(x: 0, y: bbNavBarHeight, width: bbScreenWidth, height: 1))
@@ -94,6 +94,7 @@ class BBNewsDetailController: BBGestureBaseController {
         view.addSubview(wkWebView)
         view.addSubview(progressView)
         wkWebView.addObserver(self, forKeyPath: "estimatedProgress", options: .new, context: nil)
+        wkWebView.isHidden = true
     }
     
     deinit {
@@ -146,10 +147,10 @@ extension BBNewsDetailController {
     private func share(type:SSDKPlatformType){
         // 1.创建分享参数
         let shareParames = NSMutableDictionary()
-        shareParames.ssdkSetupShareParams(byText: "shareDscription",
-                                          images : "iconurl",
-                                          url : NSURL(string:"urlString") as URL?,
-                                          title : "shareTitle",
+        shareParames.ssdkSetupShareParams(byText: shareDscription,
+                                          images : iconurl,
+                                          url : NSURL(string:urlString) as URL?,
+                                          title : shareTitle,
                                           type : .auto)
         
         //2.进行分享
@@ -188,11 +189,11 @@ extension BBNewsDetailController : WKNavigationDelegate,WKUIDelegate {
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        progressView.setProgress(0.0, animated: false)
         
-//        [js appendString:@"var buyNow = document.getElementsByTagName('header');"];
-//        [js appendString:@"buyNow.parentNode.removeChild(buyNow);"];
-        webView.evaluateJavaScript("document.getElementsByTagName('header')[0].style.display='none';document.getElementsByClassName('bottomCpa')[0].style.display='none';document.getElementsByClassName('place')[0].style.display='none';document.getElementsByClassName('cont')[0].style.display='none';document.getElementsByClassName('list_load')[0].style.display='none';document.getElementsByClassName('block-title')[0].style.display='none';", completionHandler: nil)
+        webView.evaluateJavaScript("document.getElementsByTagName('header')[0].style.display='none';document.getElementsByClassName('bottomCpa')[0].style.display='none';document.getElementsByClassName('place')[0].style.display='none';document.getElementsByClassName('cont')[0].style.display='none';document.getElementsByClassName('list_load')[0].style.display='none';document.getElementsByClassName('block-title')[0].style.display='none';document.getElementsByClassName('sec_foot')[0].getElementsByTagName('a')[0].style.display='none';", completionHandler: nil)
+        
+        progressView.setProgress(0.0, animated: false)
+        webView.isHidden = false
         
     }
     

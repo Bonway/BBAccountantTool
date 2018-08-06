@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="imgView" destination="A6b-7g-f1M" id="bnY-mr-fa7"/>
                 <outlet property="tableView" destination="6KK-yk-Hwi" id="xRE-bg-T5I"/>
+                <outlet property="tableViewTop" destination="M7z-yx-RIm" id="SJr-YL-sMm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,10 +43,10 @@
                 <constraint firstItem="6KK-yk-Hwi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6Wp-cl-bB6"/>
                 <constraint firstItem="6KK-yk-Hwi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C68-r1-05B"/>
                 <constraint firstItem="6KK-yk-Hwi" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="G2q-t8-ozL"/>
-                <constraint firstItem="6KK-yk-Hwi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M7z-yx-RIm"/>
+                <constraint firstItem="6KK-yk-Hwi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="M7z-yx-RIm"/>
                 <constraint firstItem="A6b-7g-f1M" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bAy-f5-SV7"/>
-                <constraint firstItem="A6b-7g-f1M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iue-rm-hyC"/>
-                <constraint firstItem="A6b-7g-f1M" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wNO-qa-HSK"/>
+                <constraint firstItem="A6b-7g-f1M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iue-rm-hyC"/>
+                <constraint firstItem="A6b-7g-f1M" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="wNO-qa-HSK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="51.5"/>

@@ -22,7 +22,7 @@ class BBUserLoginController: BBGestureBaseController {
     
     private var remainingSeconds: Int = 0 {
         willSet {
-            secondBtn.setTitle("\(newValue)秒后获取", for: .normal)
+            secondBtn.setTitle("\(newValue)s后重新获取", for: .normal)
             secondBtn.setTitleColor(BBColor(rgbValue: 0x999999), for: .normal)
             if newValue <= 0 {
                 secondBtn.setTitle("重新获取", for: .normal)
@@ -139,11 +139,18 @@ extension BBUserLoginController {
     
     @IBAction func weChatClick(_ sender: Any) {
         ShareSDK.cancelAuthorize(.typeWechat)
+        
+        let hud = MBProgressHUD.showProgress(self.view)
+        
         ShareSDK.getUserInfo(.typeWechat) { (state, user, error) in
+            
+            hud?.hide(animated: true)
             if state == .success {
-                let hud = MBProgressHUD.showProgress(self.view)
+                
+                
+                let hud2 = MBProgressHUD.showProgress(self.view)
                 BBNetworkTool.loadData(API: UserProviderType.self, target: .thirdLogin(tag: "1", openid: user?.uid ?? ""), cache: true , success: { (json)in
-                    hud?.hide(animated: true)
+                    hud2?.hide(animated: true)
                     let decoder = JSONDecoder()
                     let model = try? decoder.decode(BBUserLoginModel.self, from: json)
 
@@ -192,15 +199,17 @@ extension BBUserLoginController {
                             
                             let s = user?.rawData["sex"] as! NSNumber
                             let sex = "\(s)"
-                            if sex == "0"  {
-                                bindPhoneController.sex = "1"
-                            }
-                            if sex == "1" {
-                                bindPhoneController.sex = "2"
-                            }
-                            if sex == "2" {
-                                bindPhoneController.sex = "0"
-                            }
+//                            print("hahahha:\(sex)")
+                            bindPhoneController.sex = sex
+//                            if sex == "0"  {
+//                                bindPhoneController.sex = "0"
+//                            }
+//                            if sex == "1" {
+//                                bindPhoneController.sex = "1"
+//                            }
+//                            if sex == "2" {
+//                                bindPhoneController.sex = "2"
+//                            }
                             
                         }else{
                             bindPhoneController.sex = "0"
@@ -211,10 +220,11 @@ extension BBUserLoginController {
                         MBProgressHUD.showTitle(model?.info, to: self.view)
                     }
                 }) { (error_code, message) in
-                    hud?.hide(animated: true)
+                    hud2?.hide(animated: true)
                     self.addBlankView(blankType: .requestFailed)
                 }
             }else {
+                hud?.hide(animated: true)
                 MBProgressHUD.showTitle("授权信息有误", to: self.view)
             }
         }
@@ -223,7 +233,7 @@ extension BBUserLoginController {
     
     @objc private func phoneChange(textField:UITextField) {
         if let str = textField.text{
-            let expression = "^((1[3,5,8][0-9])|(14[5,7])|(17[0,6,7,8])|(19[7]))\\d{8}$"//"|"表示什么就不用说了吧，[5|7]表示满足其中任意一个即匹配，数量唯一，"[0-3]"则表示满足0到之间的数字即匹配，数量唯一，[^14]表示匹配除1和4以外的任意字符，这里包括了字母，所以建议弹出键盘类型为数字键盘
+            let expression = "^((1[3,5,8][0-9])|(14[5,7])|(17[0,3,6,7,8])|(19[7]))\\d{8}$"//"|"表示什么就不用说了吧，[5|7]表示满足其中任意一个即匹配，数量唯一，"[0-3]"则表示满足0到之间的数字即匹配，数量唯一，[^14]表示匹配除1和4以外的任意字符，这里包括了字母，所以建议弹出键盘类型为数字键盘
             let regex = try! NSRegularExpression(pattern: expression, options: .allowCommentsAndWhitespace)//生成NSRegularExpression实例
             let numberOfMatches = regex.numberOfMatches(in: str, options:.reportProgress, range: NSMakeRange(0, (str as NSString).length))//获取匹配的个数
             if numberOfMatches != 0{//如果匹配，则登录按钮生效，否则反之

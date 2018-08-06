@@ -88,19 +88,19 @@
                                 <rect key="frame" x="18" y="162.5" width="319" height="15"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-YO-g8B">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179.5" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-3h-i9p">
-                                        <rect key="frame" x="160" y="0.0" width="74.5" height="15"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-3h-i9p">
+                                        <rect key="frame" x="189.5" y="0.0" width="60" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VaI-PA-Ysf">
-                                        <rect key="frame" x="244.5" y="0.0" width="74.5" height="15"/>
+                                        <rect key="frame" x="259.5" y="0.0" width="59.5" height="15"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -120,7 +120,7 @@
                                     <constraint firstItem="VaI-PA-Ysf" firstAttribute="leading" secondItem="5oG-3h-i9p" secondAttribute="trailing" constant="10" id="oqd-Lh-5TI"/>
                                     <constraint firstItem="s1Y-YO-g8B" firstAttribute="leading" secondItem="Rnj-iR-KiX" secondAttribute="leading" id="qyn-ra-dhe"/>
                                     <constraint firstAttribute="bottom" secondItem="s1Y-YO-g8B" secondAttribute="bottom" id="vec-fo-V45"/>
-                                    <constraint firstItem="s1Y-YO-g8B" firstAttribute="width" secondItem="5oG-3h-i9p" secondAttribute="width" multiplier="2:1" id="vyG-eH-4pK"/>
+                                    <constraint firstItem="s1Y-YO-g8B" firstAttribute="width" secondItem="5oG-3h-i9p" secondAttribute="width" multiplier="3:1" id="vyG-eH-4pK"/>
                                 </constraints>
                             </view>
                         </subviews>

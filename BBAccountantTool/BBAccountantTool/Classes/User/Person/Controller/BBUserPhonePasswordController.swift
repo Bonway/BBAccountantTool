@@ -16,10 +16,10 @@ class BBUserPhonePasswordController: BBGestureBaseController {
     @IBOutlet weak var threeView: UIView!
     @IBOutlet weak var fourView: UIView!
     
-    @IBOutlet weak var oneField: UITextField!
-    @IBOutlet weak var twoField: UITextField!
-    @IBOutlet weak var threeField: UITextField!
-    @IBOutlet weak var fourField: UITextField!
+    @IBOutlet weak var oneField: BBTextField!
+    @IBOutlet weak var twoField: BBTextField!
+    @IBOutlet weak var threeField: BBTextField!
+    @IBOutlet weak var fourField: BBTextField!
     
     @IBOutlet weak var secondBtn: UIButton!
     
@@ -27,7 +27,7 @@ class BBUserPhonePasswordController: BBGestureBaseController {
     
     private var remainingSeconds: Int = 0 {
         willSet {
-            secondBtn.setTitle("\(newValue)秒后获取", for: .disabled)
+            secondBtn.setTitle("\(newValue)s后重新获取", for: .disabled)
             if newValue <= 0 {
                 isCounting = false
             }
@@ -96,6 +96,13 @@ class BBUserPhonePasswordController: BBGestureBaseController {
 
         fourField.addTarget(self, action: #selector(passwordDid(textField:)), for: .editingDidEnd)
         
+        
+        
+        oneField.bbDelegate = self
+        twoField.bbDelegate = self
+        threeField.bbDelegate = self
+        fourField.bbDelegate = self
+        
         navigationItem.title = "填写验证码"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "navigation_back"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(backClick))
     }
@@ -144,6 +151,7 @@ extension BBUserPhonePasswordController {
         }
         
     }
+    
     
     
     @objc private func passwordDid(textField:UITextField) {
@@ -214,6 +222,25 @@ extension BBUserPhonePasswordController : UITextFieldDelegate{
         }
         return true
     }
+}
+
+extension BBUserPhonePasswordController : BBTextFieldDelegate{
     
+    
+    func deleteText(textField: BBTextField) {
+        if textField == fourField {
+            threeField.becomeFirstResponder()
+        }
+        
+        if textField == threeField {
+            twoField.becomeFirstResponder()
+        }
+        
+        if textField == twoField {
+            oneField.becomeFirstResponder()
+        }
+
+    }
     
 }
+

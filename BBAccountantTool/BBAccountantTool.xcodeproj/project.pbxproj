@@ -111,6 +111,7 @@
 		CF82EC9320EF1AC300CCE8DC /* UIScrollView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82EC4020EF1AC300CCE8DC /* UIScrollView+DDGShot.swift */; };
 		CF82EC9420EF1AC300CCE8DC /* UIImage+DDGManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82EC4120EF1AC300CCE8DC /* UIImage+DDGManage.swift */; };
 		CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF82EC4220EF1AC300CCE8DC /* WKWebView+DDGShot.swift */; };
+		CF84D2C92117E9D300890BF4 /* BBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84D2C82117E9D300890BF4 /* BBTextField.swift */; };
 		CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */; };
 		CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */; };
 		CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F7D2105705100E23FFA /* BBUserVipController.xib */; };
@@ -308,6 +309,7 @@
 		CF82EC4020EF1AC300CCE8DC /* UIScrollView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+DDGShot.swift"; sourceTree = "<group>"; };
 		CF82EC4120EF1AC300CCE8DC /* UIImage+DDGManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+DDGManage.swift"; sourceTree = "<group>"; };
 		CF82EC4220EF1AC300CCE8DC /* WKWebView+DDGShot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+DDGShot.swift"; sourceTree = "<group>"; };
+		CF84D2C82117E9D300890BF4 /* BBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBTextField.swift; sourceTree = "<group>"; };
 		CF863B1220EB539900EA6FAD /* UIBarButtonItem+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BBExtension.h"; sourceTree = "<group>"; };
 		CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBExtension.m"; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 		CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexDataProvider.swift; sourceTree = "<group>"; };
 		CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexPresenter.swift; sourceTree = "<group>"; };
 		CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsViewController.swift; sourceTree = "<group>"; };
+		CFFD5E87211441F100EB4A57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserUpdatePasswordNumController.xib; sourceTree = "<group>"; };
 		CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePhoneNumController.swift; sourceTree = "<group>"; };
 		CFFE800321081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePasswordNumController.swift; sourceTree = "<group>"; };
@@ -1017,6 +1020,14 @@
 			path = DDGScreenShot;
 			sourceTree = "<group>";
 		};
+		CF84D2C72117E9B700890BF4 /* BBTextField */ = {
+			isa = PBXGroup;
+			children = (
+				CF84D2C82117E9D300890BF4 /* BBTextField.swift */,
+			);
+			path = BBTextField;
+			sourceTree = "<group>";
+		};
 		CF863B1120EB539900EA6FAD /* UIBarButtonItem+Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -1080,6 +1091,7 @@
 		CFACE81920FCA18500849B4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CF84D2C72117E9B700890BF4 /* BBTextField */,
 				CFBBB50521005F9200D31F89 /* BBShareView */,
 				CFACE81A20FCA1AB00849B4C /* BBRefresh */,
 			);
@@ -1524,6 +1536,7 @@
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
+				CF84D2C92117E9D300890BF4 /* BBTextField.swift in Sources */,
 				CFFE8017210856A000E280C8 /* BBUserSexPickerView.swift in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CF939F942105DD4F00E23FFA /* BBUserLoginModel.swift in Sources */,
@@ -1604,6 +1617,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF51C09020D88CD20024E971 /* Base */,
+				CFFD5E87211441F100EB4A57 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1615,6 +1629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1676,6 +1691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

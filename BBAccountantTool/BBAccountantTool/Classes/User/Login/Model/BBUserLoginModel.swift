@@ -18,9 +18,21 @@ struct BBUserLoginModelDataModel: Codable{
     let vip: Int?
 }
 
-
-
 struct BBUserGeneralModel: Codable{
     let msg: Int
     let info: String
+}
+
+
+
+
+struct BBUserShareModel: Codable{
+    let msg: Int
+    let info: String
+    var data: BBUserShareModelDataModel
+}
+
+struct BBUserShareModelDataModel: Codable{
+    let vip: Int?
+    let endtime: String?
 }

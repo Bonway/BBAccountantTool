@@ -15,13 +15,15 @@ class BBUserViewController: BBGestureBaseController {
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewTop: NSLayoutConstraint!
     
     let cellID = "userCell"
     let cellTopID = "userTopCell"
     let cellBottomID = "userBottomCell"
     let cellHeaderID = "userHeaderCell"
     
-    private let cellInfo = [["imageName": "user_index_collect", "title": "我的收藏"],
+//    ["imageName": "user_index_collect", "title": "我的收藏"],
+    private let cellInfo = [
                                    ["imageName": "user_index_opinion", "title": "吐个槽"],
                                    ["imageName": "user_index_aboutus", "title": "关于会计工具箱"],
                                    ["imageName": "user_index_grade", "title": "给我打分"]]
@@ -72,12 +74,22 @@ class BBUserViewController: BBGestureBaseController {
     }
 
     private func setupTableView() {
+        
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false;
+        }
+        
         tableView.tableHeaderView = navHeaderView
+        
         view.backgroundColor = BBColor(rgbValue: 0xf6f6f6)
+        tableViewTop.constant = bbStatusHeight
         tableView.register(UINib.init(nibName: "BBUserIndexCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib.init(nibName: "BBUserIndexTopCell", bundle: nil), forCellReuseIdentifier: cellTopID)
         tableView.register(UINib.init(nibName: "BBUserIndexBottomCell", bundle: nil), forCellReuseIdentifier: cellBottomID)
         tableView.register(UINib.init(nibName: "BBUserIndexHeaderCell", bundle: nil), forCellReuseIdentifier: cellHeaderID)
+       
     }
     
     private func loadDatas() {
@@ -124,7 +136,7 @@ extension BBUserViewController : UITableViewDataSource {
         if section == 0 {
             return 1
         }
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -145,7 +157,7 @@ extension BBUserViewController : UITableViewDataSource {
                 cell.cellTitleLabel.text = title
                 return cell
             }
-            if indexPath.row == 3 {
+            if indexPath.row == 2 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellBottomID) as! BBUserIndexBottomCell
                 let dict = cellInfo[indexPath.row]
                 let imageName = dict["imageName"]
@@ -171,11 +183,11 @@ extension BBUserViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.section == 0 {
-            return 156
+            return 160
         }
         
         if indexPath.section == 1 {
-            if indexPath.row == 0 || indexPath.row == 3 {
+            if indexPath.row == 0 || indexPath.row == 2 {
                 return 52+12
             }
         }
@@ -199,19 +211,19 @@ extension BBUserViewController : UITableViewDelegate {
         
         if indexPath.section == 1 {
             
-            if indexPath.row == 0 {
-//                navigationController?.pushViewController(BBUserPersonController(), animated: true)
-            }
+//            if indexPath.row == 0 {
+////                navigationController?.pushViewController(BBUserPersonController(), animated: true)
+//            }
             
-            if indexPath.row == 1 {
+            if indexPath.row == 0 {
                 navigationController?.pushViewController(BBUserAdviseController(), animated: true)
             }
             
-            if indexPath.row == 2 {
+            if indexPath.row == 1 {
                 navigationController?.pushViewController(BBUserAboutController(), animated: true)
             }
             
-            if indexPath.row == 3 {
+            if indexPath.row == 2 {
                 let urlString = "itms-apps://itunes.apple.com/app/id1407125955"
                 let url = NSURL(string: urlString)
                 UIApplication.shared.openURL(url! as URL)
@@ -230,7 +242,7 @@ extension BBUserViewController : UIScrollViewDelegate {
             imgView.y = -imgView.height
         }
         if scrollView.contentOffset.y <= 0{
-            imgView.height = 375.0 / bbScreenWidth * 200 - scrollView.contentOffset.y
+            imgView.height = bbScreenWidth * 8 / 15 - scrollView.contentOffset.y
         }
     }
 }

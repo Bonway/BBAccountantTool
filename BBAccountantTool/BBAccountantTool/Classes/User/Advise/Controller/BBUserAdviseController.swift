@@ -51,7 +51,7 @@ extension BBUserAdviseController {
     @objc private func phoneChange(textField:UITextField) {
         
         if let str = textField.text{
-            let expression = "^((1[3,5,8][0-9])|(14[5,7])|(17[0,6,7,8])|(19[7]))\\d{8}$"//"|"表示什么就不用说了吧，[5|7]表示满足其中任意一个即匹配，数量唯一，"[0-3]"则表示满足0到之间的数字即匹配，数量唯一，[^14]表示匹配除1和4以外的任意字符，这里包括了字母，所以建议弹出键盘类型为数字键盘
+            let expression = "^((1[3,5,8][0-9])|(14[5,7])|(17[0,3,6,7,8])|(19[7]))\\d{8}$"//"|"表示什么就不用说了吧，[5|7]表示满足其中任意一个即匹配，数量唯一，"[0-3]"则表示满足0到之间的数字即匹配，数量唯一，[^14]表示匹配除1和4以外的任意字符，这里包括了字母，所以建议弹出键盘类型为数字键盘
             let regex = try! NSRegularExpression(pattern: expression, options: .allowCommentsAndWhitespace)//生成NSRegularExpression实例
             regex.numberOfMatches(in: str, options:.reportProgress, range: NSMakeRange(0, (str as NSString).length))//获取匹配的个数
 
@@ -63,6 +63,11 @@ extension BBUserAdviseController {
 extension BBUserAdviseController : UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let str = (textField.text! as NSString).replacingCharacters(in: range, with: string)//获取输入框接收到的文字
+        
+        if str.count > 11 {
+            return false
+        }
+        
         let expression = "^\\d*\\.?\\d{0,2}$"//创建表达式,"*"表示重复0次或更多次，"."表示匹配除换行符以外的任意字符，如果我们想直接匹配"."本身，就得在前边加转义符\\，"?"表示重复0或1次，{0,2}表示重复0或2次，"^","$"分别匹配字符串的开始和末尾，所以整个意思就是，匹配可重复出现的数字+一个"."+两个数字
         let regex = try! NSRegularExpression(pattern: expression, options: .allowCommentsAndWhitespace)//生成NSRegularExpression实例
         let numberOfMatches = regex.numberOfMatches(in: str, options:.reportProgress, range: NSMakeRange(0, (str as NSString).length))//获取匹配的个数
@@ -106,8 +111,7 @@ extension BBUserAdviseController : UITextViewDelegate {
         }
         if textView.text.count > 200  {
             let str = textView.text
-            let index = str?.index((str?.startIndex)!, offsetBy: 2)
-            textView.text = String((str?.prefix(upTo: index!))!)
+            textView.text = String((str?.prefix(200))!)
         }
         numLabel.text = "\(textView.text.count)/200"
     }
