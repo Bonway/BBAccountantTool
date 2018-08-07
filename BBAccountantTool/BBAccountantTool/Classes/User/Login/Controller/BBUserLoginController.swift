@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class BBUserLoginController: BBGestureBaseController {
 
     @IBOutlet weak var navigationHeight: NSLayoutConstraint!
@@ -18,6 +19,7 @@ class BBUserLoginController: BBGestureBaseController {
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var loginBtn: UIButton!
     
+    @IBOutlet weak var weChatLoginBtn: UIButton!
     @IBOutlet weak var secondBtn: UIButton!
     
     private var remainingSeconds: Int = 0 {
@@ -55,6 +57,14 @@ class BBUserLoginController: BBGestureBaseController {
         
         phoneFieldView.addTarget(self, action: #selector(phoneChange(textField:)), for: .allEditingEvents)
         passwordFieldView.addTarget(self, action: #selector(passwordChange(textField:)), for: .allEditingEvents)
+    
+    
+        if !ShareSDK.isClientInstalled(.typeWechat) {
+            weChatLoginBtn.isHidden = true
+        }else {
+            weChatLoginBtn.isHidden = false
+        }
+    
     }
 
     

@@ -20,6 +20,7 @@
                 <outlet property="phoneFieldView" destination="OEG-ys-hJD" id="fqc-m3-HuB"/>
                 <outlet property="secondBtn" destination="4d3-dj-a4h" id="Kyt-yK-unc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weChatLoginBtn" destination="2gN-e8-piP" id="m83-Ok-mTU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

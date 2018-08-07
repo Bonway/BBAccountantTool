@@ -14,7 +14,7 @@
 #import "SGPagingView.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
-
+#import <ShareSDKExtension/ShareSDK+Extension.h>
 
 #import <CommonCrypto/CommonDigest.h>
 
