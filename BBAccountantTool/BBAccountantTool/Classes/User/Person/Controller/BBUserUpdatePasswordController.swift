@@ -72,7 +72,8 @@ extension BBUserUpdatePasswordController {
                 }
             }) { (error_code, message) in
                 hud?.hide(animated: true)
-                self.addBlankView(blankType: .requestFailed)
+//                self.addBlankView(blankType: .requestFailed)
+                self.addBlankView(BBBlankTypeRequestFailed)
             }
         }else {
             let hud = MBProgressHUD.showProgress(view)
@@ -93,7 +94,8 @@ extension BBUserUpdatePasswordController {
                 }
             }) { (error_code, message) in
                 hud?.hide(animated: true)
-                self.addBlankView(blankType: .requestFailed)
+//                self.addBlankView(blankType: .requestFailed)
+                self.addBlankView(BBBlankTypeRequestFailed)
             }
         }
         

@@ -117,7 +117,8 @@ class BBNewsChildController: BBGestureBaseController {
             self.tableView.mj_footer.isHidden = false
         }) { (error_code, message) in
             hud?.hide(animated: true)
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
     }
     
@@ -160,7 +161,7 @@ extension BBNewsChildController{
 //            if self!.tableView.mj_header.isRefreshing { self!.tableView.mj_header.endRefreshing() }
         }) { (error_code, message) in
             self.tableView.mj_header.endRefreshing()
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
         }
     }
     @objc private func loadMoreData() {
@@ -180,7 +181,8 @@ extension BBNewsChildController{
             
         }) { (error_code, message) in
             self.tableView.mj_footer.endRefreshing()
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
         
     }

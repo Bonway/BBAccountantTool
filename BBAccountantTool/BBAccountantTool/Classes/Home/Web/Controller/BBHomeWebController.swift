@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class BBHomeWebController: UIViewController {
+class BBHomeWebController: BBGestureBaseController {
 
     var urlString: String = ""
     var titleString: String = ""

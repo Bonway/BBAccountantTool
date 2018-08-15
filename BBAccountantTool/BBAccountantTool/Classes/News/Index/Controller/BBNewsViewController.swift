@@ -67,7 +67,8 @@ class BBNewsViewController: BBGestureBaseController {
             self.model = model
             self.setupView()
         }) { (error_code, message) in
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
     }
     

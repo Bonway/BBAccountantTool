@@ -12,7 +12,9 @@
 
 + (MBProgressHUD *)showHUDProgress:(UIView *)containerView{
     
+    if (containerView == nil) containerView = [UIApplication sharedApplication].keyWindow;
 
+    
     UIImage *image = [UIImage imageNamed:@"loading"];
     UIImageView *imgView = [[UIImageView alloc] initWithImage:image];
 

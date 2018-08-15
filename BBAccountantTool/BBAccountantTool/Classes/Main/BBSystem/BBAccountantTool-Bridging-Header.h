@@ -9,8 +9,8 @@
 #import "MBProgressHUD+Extension.h"
 #import "UIImage+BBExtension.h"
 //#import "UIBarButtonItem+BBExtension.h"
-
 #import "MJRefresh.h"
+//#import "POP.h"
 #import "SGPagingView.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
@@ -28,5 +28,19 @@
 
 //新浪微博SDK头文件
 #import "WeiboSDK.h"
+
+
+
+//导入法规库
+#import "BBOCConst.h"
+#import "UIColor+BBExtension.h"
+#import "BBUserDefaultsParm.h"
+#import "UIView+BBExtension.h"
+#import "BBNetworking.h"
+#import "BBDBHandle.h"
+#import "BBFaGuiKuController.h"
+#import "BBPolicyViewController.h"
+#import "BBGestureBackConst.h"
+#import "BBGestureBaseController.h"
 
 //#endif

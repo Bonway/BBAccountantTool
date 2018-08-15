@@ -22,7 +22,7 @@ class BBUserViewController: BBGestureBaseController {
     let cellBottomID = "userBottomCell"
     let cellHeaderID = "userHeaderCell"
     
-//    ["imageName": "user_index_collect", "title": "我的收藏"],
+//["imageName": "user_index_collect", "title": "我的收藏"],
     private let cellInfo = [
                                    ["imageName": "user_index_opinion", "title": "吐个槽"],
                                    ["imageName": "user_index_aboutus", "title": "关于会计工具箱"],
@@ -100,7 +100,8 @@ class BBUserViewController: BBGestureBaseController {
             self.model = model
             self.tableView.reloadData()
         }) { (error_code, message) in
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
         
     }

@@ -19,7 +19,6 @@
 		CF0A33022109B7070055B5C8 /* BBUserSetVersionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A33012109B7070055B5C8 /* BBUserSetVersionView.xib */; };
 		CF0A33072109C8B00055B5C8 /* BBUserAdviseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0A33052109C8B00055B5C8 /* BBUserAdviseController.swift */; };
 		CF0A33082109C8B00055B5C8 /* BBUserAdviseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0A33062109C8B00055B5C8 /* BBUserAdviseController.xib */; };
-		CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */; };
 		CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */; };
 		CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */; };
 		CF0DBDB4210020E100243E2B /* BBUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DBDB2210020E100243E2B /* BBUserViewController.swift */; };
@@ -52,8 +51,6 @@
 		CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF4E730320E610F3005487BB /* WBComposeTypeView.xib */; };
 		CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08D20D88CD20024E971 /* Assets.xcassets */; };
 		CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF51C08F20D88CD20024E971 /* LaunchScreen.storyboard */; };
-		CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */; };
-		CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */; };
 		CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A620D893A10024E971 /* BBNavigationController.swift */; };
 		CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0A820D893A10024E971 /* BBTabBarController.swift */; };
 		CF51C0B220D897530024E971 /* BBConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF51C0B120D897530024E971 /* BBConst.swift */; };
@@ -114,6 +111,7 @@
 		CF84D2C92117E9D300890BF4 /* BBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84D2C82117E9D300890BF4 /* BBTextField.swift */; };
 		CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */; };
 		CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */; };
+		CF91CCC5211BE35C001EBE5A /* BBGestureBackConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91CCC4211BE35B001EBE5A /* BBGestureBackConst.m */; };
 		CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF939F7D2105705100E23FFA /* BBUserVipController.xib */; };
 		CF939F802105705100E23FFA /* BBUserVipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F7E2105705100E23FFA /* BBUserVipController.swift */; };
 		CF939F922105DAF800E23FFA /* BBUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF939F912105DAF800E23FFA /* BBUserProvider.swift */; };
@@ -146,9 +144,78 @@
 		CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B1220E1D2D20066FC85 /* BBHomeCollectionCell.swift */; };
 		CFD46B1920E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD46B1320E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib */; };
 		CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B1A20E1D5A40066FC85 /* BBHomeIndexModel.swift */; };
-		CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */; };
-		CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */; };
 		CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */; };
+		CFE076DA2119393700D971E0 /* BBHomeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE076D92119393700D971E0 /* BBHomeProvider.swift */; };
+		CFE076DC211939BD00D971E0 /* BBNewsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE076DB211939BD00D971E0 /* BBNewsProvider.swift */; };
+		CFE0771E21193D4A00D971E0 /* BBPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0771C21193D4A00D971E0 /* BBPageMenu.m */; };
+		CFE0772221193D8400D971E0 /* BBSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0772121193D8300D971E0 /* BBSearchBar.m */; };
+		CFE0772921193DFD00D971E0 /* FSSegmentTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0772421193DFD00D971E0 /* FSSegmentTitleView.m */; };
+		CFE0772A21193DFD00D971E0 /* FSPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0772721193DFD00D971E0 /* FSPageContentView.m */; };
+		CFE0777321193EFA00D971E0 /* BBHomeCollectController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0775B21193EFA00D971E0 /* BBHomeCollectController.m */; };
+		CFE0777421193EFA00D971E0 /* BBHomeBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0775C21193EFA00D971E0 /* BBHomeBaseController.m */; };
+		CFE0777521193EFA00D971E0 /* BBHomeNewestController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0775E21193EFA00D971E0 /* BBHomeNewestController.m */; };
+		CFE0777721193EFA00D971E0 /* FSBottomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776021193EFA00D971E0 /* FSBottomTableViewCell.m */; };
+		CFE0777821193EFA00D971E0 /* FSBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776221193EFA00D971E0 /* FSBaseTableView.m */; };
+		CFE0777921193EFA00D971E0 /* BBHomeIndexBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776621193EFA00D971E0 /* BBHomeIndexBannerModel.m */; };
+		CFE0777A21193EFA00D971E0 /* BBHomeIndexDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776721193EFA00D971E0 /* BBHomeIndexDetailModel.m */; };
+		CFE0777B21193EFA00D971E0 /* BBHomeIndexHotSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776921193EFA00D971E0 /* BBHomeIndexHotSearchModel.m */; };
+		CFE0777C21193EFA00D971E0 /* BBHomeHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776C21193EFA00D971E0 /* BBHomeHeaderViewCell.m */; };
+		CFE0777D21193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0776E21193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.m */; };
+		CFE0777E21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE0776F21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.xib */; };
+		CFE0777F21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0777221193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.m */; };
+		CFE0779021193FAF00D971E0 /* BBHomeSearchAdvancedController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0778221193FAF00D971E0 /* BBHomeSearchAdvancedController.m */; };
+		CFE0779121193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE0778521193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.xib */; };
+		CFE0779221193FAF00D971E0 /* BBHomeAdvancedSearchTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0778621193FAF00D971E0 /* BBHomeAdvancedSearchTextField.m */; };
+		CFE0779321193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0778821193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.m */; };
+		CFE0779421193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0778921193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.m */; };
+		CFE0779521193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE0778A21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.xib */; };
+		CFE0779621193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE0778B21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.xib */; };
+		CFE0779721193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0778D21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.m */; };
+		CFE077A22119401000D971E0 /* BBHomeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0779B2119400F00D971E0 /* BBHomeDetailController.m */; };
+		CFE077A32119401000D971E0 /* BBHomeDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0779D2119400F00D971E0 /* BBHomeDetailModel.m */; };
+		CFE077A42119401000D971E0 /* BBHomeDetailFontView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077A02119400F00D971E0 /* BBHomeDetailFontView.m */; };
+		CFE077CB2119401500D971E0 /* BBHomeSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077A82119401400D971E0 /* BBHomeSearchController.m */; };
+		CFE077CC2119401500D971E0 /* BBHomeSearchClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077AB2119401400D971E0 /* BBHomeSearchClassifyModel.m */; };
+		CFE077CD2119401500D971E0 /* BBHomeSearchResultCountView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077AE2119401400D971E0 /* BBHomeSearchResultCountView.m */; };
+		CFE077CE2119401500D971E0 /* BBHomeSearchHotResultCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077B22119401400D971E0 /* BBHomeSearchHotResultCollectionLayout.m */; };
+		CFE077CF2119401500D971E0 /* BBHomeSearchTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077B42119401400D971E0 /* BBHomeSearchTableHeaderView.xib */; };
+		CFE077D02119401500D971E0 /* BBHomeSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077B52119401400D971E0 /* BBHomeSearchResultTableViewCell.xib */; };
+		CFE077D12119401500D971E0 /* BBHomeSearchCategoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077B62119401400D971E0 /* BBHomeSearchCategoryView.m */; };
+		CFE077D22119401500D971E0 /* BBHomeSearchResultCountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077B82119401400D971E0 /* BBHomeSearchResultCountView.xib */; };
+		CFE077D32119401500D971E0 /* BBHomeSearchFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077BA2119401400D971E0 /* BBHomeSearchFilterTableViewCell.m */; };
+		CFE077D42119401500D971E0 /* BBHomeSearchCategoryLeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077BC2119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.xib */; };
+		CFE077D52119401500D971E0 /* BBHomeSearchCategoryRightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077BD2119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.xib */; };
+		CFE077D62119401500D971E0 /* BBHomeSearchHotResultCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077BF2119401400D971E0 /* BBHomeSearchHotResultCollectionReusableView.m */; };
+		CFE077D72119401500D971E0 /* BBHomeSearchFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C02119401400D971E0 /* BBHomeSearchFilterView.m */; };
+		CFE077D82119401500D971E0 /* BBHomeSearchCategoryLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C12119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.m */; };
+		CFE077D92119401500D971E0 /* BBHomeSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C22119401400D971E0 /* BBHomeSearchResultTableViewCell.m */; };
+		CFE077DA2119401500D971E0 /* BBHomeSearchTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C42119401400D971E0 /* BBHomeSearchTableHeaderView.m */; };
+		CFE077DB2119401500D971E0 /* BBHomeSearchResultTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C62119401400D971E0 /* BBHomeSearchResultTableView.m */; };
+		CFE077DC2119401500D971E0 /* BBHomeSearchCategoryRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077C72119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.m */; };
+		CFE077DD2119401500D971E0 /* BBHomeSearchHotResultCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFE077C92119401400D971E0 /* BBHomeSearchHotResultCollectionCell.xib */; };
+		CFE077DE2119401500D971E0 /* BBHomeSearchHotResultCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077CA2119401400D971E0 /* BBHomeSearchHotResultCollectionCell.m */; };
+		CFE077E421196B0000D971E0 /* UIDatePicker+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077E321196B0000D971E0 /* UIDatePicker+BBExtension.m */; };
+		CFE077E821196B3800D971E0 /* BBPopOverMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077E621196B3800D971E0 /* BBPopOverMenu.m */; };
+		CFE077EC21196B5500D971E0 /* BBPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077EA21196B5500D971E0 /* BBPopView.m */; };
+		CFE077F721196C3100D971E0 /* BBPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077F021196C3000D971E0 /* BBPolicyViewController.m */; };
+		CFE077F821196C3100D971E0 /* BBPolicyLocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077F221196C3000D971E0 /* BBPolicyLocationModel.m */; };
+		CFE077F921196C3100D971E0 /* BBPolicyLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077F621196C3000D971E0 /* BBPolicyLocationView.m */; };
+		CFE077FD21196CF400D971E0 /* UIColor+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE077FB21196CF300D971E0 /* UIColor+BBExtension.m */; };
+		CFE0780221196E3300D971E0 /* BBSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0780121196E3300D971E0 /* BBSlider.m */; };
+		CFE078052119703100D971E0 /* UIView+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE078042119703100D971E0 /* UIView+BBExtension.m */; };
+		CFE078092119713500D971E0 /* BBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE078072119713500D971E0 /* BBNetworking.m */; };
+		CFE0780D211976CF00D971E0 /* BBDBHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0780B211976CF00D971E0 /* BBDBHandle.m */; };
+		CFE078112119785100D971E0 /* CALayer+BBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE078102119785100D971E0 /* CALayer+BBExtension.m */; };
+		CFE07814211979F100D971E0 /* BBOCShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE07813211979F100D971E0 /* BBOCShareView.m */; };
+		CFE0782521197CF100D971E0 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0781921197CF100D971E0 /* SDCycleScrollView.m */; };
+		CFE0782621197CF100D971E0 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0781A21197CF100D971E0 /* UIView+SDExtension.m */; };
+		CFE0782721197CF100D971E0 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0781B21197CF100D971E0 /* SDCollectionViewCell.m */; };
+		CFE0782821197CF100D971E0 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0781E21197CF100D971E0 /* TADotView.m */; };
+		CFE0782921197CF100D971E0 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0781F21197CF100D971E0 /* TAPageControl.m */; };
+		CFE0782A21197CF100D971E0 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0782021197CF100D971E0 /* TAAnimatedDotView.m */; };
+		CFE0782B21197CF100D971E0 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0782121197CF100D971E0 /* TAAbstractDotView.m */; };
+		CFE078312119A14100D971E0 /* BBGestureBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE0782F2119A14100D971E0 /* BBGestureBaseController.m */; };
+		CFE078382119A4C100D971E0 /* BBFaGuiKuController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE078362119A4C100D971E0 /* BBFaGuiKuController.m */; };
 		CFFE800A21081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */; };
 		CFFE800B21081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */; };
 		CFFE800C21081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFE800321081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift */; };
@@ -179,7 +246,6 @@
 		CF0A33012109B7070055B5C8 /* BBUserSetVersionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserSetVersionView.xib; sourceTree = "<group>"; };
 		CF0A33052109C8B00055B5C8 /* BBUserAdviseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserAdviseController.swift; sourceTree = "<group>"; };
 		CF0A33062109C8B00055B5C8 /* BBUserAdviseController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBUserAdviseController.xib; sourceTree = "<group>"; };
-		CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNewsIndexDataProvider.swift; sourceTree = "<group>"; };
 		CF0B9BED20F7286C00D42009 /* BBNewsIndexTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsIndexTitleModel.swift; sourceTree = "<group>"; };
 		CF0B9BF020F73D4300D42009 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CF0DBDB2210020E100243E2B /* BBUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBUserViewController.swift; sourceTree = "<group>"; };
@@ -222,8 +288,6 @@
 		CF51C08D20D88CD20024E971 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF51C09020D88CD20024E971 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF51C09220D88CD20024E971 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBaseController.swift; sourceTree = "<group>"; };
-		CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBGestureBackConst.swift; sourceTree = "<group>"; };
 		CF51C0A620D893A10024E971 /* BBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNavigationController.swift; sourceTree = "<group>"; };
 		CF51C0A820D893A10024E971 /* BBTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBTabBarController.swift; sourceTree = "<group>"; };
 		CF51C0B120D897530024E971 /* BBConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBConst.swift; sourceTree = "<group>"; };
@@ -314,6 +378,8 @@
 		CF863B1320EB539900EA6FAD /* UIBarButtonItem+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1620EB53AD00EA6FAD /* UIImage+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBExtension.m"; sourceTree = "<group>"; };
 		CF863B1720EB53AD00EA6FAD /* UIImage+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBExtension.h"; sourceTree = "<group>"; };
+		CF91CCC3211BE35B001EBE5A /* BBGestureBackConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBGestureBackConst.h; sourceTree = "<group>"; };
+		CF91CCC4211BE35B001EBE5A /* BBGestureBackConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBackConst.m; sourceTree = "<group>"; };
 		CF939F7D2105705100E23FFA /* BBUserVipController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserVipController.xib; sourceTree = "<group>"; };
 		CF939F7E2105705100E23FFA /* BBUserVipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserVipController.swift; sourceTree = "<group>"; };
 		CF939F912105DAF800E23FFA /* BBUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserProvider.swift; sourceTree = "<group>"; };
@@ -346,9 +412,140 @@
 		CFD46B1220E1D2D20066FC85 /* BBHomeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeCollectionCell.swift; sourceTree = "<group>"; };
 		CFD46B1320E1D2D20066FC85 /* BBHomeCollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeCollectionHeaderView.xib; sourceTree = "<group>"; };
 		CFD46B1A20E1D5A40066FC85 /* BBHomeIndexModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexModel.swift; sourceTree = "<group>"; };
-		CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexDataProvider.swift; sourceTree = "<group>"; };
-		CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBHomeIndexPresenter.swift; sourceTree = "<group>"; };
 		CFD7E65920EF0BE8002178AA /* BBNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBNewsViewController.swift; sourceTree = "<group>"; };
+		CFE076D92119393700D971E0 /* BBHomeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBHomeProvider.swift; sourceTree = "<group>"; };
+		CFE076DB211939BD00D971E0 /* BBNewsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBNewsProvider.swift; sourceTree = "<group>"; };
+		CFE0771C21193D4A00D971E0 /* BBPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPageMenu.m; sourceTree = "<group>"; };
+		CFE0771D21193D4A00D971E0 /* BBPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPageMenu.h; sourceTree = "<group>"; };
+		CFE0772021193D8300D971E0 /* BBSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSearchBar.h; sourceTree = "<group>"; };
+		CFE0772121193D8300D971E0 /* BBSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSearchBar.m; sourceTree = "<group>"; };
+		CFE0772421193DFD00D971E0 /* FSSegmentTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSegmentTitleView.m; sourceTree = "<group>"; };
+		CFE0772521193DFD00D971E0 /* FSPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPageContentView.h; sourceTree = "<group>"; };
+		CFE0772621193DFD00D971E0 /* FSScrollContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSScrollContentView.h; sourceTree = "<group>"; };
+		CFE0772721193DFD00D971E0 /* FSPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPageContentView.m; sourceTree = "<group>"; };
+		CFE0772821193DFD00D971E0 /* FSSegmentTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSegmentTitleView.h; sourceTree = "<group>"; };
+		CFE0775821193EFA00D971E0 /* BBHomeNewestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeNewestController.h; sourceTree = "<group>"; };
+		CFE0775921193EFA00D971E0 /* FSBottomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBottomTableViewCell.h; sourceTree = "<group>"; };
+		CFE0775B21193EFA00D971E0 /* BBHomeCollectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeCollectController.m; sourceTree = "<group>"; };
+		CFE0775C21193EFA00D971E0 /* BBHomeBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeBaseController.m; sourceTree = "<group>"; };
+		CFE0775D21193EFA00D971E0 /* FSBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseTableView.h; sourceTree = "<group>"; };
+		CFE0775E21193EFA00D971E0 /* BBHomeNewestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeNewestController.m; sourceTree = "<group>"; };
+		CFE0776021193EFA00D971E0 /* FSBottomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBottomTableViewCell.m; sourceTree = "<group>"; };
+		CFE0776121193EFA00D971E0 /* BBHomeCollectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeCollectController.h; sourceTree = "<group>"; };
+		CFE0776221193EFA00D971E0 /* FSBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseTableView.m; sourceTree = "<group>"; };
+		CFE0776321193EFA00D971E0 /* BBHomeBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeBaseController.h; sourceTree = "<group>"; };
+		CFE0776521193EFA00D971E0 /* BBHomeIndexHotSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeIndexHotSearchModel.h; sourceTree = "<group>"; };
+		CFE0776621193EFA00D971E0 /* BBHomeIndexBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeIndexBannerModel.m; sourceTree = "<group>"; };
+		CFE0776721193EFA00D971E0 /* BBHomeIndexDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeIndexDetailModel.m; sourceTree = "<group>"; };
+		CFE0776821193EFA00D971E0 /* BBHomeIndexBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeIndexBannerModel.h; sourceTree = "<group>"; };
+		CFE0776921193EFA00D971E0 /* BBHomeIndexHotSearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeIndexHotSearchModel.m; sourceTree = "<group>"; };
+		CFE0776A21193EFA00D971E0 /* BBHomeIndexDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeIndexDetailModel.h; sourceTree = "<group>"; };
+		CFE0776C21193EFA00D971E0 /* BBHomeHeaderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeHeaderViewCell.m; sourceTree = "<group>"; };
+		CFE0776D21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeHotSearchCollectionViewCell.h; sourceTree = "<group>"; };
+		CFE0776E21193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeHotSearchCollectionLayout.m; sourceTree = "<group>"; };
+		CFE0776F21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeHotSearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		CFE0777021193EFA00D971E0 /* BBHomeHeaderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeHeaderViewCell.h; sourceTree = "<group>"; };
+		CFE0777121193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeHotSearchCollectionLayout.h; sourceTree = "<group>"; };
+		CFE0777221193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeHotSearchCollectionViewCell.m; sourceTree = "<group>"; };
+		CFE0778221193FAF00D971E0 /* BBHomeSearchAdvancedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchAdvancedController.m; sourceTree = "<group>"; };
+		CFE0778321193FAF00D971E0 /* BBHomeSearchAdvancedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchAdvancedController.h; sourceTree = "<group>"; };
+		CFE0778521193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchAdvancedHeaderTopView.xib; sourceTree = "<group>"; };
+		CFE0778621193FAF00D971E0 /* BBHomeAdvancedSearchTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeAdvancedSearchTextField.m; sourceTree = "<group>"; };
+		CFE0778721193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchAdvancedHeaderTopView.h; sourceTree = "<group>"; };
+		CFE0778821193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchAdvancedHeaderView.m; sourceTree = "<group>"; };
+		CFE0778921193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchAdvancedHeaderCell.m; sourceTree = "<group>"; };
+		CFE0778A21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchAdvancedHeaderCell.xib; sourceTree = "<group>"; };
+		CFE0778B21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchAdvancedHeaderView.xib; sourceTree = "<group>"; };
+		CFE0778C21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchAdvancedHeaderView.h; sourceTree = "<group>"; };
+		CFE0778D21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchAdvancedHeaderTopView.m; sourceTree = "<group>"; };
+		CFE0778E21193FAF00D971E0 /* BBHomeAdvancedSearchTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeAdvancedSearchTextField.h; sourceTree = "<group>"; };
+		CFE0778F21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchAdvancedHeaderCell.h; sourceTree = "<group>"; };
+		CFE0779A2119400F00D971E0 /* BBHomeDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeDetailController.h; sourceTree = "<group>"; };
+		CFE0779B2119400F00D971E0 /* BBHomeDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeDetailController.m; sourceTree = "<group>"; };
+		CFE0779D2119400F00D971E0 /* BBHomeDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeDetailModel.m; sourceTree = "<group>"; };
+		CFE0779E2119400F00D971E0 /* BBHomeDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeDetailModel.h; sourceTree = "<group>"; };
+		CFE077A02119400F00D971E0 /* BBHomeDetailFontView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeDetailFontView.m; sourceTree = "<group>"; };
+		CFE077A12119400F00D971E0 /* BBHomeDetailFontView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeDetailFontView.h; sourceTree = "<group>"; };
+		CFE077A72119401400D971E0 /* BBHomeSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchController.h; sourceTree = "<group>"; };
+		CFE077A82119401400D971E0 /* BBHomeSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchController.m; sourceTree = "<group>"; };
+		CFE077AA2119401400D971E0 /* BBHomeSearchClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchClassifyModel.h; sourceTree = "<group>"; };
+		CFE077AB2119401400D971E0 /* BBHomeSearchClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchClassifyModel.m; sourceTree = "<group>"; };
+		CFE077AD2119401400D971E0 /* BBHomeSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchResultTableViewCell.h; sourceTree = "<group>"; };
+		CFE077AE2119401400D971E0 /* BBHomeSearchResultCountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchResultCountView.m; sourceTree = "<group>"; };
+		CFE077AF2119401400D971E0 /* BBHomeSearchFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchFilterView.h; sourceTree = "<group>"; };
+		CFE077B02119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchCategoryLeftTableViewCell.h; sourceTree = "<group>"; };
+		CFE077B12119401400D971E0 /* BBHomeSearchHotResultCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchHotResultCollectionReusableView.h; sourceTree = "<group>"; };
+		CFE077B22119401400D971E0 /* BBHomeSearchHotResultCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchHotResultCollectionLayout.m; sourceTree = "<group>"; };
+		CFE077B32119401400D971E0 /* BBHomeSearchTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchTableHeaderView.h; sourceTree = "<group>"; };
+		CFE077B42119401400D971E0 /* BBHomeSearchTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchTableHeaderView.xib; sourceTree = "<group>"; };
+		CFE077B52119401400D971E0 /* BBHomeSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		CFE077B62119401400D971E0 /* BBHomeSearchCategoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchCategoryView.m; sourceTree = "<group>"; };
+		CFE077B72119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchCategoryRightTableViewCell.h; sourceTree = "<group>"; };
+		CFE077B82119401400D971E0 /* BBHomeSearchResultCountView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchResultCountView.xib; sourceTree = "<group>"; };
+		CFE077B92119401400D971E0 /* BBHomeSearchResultTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchResultTableView.h; sourceTree = "<group>"; };
+		CFE077BA2119401400D971E0 /* BBHomeSearchFilterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchFilterTableViewCell.m; sourceTree = "<group>"; };
+		CFE077BB2119401400D971E0 /* BBHomeSearchHotResultCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchHotResultCollectionCell.h; sourceTree = "<group>"; };
+		CFE077BC2119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchCategoryLeftTableViewCell.xib; sourceTree = "<group>"; };
+		CFE077BD2119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchCategoryRightTableViewCell.xib; sourceTree = "<group>"; };
+		CFE077BE2119401400D971E0 /* BBHomeSearchHotResultCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchHotResultCollectionLayout.h; sourceTree = "<group>"; };
+		CFE077BF2119401400D971E0 /* BBHomeSearchHotResultCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchHotResultCollectionReusableView.m; sourceTree = "<group>"; };
+		CFE077C02119401400D971E0 /* BBHomeSearchFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchFilterView.m; sourceTree = "<group>"; };
+		CFE077C12119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchCategoryLeftTableViewCell.m; sourceTree = "<group>"; };
+		CFE077C22119401400D971E0 /* BBHomeSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchResultTableViewCell.m; sourceTree = "<group>"; };
+		CFE077C32119401400D971E0 /* BBHomeSearchResultCountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchResultCountView.h; sourceTree = "<group>"; };
+		CFE077C42119401400D971E0 /* BBHomeSearchTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchTableHeaderView.m; sourceTree = "<group>"; };
+		CFE077C52119401400D971E0 /* BBHomeSearchFilterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchFilterTableViewCell.h; sourceTree = "<group>"; };
+		CFE077C62119401400D971E0 /* BBHomeSearchResultTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchResultTableView.m; sourceTree = "<group>"; };
+		CFE077C72119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchCategoryRightTableViewCell.m; sourceTree = "<group>"; };
+		CFE077C82119401400D971E0 /* BBHomeSearchCategoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHomeSearchCategoryView.h; sourceTree = "<group>"; };
+		CFE077C92119401400D971E0 /* BBHomeSearchHotResultCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBHomeSearchHotResultCollectionCell.xib; sourceTree = "<group>"; };
+		CFE077CA2119401400D971E0 /* BBHomeSearchHotResultCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHomeSearchHotResultCollectionCell.m; sourceTree = "<group>"; };
+		CFE077E02119616E00D971E0 /* BBOCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOCConst.h; sourceTree = "<group>"; };
+		CFE077E221196B0000D971E0 /* UIDatePicker+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDatePicker+BBExtension.h"; sourceTree = "<group>"; };
+		CFE077E321196B0000D971E0 /* UIDatePicker+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDatePicker+BBExtension.m"; sourceTree = "<group>"; };
+		CFE077E621196B3800D971E0 /* BBPopOverMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPopOverMenu.m; sourceTree = "<group>"; };
+		CFE077E721196B3800D971E0 /* BBPopOverMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPopOverMenu.h; sourceTree = "<group>"; };
+		CFE077EA21196B5500D971E0 /* BBPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPopView.m; sourceTree = "<group>"; };
+		CFE077EB21196B5500D971E0 /* BBPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPopView.h; sourceTree = "<group>"; };
+		CFE077EF21196C3000D971E0 /* BBPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPolicyViewController.h; sourceTree = "<group>"; };
+		CFE077F021196C3000D971E0 /* BBPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPolicyViewController.m; sourceTree = "<group>"; };
+		CFE077F221196C3000D971E0 /* BBPolicyLocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPolicyLocationModel.m; sourceTree = "<group>"; };
+		CFE077F321196C3000D971E0 /* BBPolicyLocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPolicyLocationModel.h; sourceTree = "<group>"; };
+		CFE077F521196C3000D971E0 /* BBPolicyLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBPolicyLocationView.h; sourceTree = "<group>"; };
+		CFE077F621196C3000D971E0 /* BBPolicyLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBPolicyLocationView.m; sourceTree = "<group>"; };
+		CFE077FB21196CF300D971E0 /* UIColor+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BBExtension.m"; sourceTree = "<group>"; };
+		CFE077FC21196CF300D971E0 /* UIColor+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BBExtension.h"; sourceTree = "<group>"; };
+		CFE077FE21196D8800D971E0 /* BBUserDefaultsParm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBUserDefaultsParm.h; sourceTree = "<group>"; };
+		CFE0780021196E3300D971E0 /* BBSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSlider.h; sourceTree = "<group>"; };
+		CFE0780121196E3300D971E0 /* BBSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSlider.m; sourceTree = "<group>"; };
+		CFE078032119703100D971E0 /* UIView+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BBExtension.h"; sourceTree = "<group>"; };
+		CFE078042119703100D971E0 /* UIView+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BBExtension.m"; sourceTree = "<group>"; };
+		CFE078072119713500D971E0 /* BBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBNetworking.m; sourceTree = "<group>"; };
+		CFE078082119713500D971E0 /* BBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBNetworking.h; sourceTree = "<group>"; };
+		CFE0780B211976CF00D971E0 /* BBDBHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBDBHandle.m; sourceTree = "<group>"; };
+		CFE0780C211976CF00D971E0 /* BBDBHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBDBHandle.h; sourceTree = "<group>"; };
+		CFE0780F2119785100D971E0 /* CALayer+BBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+BBExtension.h"; sourceTree = "<group>"; };
+		CFE078102119785100D971E0 /* CALayer+BBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+BBExtension.m"; sourceTree = "<group>"; };
+		CFE07812211979F100D971E0 /* BBOCShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBOCShareView.h; sourceTree = "<group>"; };
+		CFE07813211979F100D971E0 /* BBOCShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBOCShareView.m; sourceTree = "<group>"; };
+		CFE0781621197CF100D971E0 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		CFE0781721197CF100D971E0 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		CFE0781821197CF100D971E0 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		CFE0781921197CF100D971E0 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		CFE0781A21197CF100D971E0 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		CFE0781B21197CF100D971E0 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		CFE0781D21197CF100D971E0 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		CFE0781E21197CF100D971E0 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		CFE0781F21197CF100D971E0 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		CFE0782021197CF100D971E0 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		CFE0782121197CF100D971E0 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		CFE0782221197CF100D971E0 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		CFE0782321197CF100D971E0 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		CFE0782421197CF100D971E0 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		CFE0782F2119A14100D971E0 /* BBGestureBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBGestureBaseController.m; sourceTree = "<group>"; };
+		CFE078322119A15000D971E0 /* BBGestureBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBGestureBaseController.h; sourceTree = "<group>"; };
+		CFE078362119A4C100D971E0 /* BBFaGuiKuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBFaGuiKuController.m; sourceTree = "<group>"; };
+		CFE078372119A4C100D971E0 /* BBFaGuiKuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBFaGuiKuController.h; sourceTree = "<group>"; };
 		CFFD5E87211441F100EB4A57 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		CFFE800121081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBUserUpdatePasswordNumController.xib; sourceTree = "<group>"; };
 		CFFE800221081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBUserUpdatePhoneNumController.swift; sourceTree = "<group>"; };
@@ -464,14 +661,6 @@
 				CFACE81220FC695C00849B4C /* BBNewsChildMorePicCell.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		CF0B9BEA20F724E100D42009 /* DataProvider */ = {
-			isa = PBXGroup;
-			children = (
-				CF0B9BEB20F7253B00D42009 /* BBNewsIndexDataProvider.swift */,
-			);
-			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		CF0B9BEF20F73D1F00D42009 /* UIColor+Extension */ = {
@@ -593,13 +782,6 @@
 			path = BBNetwork;
 			sourceTree = "<group>";
 		};
-		CF216F6E2106FFB700243B2F /* BBLogin */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BBLogin;
-			sourceTree = "<group>";
-		};
 		CF4E72FF20E60BC2005487BB /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -657,6 +839,8 @@
 		CF51C09920D893A10024E971 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CFE077ED21196C3000D971E0 /* Policy */,
+				CFE0775521193EFA00D971E0 /* FaGuiKu */,
 				CF1B5BC920E3773100DE77DD /* Web */,
 				CFD46B0820E1D2D20066FC85 /* Index */,
 			);
@@ -666,7 +850,7 @@
 		CF51C09D20D893A10024E971 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				CF216F6E2106FFB700243B2F /* BBLogin */,
+				CFE0780A211976CF00D971E0 /* BBDBHandle */,
 				CF216F672106FFA500243B2F /* BBNetwork */,
 			);
 			path = Tools;
@@ -697,8 +881,10 @@
 		CF51C0A020D893A10024E971 /* BBGestureBack */ = {
 			isa = PBXGroup;
 			children = (
-				CF51C0A120D893A10024E971 /* BBGestureBaseController.swift */,
-				CF51C0A220D893A10024E971 /* BBGestureBackConst.swift */,
+				CF91CCC3211BE35B001EBE5A /* BBGestureBackConst.h */,
+				CF91CCC4211BE35B001EBE5A /* BBGestureBackConst.m */,
+				CFE078322119A15000D971E0 /* BBGestureBaseController.h */,
+				CFE0782F2119A14100D971E0 /* BBGestureBaseController.m */,
 			);
 			path = BBGestureBack;
 			sourceTree = "<group>";
@@ -731,6 +917,8 @@
 		CF69AAD120DB497500B5BCC7 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CFE077FA21196CF300D971E0 /* UIColor */,
+				CFE077E121196B0000D971E0 /* UIDatePicker */,
 				CF0B9BEF20F73D1F00D42009 /* UIColor+Extension */,
 				CF6E85F220EF61BA009FE443 /* String+Extension */,
 				CF863B1520EB53AD00EA6FAD /* UIImage+Extension */,
@@ -763,6 +951,8 @@
 		CF69AAE120DB9B6600B5BCC7 /* UIView+Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CFE078032119703100D971E0 /* UIView+BBExtension.h */,
+				CFE078042119703100D971E0 /* UIView+BBExtension.m */,
 				CF69AAE220DB9B6600B5BCC7 /* UIView+Extension.swift */,
 			);
 			path = "UIView+Extension";
@@ -788,6 +978,8 @@
 		CF82EBBD20EF1AC200CCE8DC /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0781521197CF100D971E0 /* SDCycleScrollView */,
+				CFE0772321193DFD00D971E0 /* FSScrollContentViewLib */,
 				CF1A84BD20F899B900E9CE0B /* SGPagingView */,
 				CF82EBEC20EF1AC300CCE8DC /* MJRefresh */,
 				CF82EC1B20EF1AC300CCE8DC /* SDK */,
@@ -1058,6 +1250,8 @@
 		CF939F902105DAF800E23FFA /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				CFE076DB211939BD00D971E0 /* BBNewsProvider.swift */,
+				CFE076D92119393700D971E0 /* BBHomeProvider.swift */,
 				CF939F912105DAF800E23FFA /* BBUserProvider.swift */,
 			);
 			path = Provider;
@@ -1091,6 +1285,13 @@
 		CFACE81920FCA18500849B4C /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0780E2119785100D971E0 /* CALayer */,
+				CFE078062119713500D971E0 /* BBNetworking */,
+				CFE077FF21196E3300D971E0 /* BBSlider */,
+				CFE077E921196B5500D971E0 /* BBPopView */,
+				CFE077E521196B3800D971E0 /* BBPopMenu */,
+				CFE0771F21193D8300D971E0 /* BBSearchBar */,
+				CFE0771B21193D4A00D971E0 /* BBPageMenu */,
 				CF84D2C72117E9B700890BF4 /* BBTextField */,
 				CFBBB50521005F9200D31F89 /* BBShareView */,
 				CFACE81A20FCA1AB00849B4C /* BBRefresh */,
@@ -1109,6 +1310,8 @@
 		CFBBB50521005F9200D31F89 /* BBShareView */ = {
 			isa = PBXGroup;
 			children = (
+				CFE07812211979F100D971E0 /* BBOCShareView.h */,
+				CFE07813211979F100D971E0 /* BBOCShareView.m */,
 				CFBBB50621005F9200D31F89 /* BBShareView.xib */,
 				CFBBB50721005F9200D31F89 /* BBShareView.swift */,
 			);
@@ -1187,29 +1390,11 @@
 		CFD46B0820E1D2D20066FC85 /* Index */ = {
 			isa = PBXGroup;
 			children = (
-				CFD46B0920E1D2D20066FC85 /* Presenter */,
-				CFD46B0A20E1D2D20066FC85 /* DataProvider */,
 				CFD46B0B20E1D2D20066FC85 /* Controller */,
 				CFD46B0D20E1D2D20066FC85 /* Model */,
 				CFD46B0E20E1D2D20066FC85 /* View */,
 			);
 			path = Index;
-			sourceTree = "<group>";
-		};
-		CFD46B0920E1D2D20066FC85 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CFD46B2220E20C4B0066FC85 /* BBHomeIndexPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CFD46B0A20E1D2D20066FC85 /* DataProvider */ = {
-			isa = PBXGroup;
-			children = (
-				CFD46B2020E1DCD20066FC85 /* BBHomeIndexDataProvider.swift */,
-			);
-			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		CFD46B0B20E1D2D20066FC85 /* Controller */ = {
@@ -1252,7 +1437,6 @@
 		CFD7E65520EF0B8E002178AA /* Index */ = {
 			isa = PBXGroup;
 			children = (
-				CF0B9BEA20F724E100D42009 /* DataProvider */,
 				CF0B9BE820F724E100D42009 /* Model */,
 				CF0B9BE920F724E100D42009 /* View */,
 				CFD7E65820EF0BC7002178AA /* Controller */,
@@ -1300,6 +1484,389 @@
 				CF0DBDB3210020E100243E2B /* BBUserViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE0771B21193D4A00D971E0 /* BBPageMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0771C21193D4A00D971E0 /* BBPageMenu.m */,
+				CFE0771D21193D4A00D971E0 /* BBPageMenu.h */,
+			);
+			path = BBPageMenu;
+			sourceTree = "<group>";
+		};
+		CFE0771F21193D8300D971E0 /* BBSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0772021193D8300D971E0 /* BBSearchBar.h */,
+				CFE0772121193D8300D971E0 /* BBSearchBar.m */,
+			);
+			path = BBSearchBar;
+			sourceTree = "<group>";
+		};
+		CFE0772321193DFD00D971E0 /* FSScrollContentViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0772421193DFD00D971E0 /* FSSegmentTitleView.m */,
+				CFE0772521193DFD00D971E0 /* FSPageContentView.h */,
+				CFE0772621193DFD00D971E0 /* FSScrollContentView.h */,
+				CFE0772721193DFD00D971E0 /* FSPageContentView.m */,
+				CFE0772821193DFD00D971E0 /* FSSegmentTitleView.h */,
+			);
+			path = FSScrollContentViewLib;
+			sourceTree = "<group>";
+		};
+		CFE0775521193EFA00D971E0 /* FaGuiKu */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077DF2119616E00D971E0 /* System */,
+				CFE077A52119401400D971E0 /* Search */,
+				CFE077982119400F00D971E0 /* Detail */,
+				CFE0778021193FAF00D971E0 /* AdvancedSearch */,
+				CFE0775621193EFA00D971E0 /* Index */,
+			);
+			path = FaGuiKu;
+			sourceTree = "<group>";
+		};
+		CFE0775621193EFA00D971E0 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0775721193EFA00D971E0 /* Controller */,
+				CFE0776421193EFA00D971E0 /* Model */,
+				CFE0776B21193EFA00D971E0 /* View */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		CFE0775721193EFA00D971E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE078372119A4C100D971E0 /* BBFaGuiKuController.h */,
+				CFE078362119A4C100D971E0 /* BBFaGuiKuController.m */,
+				CFE0775821193EFA00D971E0 /* BBHomeNewestController.h */,
+				CFE0775E21193EFA00D971E0 /* BBHomeNewestController.m */,
+				CFE0775921193EFA00D971E0 /* FSBottomTableViewCell.h */,
+				CFE0776021193EFA00D971E0 /* FSBottomTableViewCell.m */,
+				CFE0776121193EFA00D971E0 /* BBHomeCollectController.h */,
+				CFE0775B21193EFA00D971E0 /* BBHomeCollectController.m */,
+				CFE0775D21193EFA00D971E0 /* FSBaseTableView.h */,
+				CFE0776221193EFA00D971E0 /* FSBaseTableView.m */,
+				CFE0776321193EFA00D971E0 /* BBHomeBaseController.h */,
+				CFE0775C21193EFA00D971E0 /* BBHomeBaseController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE0776421193EFA00D971E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0776521193EFA00D971E0 /* BBHomeIndexHotSearchModel.h */,
+				CFE0776621193EFA00D971E0 /* BBHomeIndexBannerModel.m */,
+				CFE0776721193EFA00D971E0 /* BBHomeIndexDetailModel.m */,
+				CFE0776821193EFA00D971E0 /* BBHomeIndexBannerModel.h */,
+				CFE0776921193EFA00D971E0 /* BBHomeIndexHotSearchModel.m */,
+				CFE0776A21193EFA00D971E0 /* BBHomeIndexDetailModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE0776B21193EFA00D971E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0776C21193EFA00D971E0 /* BBHomeHeaderViewCell.m */,
+				CFE0776D21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.h */,
+				CFE0776E21193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.m */,
+				CFE0776F21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.xib */,
+				CFE0777021193EFA00D971E0 /* BBHomeHeaderViewCell.h */,
+				CFE0777121193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.h */,
+				CFE0777221193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE0778021193FAF00D971E0 /* AdvancedSearch */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0778121193FAF00D971E0 /* Controller */,
+				CFE0778421193FAF00D971E0 /* View */,
+			);
+			path = AdvancedSearch;
+			sourceTree = "<group>";
+		};
+		CFE0778121193FAF00D971E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0778321193FAF00D971E0 /* BBHomeSearchAdvancedController.h */,
+				CFE0778221193FAF00D971E0 /* BBHomeSearchAdvancedController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE0778421193FAF00D971E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0778521193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.xib */,
+				CFE0778621193FAF00D971E0 /* BBHomeAdvancedSearchTextField.m */,
+				CFE0778721193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.h */,
+				CFE0778821193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.m */,
+				CFE0778921193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.m */,
+				CFE0778A21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.xib */,
+				CFE0778B21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.xib */,
+				CFE0778C21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.h */,
+				CFE0778D21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.m */,
+				CFE0778E21193FAF00D971E0 /* BBHomeAdvancedSearchTextField.h */,
+				CFE0778F21193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE077982119400F00D971E0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077992119400F00D971E0 /* Controller */,
+				CFE0779C2119400F00D971E0 /* Model */,
+				CFE0779F2119400F00D971E0 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CFE077992119400F00D971E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0779A2119400F00D971E0 /* BBHomeDetailController.h */,
+				CFE0779B2119400F00D971E0 /* BBHomeDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE0779C2119400F00D971E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0779D2119400F00D971E0 /* BBHomeDetailModel.m */,
+				CFE0779E2119400F00D971E0 /* BBHomeDetailModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE0779F2119400F00D971E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077A02119400F00D971E0 /* BBHomeDetailFontView.m */,
+				CFE077A12119400F00D971E0 /* BBHomeDetailFontView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE077A52119401400D971E0 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077A62119401400D971E0 /* Controller */,
+				CFE077A92119401400D971E0 /* Model */,
+				CFE077AC2119401400D971E0 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CFE077A62119401400D971E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077A72119401400D971E0 /* BBHomeSearchController.h */,
+				CFE077A82119401400D971E0 /* BBHomeSearchController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE077A92119401400D971E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077AA2119401400D971E0 /* BBHomeSearchClassifyModel.h */,
+				CFE077AB2119401400D971E0 /* BBHomeSearchClassifyModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE077AC2119401400D971E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077AD2119401400D971E0 /* BBHomeSearchResultTableViewCell.h */,
+				CFE077AE2119401400D971E0 /* BBHomeSearchResultCountView.m */,
+				CFE077AF2119401400D971E0 /* BBHomeSearchFilterView.h */,
+				CFE077B02119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.h */,
+				CFE077B12119401400D971E0 /* BBHomeSearchHotResultCollectionReusableView.h */,
+				CFE077B22119401400D971E0 /* BBHomeSearchHotResultCollectionLayout.m */,
+				CFE077B32119401400D971E0 /* BBHomeSearchTableHeaderView.h */,
+				CFE077B42119401400D971E0 /* BBHomeSearchTableHeaderView.xib */,
+				CFE077B52119401400D971E0 /* BBHomeSearchResultTableViewCell.xib */,
+				CFE077B62119401400D971E0 /* BBHomeSearchCategoryView.m */,
+				CFE077B72119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.h */,
+				CFE077B82119401400D971E0 /* BBHomeSearchResultCountView.xib */,
+				CFE077B92119401400D971E0 /* BBHomeSearchResultTableView.h */,
+				CFE077BA2119401400D971E0 /* BBHomeSearchFilterTableViewCell.m */,
+				CFE077BB2119401400D971E0 /* BBHomeSearchHotResultCollectionCell.h */,
+				CFE077BC2119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.xib */,
+				CFE077BD2119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.xib */,
+				CFE077BE2119401400D971E0 /* BBHomeSearchHotResultCollectionLayout.h */,
+				CFE077BF2119401400D971E0 /* BBHomeSearchHotResultCollectionReusableView.m */,
+				CFE077C02119401400D971E0 /* BBHomeSearchFilterView.m */,
+				CFE077C12119401400D971E0 /* BBHomeSearchCategoryLeftTableViewCell.m */,
+				CFE077C22119401400D971E0 /* BBHomeSearchResultTableViewCell.m */,
+				CFE077C32119401400D971E0 /* BBHomeSearchResultCountView.h */,
+				CFE077C42119401400D971E0 /* BBHomeSearchTableHeaderView.m */,
+				CFE077C52119401400D971E0 /* BBHomeSearchFilterTableViewCell.h */,
+				CFE077C62119401400D971E0 /* BBHomeSearchResultTableView.m */,
+				CFE077C72119401400D971E0 /* BBHomeSearchCategoryRightTableViewCell.m */,
+				CFE077C82119401400D971E0 /* BBHomeSearchCategoryView.h */,
+				CFE077C92119401400D971E0 /* BBHomeSearchHotResultCollectionCell.xib */,
+				CFE077CA2119401400D971E0 /* BBHomeSearchHotResultCollectionCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE077DF2119616E00D971E0 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077FE21196D8800D971E0 /* BBUserDefaultsParm.h */,
+				CFE077E02119616E00D971E0 /* BBOCConst.h */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		CFE077E121196B0000D971E0 /* UIDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077E221196B0000D971E0 /* UIDatePicker+BBExtension.h */,
+				CFE077E321196B0000D971E0 /* UIDatePicker+BBExtension.m */,
+			);
+			path = UIDatePicker;
+			sourceTree = "<group>";
+		};
+		CFE077E521196B3800D971E0 /* BBPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077E621196B3800D971E0 /* BBPopOverMenu.m */,
+				CFE077E721196B3800D971E0 /* BBPopOverMenu.h */,
+			);
+			path = BBPopMenu;
+			sourceTree = "<group>";
+		};
+		CFE077E921196B5500D971E0 /* BBPopView */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077EA21196B5500D971E0 /* BBPopView.m */,
+				CFE077EB21196B5500D971E0 /* BBPopView.h */,
+			);
+			path = BBPopView;
+			sourceTree = "<group>";
+		};
+		CFE077ED21196C3000D971E0 /* Policy */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077EE21196C3000D971E0 /* Controller */,
+				CFE077F121196C3000D971E0 /* Model */,
+				CFE077F421196C3000D971E0 /* View */,
+			);
+			path = Policy;
+			sourceTree = "<group>";
+		};
+		CFE077EE21196C3000D971E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077EF21196C3000D971E0 /* BBPolicyViewController.h */,
+				CFE077F021196C3000D971E0 /* BBPolicyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CFE077F121196C3000D971E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077F221196C3000D971E0 /* BBPolicyLocationModel.m */,
+				CFE077F321196C3000D971E0 /* BBPolicyLocationModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CFE077F421196C3000D971E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077F521196C3000D971E0 /* BBPolicyLocationView.h */,
+				CFE077F621196C3000D971E0 /* BBPolicyLocationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CFE077FA21196CF300D971E0 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				CFE077FB21196CF300D971E0 /* UIColor+BBExtension.m */,
+				CFE077FC21196CF300D971E0 /* UIColor+BBExtension.h */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		CFE077FF21196E3300D971E0 /* BBSlider */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0780021196E3300D971E0 /* BBSlider.h */,
+				CFE0780121196E3300D971E0 /* BBSlider.m */,
+			);
+			path = BBSlider;
+			sourceTree = "<group>";
+		};
+		CFE078062119713500D971E0 /* BBNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				CFE078072119713500D971E0 /* BBNetworking.m */,
+				CFE078082119713500D971E0 /* BBNetworking.h */,
+			);
+			path = BBNetworking;
+			sourceTree = "<group>";
+		};
+		CFE0780A211976CF00D971E0 /* BBDBHandle */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0780B211976CF00D971E0 /* BBDBHandle.m */,
+				CFE0780C211976CF00D971E0 /* BBDBHandle.h */,
+			);
+			path = BBDBHandle;
+			sourceTree = "<group>";
+		};
+		CFE0780E2119785100D971E0 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0780F2119785100D971E0 /* CALayer+BBExtension.h */,
+				CFE078102119785100D971E0 /* CALayer+BBExtension.m */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
+		CFE0781521197CF100D971E0 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0781621197CF100D971E0 /* UIView+SDExtension.h */,
+				CFE0781721197CF100D971E0 /* SDCycleScrollView.h */,
+				CFE0781821197CF100D971E0 /* SDCollectionViewCell.h */,
+				CFE0781921197CF100D971E0 /* SDCycleScrollView.m */,
+				CFE0781A21197CF100D971E0 /* UIView+SDExtension.m */,
+				CFE0781B21197CF100D971E0 /* SDCollectionViewCell.m */,
+				CFE0781C21197CF100D971E0 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		CFE0781C21197CF100D971E0 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				CFE0781D21197CF100D971E0 /* TAAbstractDotView.h */,
+				CFE0781E21197CF100D971E0 /* TADotView.m */,
+				CFE0781F21197CF100D971E0 /* TAPageControl.m */,
+				CFE0782021197CF100D971E0 /* TAAnimatedDotView.m */,
+				CFE0782121197CF100D971E0 /* TAAbstractDotView.m */,
+				CFE0782221197CF100D971E0 /* TADotView.h */,
+				CFE0782321197CF100D971E0 /* TAAnimatedDotView.h */,
+				CFE0782421197CF100D971E0 /* TAPageControl.h */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		CFFE7FFF21081ADA00E280C8 /* Person */ = {
@@ -1420,8 +1987,11 @@
 				CFFE800A21081ADA00E280C8 /* BBUserUpdatePasswordNumController.xib in Resources */,
 				CF0A32F321097B8D0055B5C8 /* BBUserPhonePasswordController.xib in Resources */,
 				CF216F642106BE9F00243B2F /* BBUserSetPasswordController.xib in Resources */,
+				CFE0779121193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.xib in Resources */,
 				CFD46B1620E1D2D20066FC85 /* BBHomeCollectionCell.xib in Resources */,
+				CFE077D22119401500D971E0 /* BBHomeSearchResultCountView.xib in Resources */,
 				CFFE800D21081ADA00E280C8 /* BBUserUpdatePhoneNumController.xib in Resources */,
+				CFE077D52119401500D971E0 /* BBHomeSearchCategoryRightTableViewCell.xib in Resources */,
 				CF216F662106BE9F00243B2F /* BBUserAccountLoginController.xib in Resources */,
 				CFBBB52B21008A8D00D31F89 /* BBUserAboutController.xib in Resources */,
 				CF939F7F2105705100E23FFA /* BBUserVipController.xib in Resources */,
@@ -1429,12 +1999,14 @@
 				CF51C09120D88CD20024E971 /* LaunchScreen.storyboard in Resources */,
 				CF82EC8B20EF1AC300CCE8DC /* ShareSDKConfigFile.bundle in Resources */,
 				CF51C08E20D88CD20024E971 /* Assets.xcassets in Resources */,
+				CFE0779621193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.xib in Resources */,
 				CF0A32FB2109A8650055B5C8 /* BBUserAddressView.xib in Resources */,
 				CFACE81420FC695C00849B4C /* BBNewsChildMorePicCell.xib in Resources */,
 				CF82EC8720EF1AC300CCE8DC /* ShareSDKUI.bundle in Resources */,
 				CF82EC8620EF1AC300CCE8DC /* ShareSDK.bundle in Resources */,
 				CF0DBDC02100292800243E2B /* BBUserIndexCell.xib in Resources */,
 				CF0A33082109C8B00055B5C8 /* BBUserAdviseController.xib in Resources */,
+				CFE0777E21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.xib in Resources */,
 				CFBBB50D210078AD00D31F89 /* BBUserIndexTopCell.xib in Resources */,
 				CFFE801121081ADA00E280C8 /* BBUserPersonController.xib in Resources */,
 				CFFE801021081ADA00E280C8 /* BBUserNickNameController.xib in Resources */,
@@ -1442,14 +2014,19 @@
 				CFFE8019210856B100E280C8 /* BBUserSexPickerView.xib in Resources */,
 				CF82EC8220EF1AC300CCE8DC /* README.txt in Resources */,
 				CF4E730720E610F3005487BB /* WBComposeTypeView.xib in Resources */,
+				CFE077DD2119401500D971E0 /* BBHomeSearchHotResultCollectionCell.xib in Resources */,
 				CF216F632106BE9F00243B2F /* BBUserLoginController.xib in Resources */,
 				CFBBB511210078C200D31F89 /* BBUserIndexBottomCell.xib in Resources */,
 				CFBBB504210037C500D31F89 /* BBUserIndexHeaderCell.xib in Resources */,
+				CFE077D42119401500D971E0 /* BBHomeSearchCategoryLeftTableViewCell.xib in Resources */,
 				CF216F622106BE9F00243B2F /* BBUserBindPhoneController.xib in Resources */,
 				CF0DBDB5210020E100243E2B /* BBUserViewController.xib in Resources */,
 				CF82EC8020EF1AC300CCE8DC /* WeiboSDK.bundle in Resources */,
+				CFE0779521193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.xib in Resources */,
 				CF82EC6E20EF1AC300CCE8DC /* MJRefresh.bundle in Resources */,
 				CF4E730520E610F3005487BB /* WBComposeTypeButton.xib in Resources */,
+				CFE077CF2119401500D971E0 /* BBHomeSearchTableHeaderView.xib in Resources */,
+				CFE077D02119401500D971E0 /* BBHomeSearchResultTableViewCell.xib in Resources */,
 				CFBBB5172100836F00D31F89 /* BBUserSetController.xib in Resources */,
 				CF0A32F721099D690055B5C8 /* BBUserUpdatePasswordController.xib in Resources */,
 			);
@@ -1483,20 +2060,30 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BBAccountantTool/Pods-BBAccountantTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1511,6 +2098,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE0779221193FAF00D971E0 /* BBHomeAdvancedSearchTextField.m in Sources */,
+				CFE0779021193FAF00D971E0 /* BBHomeSearchAdvancedController.m in Sources */,
 				CF4E730620E610F3005487BB /* WBComposeTypeButton.swift in Sources */,
 				CF82EC9520EF1AC300CCE8DC /* WKWebView+DDGShot.swift in Sources */,
 				CF0B9BF120F73D4300D42009 /* UIColor+Extension.swift in Sources */,
@@ -1519,90 +2108,145 @@
 				CF216F5F2106BE9F00243B2F /* BBUserAccountLoginController.swift in Sources */,
 				CFBBB50921005F9200D31F89 /* BBShareView.swift in Sources */,
 				CF4E730420E610F3005487BB /* WBComposeTypeView.swift in Sources */,
+				CFE078092119713500D971E0 /* BBNetworking.m in Sources */,
 				CFBBB50C210078AD00D31F89 /* BBUserIndexTopCell.swift in Sources */,
 				CF75EA7720E4BC2A00147F3E /* MBProgressHUD+Extension.m in Sources */,
+				CFE077F821196C3100D971E0 /* BBPolicyLocationModel.m in Sources */,
+				CFE077E821196B3800D971E0 /* BBPopOverMenu.m in Sources */,
 				CFD46B1420E1D2D20066FC85 /* BBHomeViewController.swift in Sources */,
 				CFACE81E20FCA1C400849B4C /* BBRefresh.swift in Sources */,
 				CF82EC9420EF1AC300CCE8DC /* UIImage+DDGManage.swift in Sources */,
+				CFE07814211979F100D971E0 /* BBOCShareView.m in Sources */,
 				CFBBB52A21008A8D00D31F89 /* BBUserAboutController.swift in Sources */,
 				CF939F922105DAF800E23FFA /* BBUserProvider.swift in Sources */,
 				CF216F6D2106FFA500243B2F /* BBNetworkTool.swift in Sources */,
+				CFE0772221193D8400D971E0 /* BBSearchBar.m in Sources */,
+				CFE0777B21193EFA00D971E0 /* BBHomeIndexHotSearchModel.m in Sources */,
 				CF82EC6C20EF1AC300CCE8DC /* UIScrollView+MJRefresh.m in Sources */,
 				CF0A32F621099D690055B5C8 /* BBUserUpdatePasswordController.swift in Sources */,
+				CFE0779421193FAF00D971E0 /* BBHomeSearchAdvancedHeaderCell.m in Sources */,
+				CFE0782921197CF100D971E0 /* TAPageControl.m in Sources */,
+				CFE0782621197CF100D971E0 /* UIView+SDExtension.m in Sources */,
 				CF0A32F221097B8D0055B5C8 /* BBUserPhonePasswordController.swift in Sources */,
+				CFE077F921196C3100D971E0 /* BBPolicyLocationView.m in Sources */,
 				CFACE81020FC419700849B4C /* BBNewsChildListModel.swift in Sources */,
+				CFE0777921193EFA00D971E0 /* BBHomeIndexBannerModel.m in Sources */,
+				CFE077FD21196CF400D971E0 /* UIColor+BBExtension.m in Sources */,
 				CF1A84D220F899B900E9CE0B /* UIView+SGPagingView.m in Sources */,
+				CFE0772921193DFD00D971E0 /* FSSegmentTitleView.m in Sources */,
 				CF1A84D520F899B900E9CE0B /* SGPageTitleView.m in Sources */,
 				CFD7E65A20EF0BE8002178AA /* BBNewsViewController.swift in Sources */,
 				CF82EC7A20EF1AC300CCE8DC /* MJRefreshGifHeader.m in Sources */,
+				CFE0777721193EFA00D971E0 /* FSBottomTableViewCell.m in Sources */,
+				CFE077F721196C3100D971E0 /* BBPolicyViewController.m in Sources */,
 				CF82EC7620EF1AC300CCE8DC /* MJRefreshAutoGifFooter.m in Sources */,
+				CFE077D92119401500D971E0 /* BBHomeSearchResultTableViewCell.m in Sources */,
+				CFE078052119703100D971E0 /* UIView+BBExtension.m in Sources */,
 				CF84D2C92117E9D300890BF4 /* BBTextField.swift in Sources */,
 				CFFE8017210856A000E280C8 /* BBUserSexPickerView.swift in Sources */,
 				CF82EC7820EF1AC300CCE8DC /* MJRefreshNormalHeader.m in Sources */,
 				CF939F942105DD4F00E23FFA /* BBUserLoginModel.swift in Sources */,
+				CFE077DA2119401500D971E0 /* BBHomeSearchTableHeaderView.m in Sources */,
+				CFE0782821197CF100D971E0 /* TADotView.m in Sources */,
 				CF0B9BEE20F7286C00D42009 /* BBNewsIndexTitleModel.swift in Sources */,
 				CFFE800B21081ADA00E280C8 /* BBUserUpdatePhoneNumController.swift in Sources */,
 				CF82EC7220EF1AC300CCE8DC /* MJRefreshBackGifFooter.m in Sources */,
-				CFD46B2120E1DCD20066FC85 /* BBHomeIndexDataProvider.swift in Sources */,
+				CFE077D32119401500D971E0 /* BBHomeSearchFilterTableViewCell.m in Sources */,
+				CFE0777D21193EFA00D971E0 /* BBHomeHotSearchCollectionLayout.m in Sources */,
+				CFE078312119A14100D971E0 /* BBGestureBaseController.m in Sources */,
 				CF0A33072109C8B00055B5C8 /* BBUserAdviseController.swift in Sources */,
+				CFE0777421193EFA00D971E0 /* BBHomeBaseController.m in Sources */,
 				CFD46B1820E1D2D20066FC85 /* BBHomeCollectionCell.swift in Sources */,
 				CF69AAE320DB9B6600B5BCC7 /* UIButton+ImageTitleSpacing.m in Sources */,
-				CFD46B2320E20C4B0066FC85 /* BBHomeIndexPresenter.swift in Sources */,
+				CFE077D72119401500D971E0 /* BBHomeSearchFilterView.m in Sources */,
 				CF0A33002109B6F50055B5C8 /* BBUserSetVersionView.swift in Sources */,
 				CF1B5BCC20E3775400DE77DD /* BBHomeWebController.swift in Sources */,
+				CFE076DA2119393700D971E0 /* BBHomeProvider.swift in Sources */,
 				CF1A84D620F899B900E9CE0B /* SGPageTitleViewConfigure.m in Sources */,
 				CF82EC7420EF1AC300CCE8DC /* MJRefreshBackNormalFooter.m in Sources */,
 				CF82EC7B20EF1AC300CCE8DC /* MJRefreshFooter.m in Sources */,
 				CFD46B0520E1CF240066FC85 /* BBThirdPropert.swift in Sources */,
+				CF91CCC5211BE35C001EBE5A /* BBGestureBackConst.m in Sources */,
 				CFBC5C3820FD768F001C5BE8 /* BBNewsDetailController.swift in Sources */,
+				CFE077CD2119401500D971E0 /* BBHomeSearchResultCountView.m in Sources */,
+				CFE078112119785100D971E0 /* CALayer+BBExtension.m in Sources */,
 				CFBBB5162100836F00D31F89 /* BBUserSetController.swift in Sources */,
 				CF1A84D120F899B900E9CE0B /* UIButton+SGPagingView.m in Sources */,
+				CFE077E421196B0000D971E0 /* UIDatePicker+BBExtension.m in Sources */,
+				CFE077DC2119401500D971E0 /* BBHomeSearchCategoryRightTableViewCell.m in Sources */,
 				CF82EC6F20EF1AC300CCE8DC /* UIScrollView+MJExtension.m in Sources */,
+				CFE0782B21197CF100D971E0 /* TAAbstractDotView.m in Sources */,
 				CF216F602106BE9F00243B2F /* BBUserLoginController.swift in Sources */,
 				CFFE800E21081ADA00E280C8 /* BBUserNickNameController.swift in Sources */,
 				CF69AAD620DB9AA700B5BCC7 /* AppDelegate.swift in Sources */,
 				CF82EC7C20EF1AC300CCE8DC /* MJRefreshHeader.m in Sources */,
+				CFE077A32119401000D971E0 /* BBHomeDetailModel.m in Sources */,
+				CFE078382119A4C100D971E0 /* BBFaGuiKuController.m in Sources */,
 				CF82EC7020EF1AC300CCE8DC /* NSBundle+MJRefresh.m in Sources */,
 				CF1A84D320F899B900E9CE0B /* SGPageContentScrollView.m in Sources */,
+				CFE077DB2119401500D971E0 /* BBHomeSearchResultTableView.m in Sources */,
 				CF82EC9320EF1AC300CCE8DC /* UIScrollView+DDGShot.swift in Sources */,
 				CF216F6C2106FFA500243B2F /* TSaveFiles.swift in Sources */,
 				CF82EC6D20EF1AC300CCE8DC /* MJRefreshConst.m in Sources */,
 				CFD46B1720E1D2D20066FC85 /* BBHomeIndexTableViewCell.swift in Sources */,
+				CFE077D12119401500D971E0 /* BBHomeSearchCategoryView.m in Sources */,
 				CF863B1420EB539900EA6FAD /* UIBarButtonItem+BBExtension.m in Sources */,
 				CF51C0AD20D893A10024E971 /* BBTabBarController.swift in Sources */,
 				CF82EC7920EF1AC300CCE8DC /* MJRefreshStateHeader.m in Sources */,
 				CF216F70210726F900243B2F /* BBUserModel.swift in Sources */,
-				CF51C0AA20D893A10024E971 /* BBGestureBackConst.swift in Sources */,
+				CFE076DC211939BD00D971E0 /* BBNewsProvider.swift in Sources */,
+				CFE0780221196E3300D971E0 /* BBSlider.m in Sources */,
+				CFE0782A21197CF100D971E0 /* TAAnimatedDotView.m in Sources */,
 				CF82EC9220EF1AC300CCE8DC /* UIView+DDGShot.swift in Sources */,
 				CF82EC7E20EF1AC300CCE8DC /* MJRefreshAutoFooter.m in Sources */,
+				CFE0780D211976CF00D971E0 /* BBDBHandle.m in Sources */,
 				CFBBB510210078C200D31F89 /* BBUserIndexBottomCell.swift in Sources */,
 				CF82EC7120EF1AC300CCE8DC /* UIView+MJExtension.m in Sources */,
 				CF939F802105705100E23FFA /* BBUserVipController.swift in Sources */,
 				CF0A32FE2109B03D0055B5C8 /* BBUserSetModel.swift in Sources */,
 				CF82EC7D20EF1AC300CCE8DC /* MJRefreshBackFooter.m in Sources */,
+				CFE077A42119401000D971E0 /* BBHomeDetailFontView.m in Sources */,
 				CFFE801421081B5900E280C8 /* BBUserPersonModel.swift in Sources */,
+				CFE0779321193FAF00D971E0 /* BBHomeSearchAdvancedHeaderView.m in Sources */,
 				CFFE800C21081ADA00E280C8 /* BBUserUpdatePasswordNumController.swift in Sources */,
 				CF0DBDB4210020E100243E2B /* BBUserViewController.swift in Sources */,
+				CFE077A22119401000D971E0 /* BBHomeDetailController.m in Sources */,
 				CF82EC7720EF1AC300CCE8DC /* MJRefreshAutoNormalFooter.m in Sources */,
-				CF0B9BEC20F7253B00D42009 /* BBNewsIndexDataProvider.swift in Sources */,
+				CFE0771E21193D4A00D971E0 /* BBPageMenu.m in Sources */,
 				CF1A84D420F899B900E9CE0B /* SGPageContentCollectionView.m in Sources */,
 				CF51C0B220D897530024E971 /* BBConst.swift in Sources */,
 				CF82EC7F20EF1AC300CCE8DC /* MJRefreshComponent.m in Sources */,
+				CFE0777321193EFA00D971E0 /* BBHomeCollectController.m in Sources */,
 				CFD46B1520E1D2D20066FC85 /* BBHomeCollectionHeaderView.swift in Sources */,
+				CFE0772A21193DFD00D971E0 /* FSPageContentView.m in Sources */,
+				CFE0777821193EFA00D971E0 /* FSBaseTableView.m in Sources */,
+				CFE0782721197CF100D971E0 /* SDCollectionViewCell.m in Sources */,
 				CFBBB503210037C500D31F89 /* BBUserIndexHeaderCell.swift in Sources */,
 				CF94726B20F88AB600C665C3 /* BBNewsChildController.swift in Sources */,
+				CFE077CE2119401500D971E0 /* BBHomeSearchHotResultCollectionLayout.m in Sources */,
 				CF69AAE420DB9B6600B5BCC7 /* UIView+Extension.swift in Sources */,
-				CF51C0A920D893A10024E971 /* BBGestureBaseController.swift in Sources */,
+				CFE0777A21193EFA00D971E0 /* BBHomeIndexDetailModel.m in Sources */,
 				CF216F6B2106FFA500243B2F /* THUD.swift in Sources */,
+				CFE0777521193EFA00D971E0 /* BBHomeNewestController.m in Sources */,
 				CFFE800F21081ADA00E280C8 /* BBUserPersonController.swift in Sources */,
+				CFE0777F21193EFA00D971E0 /* BBHomeHotSearchCollectionViewCell.m in Sources */,
+				CFE0779721193FAF00D971E0 /* BBHomeSearchAdvancedHeaderTopView.m in Sources */,
+				CFE0782521197CF100D971E0 /* SDCycleScrollView.m in Sources */,
 				CFACE81320FC695C00849B4C /* BBNewsChildMorePicCell.swift in Sources */,
+				CFE077CC2119401500D971E0 /* BBHomeSearchClassifyModel.m in Sources */,
+				CFE077D82119401500D971E0 /* BBHomeSearchCategoryLeftTableViewCell.m in Sources */,
 				CFD46B1B20E1D5A40066FC85 /* BBHomeIndexModel.swift in Sources */,
 				CF0A32F92109A8580055B5C8 /* BBUserAddressView.swift in Sources */,
 				CF216F652106BE9F00243B2F /* BBUserBindPhoneController.swift in Sources */,
 				CFAA87D820FC2F27009EF95D /* BBNewsChildOnePicCell.swift in Sources */,
+				CFE077EC21196B5500D971E0 /* BBPopView.m in Sources */,
 				CF82EC7320EF1AC300CCE8DC /* MJRefreshBackStateFooter.m in Sources */,
+				CFE0777C21193EFA00D971E0 /* BBHomeHeaderViewCell.m in Sources */,
 				CF6E85F420EF61DB009FE443 /* String+Extension.swift in Sources */,
+				CFE077CB2119401500D971E0 /* BBHomeSearchController.m in Sources */,
 				CF51C0AC20D893A10024E971 /* BBNavigationController.swift in Sources */,
+				CFE077D62119401500D971E0 /* BBHomeSearchHotResultCollectionReusableView.m in Sources */,
+				CFE077DE2119401500D971E0 /* BBHomeSearchHotResultCollectionCell.m in Sources */,
 				CF863B1820EB53AD00EA6FAD /* UIImage+BBExtension.m in Sources */,
 				CF0DBDBF2100292800243E2B /* BBUserIndexCell.swift in Sources */,
 				CFFE801D21087A6B00E280C8 /* BBUserBirthdayView.swift in Sources */,
@@ -1752,8 +2396,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = CJRF2MVLA4;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S9PKBF7ZMS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BBAccountantTool/Classes/Other/Third/SDK/ShareSDK/Support/PlatformSDK/QQSDK",
@@ -1811,8 +2455,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = NO;
-				DEVELOPMENT_TEAM = CJRF2MVLA4;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S9PKBF7ZMS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BBAccountantTool/Classes/Other/Third/SDK/ShareSDK/Support/PlatformSDK/QQSDK",

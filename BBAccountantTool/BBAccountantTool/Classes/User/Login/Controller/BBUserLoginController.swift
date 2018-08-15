@@ -119,7 +119,8 @@ extension BBUserLoginController {
             
         }) { (error_code, message) in
             hud?.hide(animated: true)
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
     }
     @IBAction func accountClick(_ sender: Any) {
@@ -137,7 +138,8 @@ extension BBUserLoginController {
  
         }) { (error_code, message) in
             hud?.hide(animated: true)
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
         
         
@@ -231,7 +233,8 @@ extension BBUserLoginController {
                     }
                 }) { (error_code, message) in
                     hud2?.hide(animated: true)
-                    self.addBlankView(blankType: .requestFailed)
+//                    self.addBlankView(blankType: .requestFailed)
+                    self.addBlankView(BBBlankTypeRequestFailed)
                 }
             }else {
                 hud?.hide(animated: true)

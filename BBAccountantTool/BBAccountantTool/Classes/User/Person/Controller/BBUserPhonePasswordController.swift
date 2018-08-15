@@ -64,7 +64,8 @@ class BBUserPhonePasswordController: BBGestureBaseController {
             
         }) { (error_code, message) in
             hud?.hide(animated: true)
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
         
         isCounting = true
@@ -176,7 +177,8 @@ extension BBUserPhonePasswordController {
 
             }) { (error_code, message) in
                 hud?.hide(animated: true)
-                self.addBlankView(blankType: .requestFailed)
+//                self.addBlankView(blankType: .requestFailed)
+                self.addBlankView(BBBlankTypeRequestFailed)
             }
 
 

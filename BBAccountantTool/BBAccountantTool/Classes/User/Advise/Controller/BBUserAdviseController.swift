@@ -90,7 +90,8 @@ extension BBUserAdviseController : UITextFieldDelegate {
             }
         }) { (error_code, message) in
             hud?.hide(animated: true)
-            self.addBlankView(blankType: .requestFailed)
+//            self.addBlankView(blankType: .requestFailed)
+            self.addBlankView(BBBlankTypeRequestFailed)
         }
     }
     
